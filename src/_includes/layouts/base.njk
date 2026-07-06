@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
     {% if math %}
     <script>
-      window.MathJax = { tex: { inlineMath: [["\\(", "\\)"], ["$", "$"]], displayMath: [["\\[", "\\]"]] } };
+      window.MathJax = {
+        tex: {
+          inlineMath: [["\\(", "\\)"]],
+          displayMath: [["\\[", "\\]"], ["$$", "$$"]]
+        },
+        options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"] }
+      };
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     {% endif %}
@@ -19,6 +25,8 @@
     <header class="site-header">
       <a class="site-title" href="{{ '/' | url }}">{{ site.title }}</a>
       <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/' | url }}">Home</a>
+        <a href="{{ '/topics/' | url }}">Topics</a>
         <a href="{{ '/archive/' | url }}">Archive</a>
         <a href="{{ '/tags/' | url }}">Tags</a>
         <a href="{{ '/feed.xml' | url }}">RSS</a>
@@ -28,7 +36,7 @@
       {{ content | safe }}
     </main>
     <footer class="site-footer">
-      <p>Static archive of t8m8r.wordpress.com. Built with Eleventy.</p>
+      <p>{{ site.title }}</p>
     </footer>
   </body>
 </html>

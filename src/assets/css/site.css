@@ -136,6 +136,23 @@ time {
   padding-left: 1.25rem;
 }
 
+.topic-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin-top: 1.5rem;
+}
+
+.topic-item {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.topic-item h2 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
 .comments-placeholder {
   border-top: 1px solid var(--line);
   margin-top: 2rem;

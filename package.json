@@ -8,6 +8,8 @@
     "build": "eleventy",
     "clean": "node scripts/clean.js",
     "import:wordpress": "python3 scripts/import-wordpress.py",
+    "repair:math": "python3 scripts/repair-math-delimiters.py",
+    "audit:urls": "python3 scripts/audit-urls.py",
     "check": "python3 scripts/check-site.py",
     "new": "node scripts/new-post.js",
     "new:draft": "node scripts/new-post.js --private-draft"

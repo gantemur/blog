@@ -18,13 +18,13 @@ templateEngineOverride: "md"
 **Евклид**
 
  	
-1. [Евклидийн алгоритм](http://t8m8r.wordpress.com/2010/04/20/euclid-algorithm/)
+1. [Евклидийн алгоритм](/blog/2010/04/20/euclid-algorithm/)
 
  	
-2. [Арифметикийн үндсэн теорем](http://t8m8r.wordpress.com/2010/04/21/fundamental-theorem-arithmetics/)
+2. [Арифметикийн үндсэн теорем](/blog/2010/04/21/fundamental-theorem-arithmetics/)
 
  	
-3. [Евклидийн теорем](http://t8m8r.wordpress.com/2010/04/22/euclid-theorem/)
+3. [Евклидийн теорем](/blog/2010/04/22/euclid-theorem/)
 
  	
 4. [Пифагорын гурвал](/blog/2019/01/09/pythagorean-triples/)
@@ -69,10 +69,10 @@ templateEngineOverride: "md"
 7. [Эйлерийн шинжүүр](/blog/2021/02/25/euler-criterion/)
 
  	
-8. [Евклидийн теоремийн баталгаа](http://t8m8r.wordpress.com/2010/04/26/euclid-thm-euler-pf/)
+8. [Евклидийн теоремийн баталгаа](/blog/2010/04/26/euclid-thm-euler-pf/)
 
  	
-9. [Эйлерийн үржвэрийн теорем](http://t8m8r.wordpress.com/2010/08/18/euler-prod/)
+9. [Эйлерийн үржвэрийн теорем](/blog/2010/08/18/euler-prod/)
 
  	
 10. [Урвуу анхны тоонуудын нийлбэр](/blog/2018/05/04/prime-reciprocal-sum/)

@@ -18,496 +18,496 @@ templateEngineOverride: "md"
 Элементар тэнцэл бишүүдийн тухай [энэ цувралынхаа эхнээс](/blog/2020/12/03/amgm/) бид хязгаар, уламжлал гэх мэт анализын аргуудыг хэрэглэхгүй гэж зүтгэснээс болоод зарим тэнцэл бишийн зарим параметрийн утгыг рациональ тоо байна гэж хязгаарлахаас аргагүйд хүрсэн. Ингэж хязгаарлагдсан тэнцэл биш бүрийг, уншигчид сануулах үүднээс нэг тухайн тохиолдлынх нь томъёоны хамтаар жагсааж үзүүлье.
 
  
--  [Жинтэй Кошийн тэнцэл биш](/blog/2020/12/03/amgm/): \({x^\lambda y^{1-\lambda}\leq\lambda x+(1-\lambda)y}\) 
--  [Юнгийн тэнцэл биш](/blog/2020/12/17/young-inequality/): \({xy\leq \frac1px^p+\frac1qy^{q}}\) 
--  [Бернуллийн тэнцэл биш](/blog/2020/12/18/bernoulli-inequality-2/): \({1+px\leq(1+x)^p}\) 
--  [Зэрэгт дунджийн тэнцэл биш](/blog/2020/12/04/power-mean/): \({M_\lambda(a,b,c)\leq M_1(a,b,c)}\) 
--  [Гёльдерийн тэнцэл биш](/blog/2020/12/08/holder/): \({\sum_ia_i^\lambda b_i^{1-\lambda}\leq(\sum_ia_i)^\lambda(\sum_ib_i)^{1-\lambda}}\) 
--  [Минковскийн тэнцэл биш](/blog/2020/12/10/minkowski/): \({(\sum_i|a_i+b_i|^p)^{1/p}\leq(\sum_i|a_i|^p)^{1/p}+(\sum_i|b_i|^p)^{1/p}}\) 
+-  [Жинтэй Кошийн тэнцэл биш](/blog/2020/12/03/amgm/): \\({x^\lambda y^{1-\lambda}\leq\lambda x+(1-\lambda)y}\\) 
+-  [Юнгийн тэнцэл биш](/blog/2020/12/17/young-inequality/): \\({xy\leq \frac1px^p+\frac1qy^{q}}\\) 
+-  [Бернуллийн тэнцэл биш](/blog/2020/12/18/bernoulli-inequality-2/): \\({1+px\leq(1+x)^p}\\) 
+-  [Зэрэгт дунджийн тэнцэл биш](/blog/2020/12/04/power-mean/): \\({M_\lambda(a,b,c)\leq M_1(a,b,c)}\\) 
+-  [Гёльдерийн тэнцэл биш](/blog/2020/12/08/holder/): \\({\sum_ia_i^\lambda b_i^{1-\lambda}\leq(\sum_ia_i)^\lambda(\sum_ib_i)^{1-\lambda}}\\) 
+-  [Минковскийн тэнцэл биш](/blog/2020/12/10/minkowski/): \\({(\sum_i|a_i+b_i|^p)^{1/p}\leq(\sum_i|a_i|^p)^{1/p}+(\sum_i|b_i|^p)^{1/p}}\\) 
 
-Зөвхөн алгебрын арга хэрэглэн дээрх тэнцэл бишүүдийг баталъя гэвэл \({\lambda}\), \({p}\), \({q}\) параметрүүдийн утгыг рациональ байлгах шаардлагатай болдог. Харин хязгаар ашиглахыг зөвшөөрсөн тохиолдолд тэнцэл бишийн зүүн баруун гар талд байгаа функцүүдийн тасралтгүй чанарыг ашиглан эдгээр параметрүүдийг иррациональ утга авдаг байхаар өргөтгөхөд амархан. Эсвэл эхлээд жинтэй Кошийн тэнцэл бишийг л дурын бодит илтгэгчидтэй үед баталчихвал бусдынх нь дурын бодит илтгэгчтэй хувилбарууд дагаад мөрдөж гарна. [Шурын](/blog/2020/12/17/schur-inequality/) болон [Мюрхедийн](/blog/2020/12/25/muirhead-inequality/) тэнцэл бишүүдийн тухайд бол \({f(x)=x^p}\) функцийн монотон чанар дээр тулгуурласан шууд баталгаанууд бидэнд бий.
+Зөвхөн алгебрын арга хэрэглэн дээрх тэнцэл бишүүдийг баталъя гэвэл \\({\lambda}\\), \\({p}\\), \\({q}\\) параметрүүдийн утгыг рациональ байлгах шаардлагатай болдог. Харин хязгаар ашиглахыг зөвшөөрсөн тохиолдолд тэнцэл бишийн зүүн баруун гар талд байгаа функцүүдийн тасралтгүй чанарыг ашиглан эдгээр параметрүүдийг иррациональ утга авдаг байхаар өргөтгөхөд амархан. Эсвэл эхлээд жинтэй Кошийн тэнцэл бишийг л дурын бодит илтгэгчидтэй үед баталчихвал бусдынх нь дурын бодит илтгэгчтэй хувилбарууд дагаад мөрдөж гарна. [Шурын](/blog/2020/12/17/schur-inequality/) болон [Мюрхедийн](/blog/2020/12/25/muirhead-inequality/) тэнцэл бишүүдийн тухайд бол \\({f(x)=x^p}\\) функцийн монотон чанар дээр тулгуурласан шууд баталгаанууд бидэнд бий.
 
 Гэхдээ эхлээд алгебрын аргаар тэнцэл бишийг рациональ илтгэгчдийн хувьд батлаад, дараа нь хязгаар авч дурын бодит илтгэгчид рүү ингэж өргөтгөхийн оронд, анхнаасаа шууд анализын хүчтэй аргыг хэрэглэн бодит илтгэгчдийн хувьд батлах нь илүү үр дүнтэй байдаг. Энд «анализын хүчтэй арга» гэдэг нь ихэнх тохиолдолд функцийн *гүдгэр чанарыг* уламжлал ашиглан шалгах явдал болж таарна. Эерэг болон монотон чанартай нилээд сайн танилцсан бид гүдгэр чанар луу ийнхүү анх өнгийж байна.
 
-Анхны ойлголт өгөх үүднээс монотон ба гүдгэр функцийн графикийг дор дүрслэв.  [![](/blog/assets/wp-media/2020/12/monoconv.png)](/blog/assets/wp-media/2020/12/monoconv.png) Өсөх монотон (цэнхэр) ба гүдгэр (улаан) функцүүд.  Дарааллын хувьд, \({a_2-a_1,a_3-a_2,a_4-a_3,\ldots}\) гэх мэт ялгаврууд *үл буурах* чанартай бол уг дарааллыг *гүдгэр дараалал* гэдэг. Өсөх эсвэл буурах дарааллыг дээрх ялгавруудын эерэг эсвэл сөрөг байдлаар тодорхойлдогтой төстэй байгааг ажиглаарай.
+Анхны ойлголт өгөх үүднээс монотон ба гүдгэр функцийн графикийг дор дүрслэв.  [![](/blog/assets/wp-media/2020/12/monoconv.png)](/blog/assets/wp-media/2020/12/monoconv.png) Өсөх монотон (цэнхэр) ба гүдгэр (улаан) функцүүд.  Дарааллын хувьд, \\({a_2-a_1,a_3-a_2,a_4-a_3,\ldots}\\) гэх мэт ялгаврууд *үл буурах* чанартай бол уг дарааллыг *гүдгэр дараалал* гэдэг. Өсөх эсвэл буурах дарааллыг дээрх ялгавруудын эерэг эсвэл сөрөг байдлаар тодорхойлдогтой төстэй байгааг ажиглаарай.
 
 Гүдгэр чанар нь ихэнх элементар тэнцэл бишийг нэг дээвэр дор оруулдгаар барахгүй, өөрөө математикийн биеэ даасан чухал судлагдахуун болдог. Функцийн гүдгэр чанарын чухлыг анх ойлгож судалсан хүн нь Данийн математикч [Иоган Йенсен](https://en.wikipedia.org/wiki/Johan_Jensen_(mathematician)) юм. Гэхдээ түүнээс өмнө Францын математикч [Шарль Эрмит](https://en.wikipedia.org/wiki/Charles_Hermite), [Жак Адамар](https://en.wikipedia.org/wiki/Jacques_Hadamard), Германы [Отто Гёльдер](https://en.wikipedia.org/wiki/Otto_Holder), Австрийн [Отто Штольц](https://en.wikipedia.org/wiki/Otto_Stolz) нар гүдгэр функцүүдийг судалгаандаа ашиглаж байсныг дурдах нь зүйтэй.
 
 Гүдгэр функцийн тухай гол теорем бол [1906 онд](https://zenodo.org/record/2371297) Йенсений нээсэн тэнцэл биш билээ. Үүнийг авч үзэхээсээ өмнө гүдгэр функцийн тухай ойлголтыг яв цав болгоцгооё.
 
-**Тодорхойлолт 1.**  Бодит тооны \({U\subset{\mathbb R}}\) гэсэн дэд олонлог, түүн дээр тодорхойлгдсон \({f:U\rightarrow{\mathbb R}}\) гэсэн функц өгөгдсөн байг. Хэрэв \({x,y\in U}\) ба \({\lambda x+(1-\lambda)y\in U}\) байх \({\lambda\in(0,1)}\) болгоны хувьд 
+**Тодорхойлолт 1.**  Бодит тооны \\({U\subset{\mathbb R}}\\) гэсэн дэд олонлог, түүн дээр тодорхойлгдсон \\({f:U\rightarrow{\mathbb R}}\\) гэсэн функц өгөгдсөн байг. Хэрэв \\({x,y\in U}\\) ба \\({\lambda x+(1-\lambda)y\in U}\\) байх \\({\lambda\in(0,1)}\\) болгоны хувьд 
 
-\(\displaystyle  f(\lambda x+(1-\lambda)y) \leq \lambda f(x)+(1-\lambda)f(y)\)
+\\(\displaystyle  f(\lambda x+(1-\lambda)y) \leq \lambda f(x)+(1-\lambda)f(y)\\)
 
- тэнцэл биш биелдэг бол, \({f}\) функцийг *\({U}\) олонлог дээр гүдгэр* гэж ярина. Энэ тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \({x=y}\) бол, \({f}\) функцийг *\({U}\) олонлог дээр эрс гүдгэр* гэнэ. 
+ тэнцэл биш биелдэг бол, \\({f}\\) функцийг *\\({U}\\) олонлог дээр гүдгэр* гэж ярина. Энэ тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \\({x=y}\\) бол, \\({f}\\) функцийг *\\({U}\\) олонлог дээр эрс гүдгэр* гэнэ. 
 
-Түүнчлэн, \({-f}\) функц гүдгэр (эрс гүдгэр) бол \({f}\) функцийг *хотгор* (*эрс хотгор*) гэдэг.
+Түүнчлэн, \\({-f}\\) функц гүдгэр (эрс гүдгэр) бол \\({f}\\) функцийг *хотгор* (*эрс хотгор*) гэдэг.
 
 **Жишээ 2.**  Жинтэй Кошийн тэнцэл бишийн хялбар тохиолдлыг 
 
-\(\displaystyle  x^\lambda y^{1-\lambda}\leq\lambda x+(1-\lambda)y\)
+\\(\displaystyle  x^\lambda y^{1-\lambda}\leq\lambda x+(1-\lambda)y\\)
 
  гэж бичээд хоёр талаас нь логарифм авбал 
 
-\(\displaystyle  \lambda\ln x+ (1-\lambda)\ln y \leq \ln\big(\lambda x+(1-\lambda)y\big)\)
+\\(\displaystyle  \lambda\ln x+ (1-\lambda)\ln y \leq \ln\big(\lambda x+(1-\lambda)y\big)\\)
 
  гарна. Өөрөөр хэлбэл, жинтэй Кошийн тэнцэл бишийн [алгебрын баталгаа](/blog/2020/12/03/amgm/) нь логарифм функцийг эерэг рациональ тоонууд дээр эрс хотгор болохыг баталсан баталгаа байжээ гэж тайлбарлаж болно гэсэн үг. 
 
 *Йенсений тэнцэл биш* гэж үнэндээ гүдгэр чанарын тодорхойлолтыг олон давтан ашиглахад гарах тэнцэл бишийг л хэлээд байгаа юм.
 
-**Теорем 3 (Йенсен).** [] Хэрэв \({f}\) нь \({[a,b]}\) завсар дээрх гүдгэр функц бол дурын \({n\geq2}\) ширхэг \({x_1,\ldots,x_n\in[a,b]}\) цэгүүд ба \({\lambda_1+\ldots+\lambda_n=1}\) байх эерэг \({\lambda_1,\ldots,\lambda_n}\) дараалал болгоны хувьд [
+**Теорем 3 (Йенсен).** [] Хэрэв \\({f}\\) нь \\({[a,b]}\\) завсар дээрх гүдгэр функц бол дурын \\({n\geq2}\\) ширхэг \\({x_1,\ldots,x_n\in[a,b]}\\) цэгүүд ба \\({\lambda_1+\ldots+\lambda_n=1}\\) байх эерэг \\({\lambda_1,\ldots,\lambda_n}\\) дараалал болгоны хувьд [
 
-\(\displaystyle  f(\lambda_1x_1+\ldots+\lambda_nx_n) \leq \lambda_1f(x_1)+\ldots+\lambda_nf(x_n) \ \ \ \ \ (1)\)
+\\(\displaystyle  f(\lambda_1x_1+\ldots+\lambda_nx_n) \leq \lambda_1f(x_1)+\ldots+\lambda_nf(x_n) \ \ \ \ \ (1)\\)
 
-] тэнцэл биш биелнэ. Цаашилбал, хэрэв \({f}\) нь эрс гүдгэр бол дээрх тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \({x_1=\ldots=x_n}\). 
+] тэнцэл биш биелнэ. Цаашилбал, хэрэв \\({f}\\) нь эрс гүдгэр бол дээрх тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \\({x_1=\ldots=x_n}\\). 
 
 Хэрэв функцийн гүдгэр эсэхийг зөвхөн алгебрын аргаар шалгадаг байсан бол энэ теоремын хэрэглээ хязгаарлагдмал байх байсан. Йенсений тэнцэл бишид үлгэрийн баатар шиг хүч оруулдаг шидэт тэжээл нь гүдгэр функцийг таних зориулалттай дараах шинжүүр юм.
 
-**Теорем 4 (Уламжлалт шинжүүр).**  Хэрэв \({f}\) нь \({(a,b)\subset{\mathbb R}}\) завсар дээр хоёр удаа дифференциалчлагддаг функц бөгөөд 
+**Теорем 4 (Уламжлалт шинжүүр).**  Хэрэв \\({f}\\) нь \\({(a,b)\subset{\mathbb R}}\\) завсар дээр хоёр удаа дифференциалчлагддаг функц бөгөөд 
 
-\(\displaystyle  f''(x)\geq0,\qquad x\in(a,b),\)
+\\(\displaystyle  f''(x)\geq0,\qquad x\in(a,b),\\)
 
- бол \({f}\) функц \({(a,b)}\) дээр гүдгэр. Түүнчлэн, хэрэв 
+ бол \\({f}\\) функц \\({(a,b)}\\) дээр гүдгэр. Түүнчлэн, хэрэв 
 
-\(\displaystyle  f''(x)>0,\qquad x\in(a,b),\)
+\\(\displaystyle  f''(x)>0,\qquad x\in(a,b),\\)
 
- бол \({f}\) функц \({(a,b)}\) дээр эрс гүдгэр. 
+ бол \\({f}\\) функц \\({(a,b)}\\) дээр эрс гүдгэр. 
 
 **Жишээ 5.**  Зэрэгт функцийн хувьд 
 
-\(\displaystyle  (x^\alpha)''=\alpha(\alpha-1)x^{\alpha-2}\)
+\\(\displaystyle  (x^\alpha)''=\alpha(\alpha-1)x^{\alpha-2}\\)
 
- тул \({f(x)=x^\alpha}\) функц \({\alpha>1}\) ба \({\alpha<0}\) тохиолдлуудад \({U=(0,\infty)}\) муж дээр эрс гүдгэр бол, \({0<\alpha<1}\) үед уг муж дээр эрс хотгор байна. Харин 
+ тул \\({f(x)=x^\alpha}\\) функц \\({\alpha>1}\\) ба \\({\alpha<0}\\) тохиолдлуудад \\({U=(0,\infty)}\\) муж дээр эрс гүдгэр бол, \\({0<\alpha<1}\\) үед уг муж дээр эрс хотгор байна. Харин 
 
-\(\displaystyle  (\ln x)''=-\frac1{x^2}\)
+\\(\displaystyle  (\ln x)''=-\frac1{x^2}\\)
 
- тул, \({f(x)=\ln x}\) функц нь \({U=(0,\infty)}\) муж дээр эрс хотгор. 
+ тул, \\({f(x)=\ln x}\\) функц нь \\({U=(0,\infty)}\\) муж дээр эрс хотгор. 
 
  Байгаа гүдгэр функцүүдээ ашиглан шинээр гүдгэр функц байгуулах хялбар аргуудын тухай дараах шинжүүрт авч үзнэ.
 
-**Теорем 6 (Нийлбэр ба максимум).**  Хэрэв \({f}\) ба \({g}\) нь \({U\subset{\mathbb R}}\) олонлог дээр (эрс) гүдгэр функцүүд бол 
+**Теорем 6 (Нийлбэр ба максимум).**  Хэрэв \\({f}\\) ба \\({g}\\) нь \\({U\subset{\mathbb R}}\\) олонлог дээр (эрс) гүдгэр функцүүд бол 
 
-\(\displaystyle  s(x) = f(x) + g(x), \qquad m(x) = \max\{f(x),g(x)\}\)
+\\(\displaystyle  s(x) = f(x) + g(x), \qquad m(x) = \max\{f(x),g(x)\}\\)
 
- функцүүд мөн \({U}\) дээр (эрс) гүдгэр байна. 
+ функцүүд мөн \\({U}\\) дээр (эрс) гүдгэр байна. 
 
 Эцэст нь, бидний хувьд нэг их ач холбогдолгүй ч гэсэн сонирхол төрүүлэм нэг шинжүүрийг толилуулъя.
 
-**Теорем 7 (Дундаж цэгийн шинжүүр).**  Хэрэв \({f}\) нь \({(a,b)\subset{\mathbb R}}\) завсар дээр тодорхойлогдсон тасралтгүй функц бөгөөд 
+**Теорем 7 (Дундаж цэгийн шинжүүр).**  Хэрэв \\({f}\\) нь \\({(a,b)\subset{\mathbb R}}\\) завсар дээр тодорхойлогдсон тасралтгүй функц бөгөөд 
 
-\(\displaystyle  f\big(\frac{x+y}2\big) \leq \frac{f(x)+f(y)}2, \qquad x,y\in(a,b),\)
+\\(\displaystyle  f\big(\frac{x+y}2\big) \leq \frac{f(x)+f(y)}2, \qquad x,y\in(a,b),\\)
 
- бол \({f}\) функц \({(a,b)}\) дээр гүдгэр. Цаашилбал, хэрэв \({x\neq y}\) ба \({x,y\in(a,b)}\) гэдгээс 
+ бол \\({f}\\) функц \\({(a,b)}\\) дээр гүдгэр. Цаашилбал, хэрэв \\({x\neq y}\\) ба \\({x,y\in(a,b)}\\) гэдгээс 
 
-\(\displaystyle  f\big(\frac{x+y}2\big) < \frac{f(x)+f(y)}2\)
+\\(\displaystyle  f\big(\frac{x+y}2\big) < \frac{f(x)+f(y)}2\\)
 
- гэж гардаг бол \({f}\) функц \({(a,b)}\) дээр эрс гүдгэр. 
+ гэж гардаг бол \\({f}\\) функц \\({(a,b)}\\) дээр эрс гүдгэр. 
 
 Эдгээр теоремуудын баталгаанаас гадна, дээр дурдагдсан (Коши, Юнг, Бернулли гэх мэт) тэнцэл бишүүдийг бодит параметрүүдийн хувьд Йенсений тэнцэл бишийг ашиглан яаж амархан баталж болохыг дор сонирхоорой. 
 
 ##  Йенсений тэнцэл бишийн баталгаа 
 
-Хэрэв \({n=2}\) бол Теорем [3](#tjensen) маань гүдгэр чанарын тодорхойлолт болж хувирна. Иймд \({n-1}\) хувьсагчийн хувьд теоремыг үнэн гэж үзээд, 
+Хэрэв \\({n=2}\\) бол Теорем [3](#tjensen) маань гүдгэр чанарын тодорхойлолт болж хувирна. Иймд \\({n-1}\\) хувьсагчийн хувьд теоремыг үнэн гэж үзээд, 
 
-\(\displaystyle  \bar x = \frac{\lambda_1}{1-\lambda_n} x_1+\ldots+\frac{\lambda_{n-1}}{1-\lambda_n} x_{n-1}\)
+\\(\displaystyle  \bar x = \frac{\lambda_1}{1-\lambda_n} x_1+\ldots+\frac{\lambda_{n-1}}{1-\lambda_n} x_{n-1}\\)
 
  гэсэн шинэ цэг тодорхойлбол, 
 
-\(\displaystyle  f(\lambda_1x_1+\ldots+\lambda_nx_n) = f((1-\lambda_n)\bar x+\lambda_nx_n) \leq (1-\lambda_n)f(\bar x)+\lambda_nf(x_n)\)
+\\(\displaystyle  f(\lambda_1x_1+\ldots+\lambda_nx_n) = f((1-\lambda_n)\bar x+\lambda_nx_n) \leq (1-\lambda_n)f(\bar x)+\lambda_nf(x_n)\\)
 
  болох ба, [
 
-\(\displaystyle  f(\bar x) \leq \frac{\lambda_1}{1-\lambda_n} f(x_1)+\ldots+\frac{\lambda_{n-1}}{1-\lambda_n} f(x_{n-1}) \ \ \ \ \ (2)\)
+\\(\displaystyle  f(\bar x) \leq \frac{\lambda_1}{1-\lambda_n} f(x_1)+\ldots+\frac{\lambda_{n-1}}{1-\lambda_n} f(x_{n-1}) \ \ \ \ \ (2)\\)
 
 ] гэдгийг тооцсоноор [(1)](#ejensen) тэнцэл биш батлагдана.
 
-Одоо \({f}\) нь эрс гүдгэр функц бол [(1)](#ejensen) тэнцэл биш тэнцэлдээ хүрсэн нөхцөлд \({\bar x=x_n}\) гэж гарна. Түүнчлэн, [(2)](#ejensen-pf-1) тэнцэл биш мөн тэнцэлдээ хүрэх тул индукцийн нөхцөл ёсоор \({x_1=\ldots=x_{n-1}=\bar x}\) болж, теоремын баталгаа гүйцнэ.
+Одоо \\({f}\\) нь эрс гүдгэр функц бол [(1)](#ejensen) тэнцэл биш тэнцэлдээ хүрсэн нөхцөлд \\({\bar x=x_n}\\) гэж гарна. Түүнчлэн, [(2)](#ejensen-pf-1) тэнцэл биш мөн тэнцэлдээ хүрэх тул индукцийн нөхцөл ёсоор \\({x_1=\ldots=x_{n-1}=\bar x}\\) болж, теоремын баталгаа гүйцнэ.
 
 ##  Коши 
 
-Эерэг *бодит* тоон \({x_1,\ldots,x_n}\) ба \({\lambda_1,\ldots,\lambda_n}\) дарааллууд \({\lambda_1+\ldots+\lambda_n=1}\) нөхцлийг хангадаг бол логарифмын хотгор чанар ёсоор 
+Эерэг *бодит* тоон \\({x_1,\ldots,x_n}\\) ба \\({\lambda_1,\ldots,\lambda_n}\\) дарааллууд \\({\lambda_1+\ldots+\lambda_n=1}\\) нөхцлийг хангадаг бол логарифмын хотгор чанар ёсоор 
 
-\(\displaystyle  \lambda_1\ln x_1+\ldots+\lambda_n\ln x_n \leq \ln\big( \lambda_1x_1+\ldots+\lambda_nx_n \big)\)
+\\(\displaystyle  \lambda_1\ln x_1+\ldots+\lambda_n\ln x_n \leq \ln\big( \lambda_1x_1+\ldots+\lambda_nx_n \big)\\)
 
  буюу 
 
-\(\displaystyle  \ln\big( x_1^{\lambda_1}\cdots x_n^{\lambda_n} \big) \leq \ln\big( \lambda_1x_1+\ldots+\lambda_nx_n \big)\)
+\\(\displaystyle  \ln\big( x_1^{\lambda_1}\cdots x_n^{\lambda_n} \big) \leq \ln\big( \lambda_1x_1+\ldots+\lambda_nx_n \big)\\)
 
- болж, [жинтэй Кошийн тэнцэл биш](/blog/2020/12/03/amgm/) батлагдана. Логарифм функц нь эрс хотгор гэдгийг санавал жинтэй Кошийн тэнцэл бишийн тэнцэлдээ хүрэх нөхцөл нь мөн Йенсений теоремоос \({x_1=\ldots=x_n}\) гэж гарна.
+ болж, [жинтэй Кошийн тэнцэл биш](/blog/2020/12/03/amgm/) батлагдана. Логарифм функц нь эрс хотгор гэдгийг санавал жинтэй Кошийн тэнцэл бишийн тэнцэлдээ хүрэх нөхцөл нь мөн Йенсений теоремоос \\({x_1=\ldots=x_n}\\) гэж гарна.
 
 ##  Юнг 
 
 Энэ өндөрлөгөөс харвал [Юнгийн тэнцэл биш](/blog/2020/12/17/young-inequality/) нь үнэндээ жинтэй Кошийн тэнцэл биштэй яг адилхан. Логарифмын хотгор чанараас шууд 
 
-\(\displaystyle  \ln(xy) = \frac{\ln(x^p)}{p}+\frac{\ln(y^q)}{q} \leq \ln\big( \frac{x^p}p + \frac{x^q}q\big)\)
+\\(\displaystyle  \ln(xy) = \frac{\ln(x^p)}{p}+\frac{\ln(y^q)}{q} \leq \ln\big( \frac{x^p}p + \frac{x^q}q\big)\\)
 
- маягаар гарна. Тэнцэлдээ хүрэх нөхцөл нь ч \({x^p=y^q}\) байх нь ойлгомжтой.
+ маягаар гарна. Тэнцэлдээ хүрэх нөхцөл нь ч \\({x^p=y^q}\\) байх нь ойлгомжтой.
 
 ##  Бернулли 
 
-[Бернуллийн тэнцэл биш](/blog/2020/12/18/bernoulli-inequality-2/) ч дээрх хоёроос ялгарах юм бараг байхгүй. Бодит \({\alpha>1}\) ба \({x>-\frac1\alpha}\) тоонуудын хувьд 
+[Бернуллийн тэнцэл биш](/blog/2020/12/18/bernoulli-inequality-2/) ч дээрх хоёроос ялгарах юм бараг байхгүй. Бодит \\({\alpha>1}\\) ба \\({x>-\frac1\alpha}\\) тоонуудын хувьд 
 
-\(\displaystyle  1+x = \big(1-\frac1\alpha\big)\cdot1 + \frac{1}{\alpha}\cdot (1+\alpha x)\)
+\\(\displaystyle  1+x = \big(1-\frac1\alpha\big)\cdot1 + \frac{1}{\alpha}\cdot (1+\alpha x)\\)
 
  гэж бичээд, логарифмын хотгор чанарыг ашиглавал 
 
-\(\displaystyle  \ln(1+x) \geq \big(1-\frac1\alpha\big)\ln1 + \frac{1}{\alpha}\ln(1+\alpha x) =\frac{\ln(1+\alpha x)}{\alpha}\)
+\\(\displaystyle  \ln(1+x) \geq \big(1-\frac1\alpha\big)\ln1 + \frac{1}{\alpha}\ln(1+\alpha x) =\frac{\ln(1+\alpha x)}{\alpha}\\)
 
  буюу 
 
-\(\displaystyle  (1+x)^\alpha \geq 1+\alpha x\)
+\\(\displaystyle  (1+x)^\alpha \geq 1+\alpha x\\)
 
- гарна. Тэнцэлдээ хүрэх нөхцөл нь \({x=0}\).
+ гарна. Тэнцэлдээ хүрэх нөхцөл нь \\({x=0}\\).
 
-Харин \({0<\alpha<1}\) ба \({x>-1}\) бол 
+Харин \\({0<\alpha<1}\\) ба \\({x>-1}\\) бол 
 
-\(\displaystyle  1+\alpha x = (1-\alpha)\cdot1+\alpha\cdot(1+x)\)
+\\(\displaystyle  1+\alpha x = (1-\alpha)\cdot1+\alpha\cdot(1+x)\\)
 
  гэж бичээд, дээрхтэй төстэйгөөр 
 
-\(\displaystyle  \ln(1+\alpha x)\geq\alpha\ln(1+x)\)
+\\(\displaystyle  \ln(1+\alpha x)\geq\alpha\ln(1+x)\\)
 
  буюу 
 
-\(\displaystyle  (1+\alpha x)\geq(1+x)^\alpha\)
+\\(\displaystyle  (1+\alpha x)\geq(1+x)^\alpha\\)
 
- гэж гаргаж болно. Тэнцэлдээ хүрэх нөхцөл нь мөн \({x=0}\).
+ гэж гаргаж болно. Тэнцэлдээ хүрэх нөхцөл нь мөн \\({x=0}\\).
 
 ##  Гёльдер 
 
-Бодит тоон эерэг \({a_1,\ldots,a_n}\) ба \({b_1,\ldots,b_n}\) дарааллууд, мөн \({p>1}\) гэсэн бодит тоо өгөгдсөн болог. Тэгвэл \({q}\) тоог \({\frac1p+\frac1q=1}\) харьцаагаар тодорхойлоод, цааш нь 
+Бодит тоон эерэг \\({a_1,\ldots,a_n}\\) ба \\({b_1,\ldots,b_n}\\) дарааллууд, мөн \\({p>1}\\) гэсэн бодит тоо өгөгдсөн болог. Тэгвэл \\({q}\\) тоог \\({\frac1p+\frac1q=1}\\) харьцаагаар тодорхойлоод, цааш нь 
 
-\(\displaystyle  x_i = a_ib_i^{-q/p}=a_ib_i^{1-q}, \qquad \lambda_i = \frac{b_i^q}{b_1^q+\ldots+b_n^q}\)
+\\(\displaystyle  x_i = a_ib_i^{-q/p}=a_ib_i^{1-q}, \qquad \lambda_i = \frac{b_i^q}{b_1^q+\ldots+b_n^q}\\)
 
- дарааллуудын хувьд \({f(x)=x^p}\) функцийн гүдгэр чанараас 
+ дарааллуудын хувьд \\({f(x)=x^p}\\) функцийн гүдгэр чанараас 
 
-\(\displaystyle  (\lambda_1x_1+\ldots+\lambda_nx_n)^p \leq \lambda_1x_1^p+\ldots+\lambda_nx_n^p\)
+\\(\displaystyle  (\lambda_1x_1+\ldots+\lambda_nx_n)^p \leq \lambda_1x_1^p+\ldots+\lambda_nx_n^p\\)
 
- гэж гаргаж болно. Одоо \({x_i}\) ба \({\lambda_i}\) тоонуудаа буцааж \({a_i}\) ба \({b_i}\) тоонуудаар илэрхийлснээр 
+ гэж гаргаж болно. Одоо \\({x_i}\\) ба \\({\lambda_i}\\) тоонуудаа буцааж \\({a_i}\\) ба \\({b_i}\\) тоонуудаар илэрхийлснээр 
 
-\(\displaystyle  \Big( \frac{a_1b_1+\ldots+a_nb_n}{b_1^q+\ldots+b_n^q} \Big)^p \leq \frac{a_1^p+\ldots+a_n^p}{b_1^q+\ldots+b_n^q}\)
+\\(\displaystyle  \Big( \frac{a_1b_1+\ldots+a_nb_n}{b_1^q+\ldots+b_n^q} \Big)^p \leq \frac{a_1^p+\ldots+a_n^p}{b_1^q+\ldots+b_n^q}\\)
 
  буюу 
 
-\(\displaystyle  {a_1b_1+\ldots+a_nb_n} \leq (a_1^p+\ldots+a_n^p)^{1/p}(b_1^q+\ldots+b_n^q)^{1/q}\)
+\\(\displaystyle  {a_1b_1+\ldots+a_nb_n} \leq (a_1^p+\ldots+a_n^p)^{1/p}(b_1^q+\ldots+b_n^q)^{1/q}\\)
 
- болж, [Гёльдерийн тэнцэл биш](/blog/2020/12/08/holder/) мөрдөнө. Тэнцэлдээ хүрэх нөхцөл нь мэдээж \({x_1=\ldots=x_n}\) буюу \({a_1^p/b_1^q=\ldots=a_n^p/b_n^q}\).
+ болж, [Гёльдерийн тэнцэл биш](/blog/2020/12/08/holder/) мөрдөнө. Тэнцэлдээ хүрэх нөхцөл нь мэдээж \\({x_1=\ldots=x_n}\\) буюу \\({a_1^p/b_1^q=\ldots=a_n^p/b_n^q}\\).
 
 ##  Минковский 
 
-Дээрхтэй адилаар, бодит тоон эерэг \({a_1,\ldots,a_n}\) ба \({b_1,\ldots,b_n}\) дарааллууд, мөн \({p>1}\) гэсэн бодит тоо өгөгдсөн болог. Тэгвэл 
+Дээрхтэй адилаар, бодит тоон эерэг \\({a_1,\ldots,a_n}\\) ба \\({b_1,\ldots,b_n}\\) дарааллууд, мөн \\({p>1}\\) гэсэн бодит тоо өгөгдсөн болог. Тэгвэл 
 
-\(\displaystyle  A = (a_1^p+\ldots+a_n^p )^{\frac1p}, \qquad B = (b_1^p+\ldots+b_n^p )^{\frac1p},\)
+\\(\displaystyle  A = (a_1^p+\ldots+a_n^p )^{\frac1p}, \qquad B = (b_1^p+\ldots+b_n^p )^{\frac1p},\\)
 
  ба 
 
-\(\displaystyle  x_i=\frac{a_i}A, \qquad y_i=\frac{b_i}B,\)
+\\(\displaystyle  x_i=\frac{a_i}A, \qquad y_i=\frac{b_i}B,\\)
 
- гэсэн тодорхойлолтуудтайгаар, \({f(x)=x^p}\) функцийн гүдгэр чанарыг бас ашиглан 
+ гэсэн тодорхойлолтуудтайгаар, \\({f(x)=x^p}\\) функцийн гүдгэр чанарыг бас ашиглан 
 
-\(\displaystyle  \Big( \frac{a_i+b_i}{A+B} \Big)^p = \Big( \frac{Ax_i+By_i}{A+B} \Big)^p \leq \frac{Ax_i^p+By_i^p}{A+B}\)
+\\(\displaystyle  \Big( \frac{a_i+b_i}{A+B} \Big)^p = \Big( \frac{Ax_i+By_i}{A+B} \Big)^p \leq \frac{Ax_i^p+By_i^p}{A+B}\\)
 
- гэж гаргаж болно. Одоо \({i}\) индексээр нийлбэрчилбэл 
+ гэж гаргаж болно. Одоо \\({i}\\) индексээр нийлбэрчилбэл 
 
-\(\displaystyle  \sum_i \Big( \frac{a_i+b_i}{A+B} \Big)^p \leq \frac{A\sum_ix_i^p+B\sum_iy_i^p}{A+B} =1\)
+\\(\displaystyle  \sum_i \Big( \frac{a_i+b_i}{A+B} \Big)^p \leq \frac{A\sum_ix_i^p+B\sum_iy_i^p}{A+B} =1\\)
 
  буюу 
 
-\(\displaystyle  \Big( \sum_i (a_i+b_i)^p \Big)^{\frac1p} \leq A+B\)
+\\(\displaystyle  \Big( \sum_i (a_i+b_i)^p \Big)^{\frac1p} \leq A+B\\)
 
- болж, [Минковскийн тэнцэл биш](/blog/2020/12/10/minkowski/) батлагдана. Тэнцэлдээ хүрэх нөхцөл нь бүх \({i=1,\ldots,n}\) индексийн хувьд \({x_i=y_i}\) буюу \({a_i/A=b_i/B}\).
+ болж, [Минковскийн тэнцэл биш](/blog/2020/12/10/minkowski/) батлагдана. Тэнцэлдээ хүрэх нөхцөл нь бүх \\({i=1,\ldots,n}\\) индексийн хувьд \\({x_i=y_i}\\) буюу \\({a_i/A=b_i/B}\\).
 
 ##  Зэрэгт дундаж 
 
-[Зэрэгт дунджийн тэнцэл бишийн](/blog/2020/12/04/power-mean/) ерөнхий тохиолдлыг өөртөө багтаасан гол тухайн тохиолдол нь бодит \({\alpha>1}\) ба эерэг \({x_1,\ldots,x_n}\) дарааллын хувьд биелэх 
+[Зэрэгт дунджийн тэнцэл бишийн](/blog/2020/12/04/power-mean/) ерөнхий тохиолдлыг өөртөө багтаасан гол тухайн тохиолдол нь бодит \\({\alpha>1}\\) ба эерэг \\({x_1,\ldots,x_n}\\) дарааллын хувьд биелэх 
 
-\(\displaystyle  \frac{x_1+\ldots+x_n}n \leq \Big(\frac{x_1^\alpha+\ldots+x_n^\alpha}n\Big)^{\frac1\alpha}\)
+\\(\displaystyle  \frac{x_1+\ldots+x_n}n \leq \Big(\frac{x_1^\alpha+\ldots+x_n^\alpha}n\Big)^{\frac1\alpha}\\)
 
- тэнцэл биш бөгөөд, энэ нь \({f(x)=x^\alpha}\) функцийн хувьд \({\lambda_1=\ldots=\lambda_n=\frac1n}\) жинтэйгээр бичсэн Йенсений тэнцэл биштэй эквивалент: 
+ тэнцэл биш бөгөөд, энэ нь \\({f(x)=x^\alpha}\\) функцийн хувьд \\({\lambda_1=\ldots=\lambda_n=\frac1n}\\) жинтэйгээр бичсэн Йенсений тэнцэл биштэй эквивалент: 
 
-\(\displaystyle  \Big( \frac{x_1+\ldots+x_n}n \Big)^\alpha \leq \frac{x_1^\alpha+\ldots+x_n^\alpha}n .\)
+\\(\displaystyle  \Big( \frac{x_1+\ldots+x_n}n \Big)^\alpha \leq \frac{x_1^\alpha+\ldots+x_n^\alpha}n .\\)
 
  Йенсений тэнцэл бишийг ерөнхий жинтэйгээр 
 
-\(\displaystyle  \big( \lambda_1x_1+\ldots+\lambda_nx_n \big)^\alpha \leq \lambda_1x_1^\alpha+\ldots+\lambda_nx_n^\alpha\)
+\\(\displaystyle  \big( \lambda_1x_1+\ldots+\lambda_nx_n \big)^\alpha \leq \lambda_1x_1^\alpha+\ldots+\lambda_nx_n^\alpha\\)
 
  гэж бичсэнээр зэрэгт дунджийн тэнцэл бишийн *жинтэй* хувилбар шууд гарна: 
 
-\(\displaystyle  \lambda_1x_1+\ldots+\lambda_nx_n \leq \big(\lambda_1x_1^\alpha+\ldots+\lambda_nx_n^\alpha\big)^{\frac1\alpha} .\)
+\\(\displaystyle  \lambda_1x_1+\ldots+\lambda_nx_n \leq \big(\lambda_1x_1^\alpha+\ldots+\lambda_nx_n^\alpha\big)^{\frac1\alpha} .\\)
 
- Тэнцэлдээ хүрэх нөхцөл нь \({x_1=\ldots=x_n}\).
+ Тэнцэлдээ хүрэх нөхцөл нь \\({x_1=\ldots=x_n}\\).
 
-Ерөнхий илтгэгчийн хувьд, тухайлбал \({0\(\displaystyle  \lambda_1y_1^p+\ldots+\lambda_ny_n^p \leq \big(\lambda_1y_1^q+\ldots+\lambda_ny_n^q\big)^{\frac{p}q}\)
+Ерөнхий илтгэгчийн хувьд, тухайлбал \\({0\\(\displaystyle  \lambda_1y_1^p+\ldots+\lambda_ny_n^p \leq \big(\lambda_1y_1^q+\ldots+\lambda_ny_n^q\big)^{\frac{p}q}\\)
 
  буюу 
 
-\(\displaystyle  \big( \lambda_1y_1^p+\ldots+\lambda_ny_n^p \big)^{\frac1p} \leq \big(\lambda_1y_1^q+\ldots+\lambda_ny_n^q\big)^{\frac1q}\)
+\\(\displaystyle  \big( \lambda_1y_1^p+\ldots+\lambda_ny_n^p \big)^{\frac1p} \leq \big(\lambda_1y_1^q+\ldots+\lambda_ny_n^q\big)^{\frac1q}\\)
 
- маягаар батлагдана. Сөрөг илтгэгчтэй \({p
-Эцэст нь, нэг илтгэгч нь \({p=0}\) үед [өмнөхтэй адилаар](/blog/2020/12/04/power-mean/) Кошийн тэнцэл бишийг хэрэглэн баталж болох боловч, хязгаар ашигласан арай өөр баталгааг энд сонирхуулъя. Эерэг \({x_1,\ldots,x_n}\) дараалал ба \({\lambda_1,\ldots,\lambda_n}\) гэсэн жингүүдийг бэхлээд, \({t}\)-ээс хамаарсан 
+ маягаар батлагдана. Сөрөг илтгэгчтэй \\({p
+Эцэст нь, нэг илтгэгч нь \\({p=0}\\) үед [өмнөхтэй адилаар](/blog/2020/12/04/power-mean/) Кошийн тэнцэл бишийг хэрэглэн баталж болох боловч, хязгаар ашигласан арай өөр баталгааг энд сонирхуулъя. Эерэг \\({x_1,\ldots,x_n}\\) дараалал ба \\({\lambda_1,\ldots,\lambda_n}\\) гэсэн жингүүдийг бэхлээд, \\({t}\\)-ээс хамаарсан 
 
-\(\displaystyle  g(t) = \big(\lambda_1x_1^t+\ldots+\lambda_nx_n^t\big)^{\frac1t} = \exp \Big( \frac{\ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t)}t \Big)\)
+\\(\displaystyle  g(t) = \big(\lambda_1x_1^t+\ldots+\lambda_nx_n^t\big)^{\frac1t} = \exp \Big( \frac{\ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t)}t \Big)\\)
 
- гэсэн функц тодорхойлбол, \({g(t)}\) функц нь \({t\neq0}\) үед өсдөг функц байгаа. Одоо \({g}\) функцийг \({t=0}\) цэг дээр тасралтгүй байхаар өргөтгөж болдог бөгөөд 
+ гэсэн функц тодорхойлбол, \\({g(t)}\\) функц нь \\({t\neq0}\\) үед өсдөг функц байгаа. Одоо \\({g}\\) функцийг \\({t=0}\\) цэг дээр тасралтгүй байхаар өргөтгөж болдог бөгөөд 
 
-\(\displaystyle  g(0) = x_1^{\lambda_1}\cdots x_n^{\lambda_n}\)
+\\(\displaystyle  g(0) = x_1^{\lambda_1}\cdots x_n^{\lambda_n}\\)
 
  гээд харуулчихвал бидний зорилго биелнэ. Тэгэхээр 
 
-\(\displaystyle  \lim_{t\rightarrow0}g(t) = \exp \Big( \lim_{t\rightarrow0} \frac{\ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t)}t \Big)\)
+\\(\displaystyle  \lim_{t\rightarrow0}g(t) = \exp \Big( \lim_{t\rightarrow0} \frac{\ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t)}t \Big)\\)
 
  хязгаарыг тооцох хэрэгтэй. Хаалтан доторх харьцаанд Лопиталийн дүрмийг хэрэглэхийн тулд 
 
-\(\displaystyle  \frac{d}{dt} \ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t) = \frac{\lambda_1x_1^t\ln x_1+\ldots+\lambda_nx_n^t\ln x_n}{\lambda_1x_1^t+\ldots+\lambda_nx_n^t}\)
+\\(\displaystyle  \frac{d}{dt} \ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t) = \frac{\lambda_1x_1^t\ln x_1+\ldots+\lambda_nx_n^t\ln x_n}{\lambda_1x_1^t+\ldots+\lambda_nx_n^t}\\)
 
- гэж хүртвэрийнх нь уламжлалыг тооцоод, \({t=0}\) гэж тавьбал 
+ гэж хүртвэрийнх нь уламжлалыг тооцоод, \\({t=0}\\) гэж тавьбал 
 
-\(\displaystyle  \frac{d}{dt} \ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t)\Big|_{t=0} = \frac{\lambda_1\ln x_1+\ldots+\lambda_n\ln x_n}{\lambda_1+\ldots+\lambda_n} = \ln\big( x_1^{\lambda_1}\cdots x_n^{\lambda_n} \big)\)
+\\(\displaystyle  \frac{d}{dt} \ln(\lambda_1x_1^t+\ldots+\lambda_nx_n^t)\Big|_{t=0} = \frac{\lambda_1\ln x_1+\ldots+\lambda_n\ln x_n}{\lambda_1+\ldots+\lambda_n} = \ln\big( x_1^{\lambda_1}\cdots x_n^{\lambda_n} \big)\\)
 
  гарна. Иймд 
 
-\(\displaystyle  \lim_{t\rightarrow0}g(t) = \exp \ln\big( x_1^{\lambda_1}\cdots x_n^{\lambda_n} \big) = x_1^{\lambda_1}\cdots x_n^{\lambda_n}\)
+\\(\displaystyle  \lim_{t\rightarrow0}g(t) = \exp \ln\big( x_1^{\lambda_1}\cdots x_n^{\lambda_n} \big) = x_1^{\lambda_1}\cdots x_n^{\lambda_n}\\)
 
  болж, бидний батлах гэсэн зүйл батлагдав.
 
 ##  Уламжлалт шинжүүрийн баталгаа 
 
-Уламжлалт шинжүүрийг уншигчид сануулах үүднээс товчилж дурдвал, \({(a,b)}\) завсар дээр \({f''\geq0}\) ол \({f}\) нь гүдгэр, харин \({f''>0}\) бол эрс гүдгэр гэсэн шинжүүр байгаа. Үүнийг батлахын тулд хоорондоо ялгаатай \({x,y\in(a,b)}\) цэгүүд аваад, \({0<\lambda<1}\) параметрийн хувьд 
+Уламжлалт шинжүүрийг уншигчид сануулах үүднээс товчилж дурдвал, \\({(a,b)}\\) завсар дээр \\({f''\geq0}\\) ол \\({f}\\) нь гүдгэр, харин \\({f''>0}\\) бол эрс гүдгэр гэсэн шинжүүр байгаа. Үүнийг батлахын тулд хоорондоо ялгаатай \\({x,y\in(a,b)}\\) цэгүүд аваад, \\({0<\lambda<1}\\) параметрийн хувьд 
 
-\(\displaystyle  z = \lambda x+(1-\lambda)y\)
+\\(\displaystyle  z = \lambda x+(1-\lambda)y\\)
 
  гэсэн тэмдэглэгээ оруулбал [
 
-\(\displaystyle  \lambda(x-z) + (1-\lambda)(y-z) = 0 \ \ \ \ \ (3)\)
+\\(\displaystyle  \lambda(x-z) + (1-\lambda)(y-z) = 0 \ \ \ \ \ (3)\\)
 
 ] байна. Одоо [Тейлорын үлдэгдлийг](https://en.wikipedia.org/wiki/Taylor%27s_theorem) Лагранж хэлбэрт бичвэл 
 
-\(\displaystyle  f(x) = f(z) + f'(z)(x-z) + \frac12f''(\xi)(x-z)^2\)
+\\(\displaystyle  f(x) = f(z) + f'(z)(x-z) + \frac12f''(\xi)(x-z)^2\\)
 
  ба 
 
-\(\displaystyle  f(y) = f(z) + f'(z)(y-z) + \frac12f''(\eta)(y-z)^2\)
+\\(\displaystyle  f(y) = f(z) + f'(z)(y-z) + \frac12f''(\eta)(y-z)^2\\)
 
  болох бөгөөд, эдгээрийг хооронд нь нэмэн [(3)](#epf-second-der-test) нөхцлийг тооцсоноор 
 
-\(\displaystyle  \lambda f(x)+(1-\lambda)f(y) = f(z) + \frac{f''(\xi)(x-z)^2+f''(\eta)(y-z)^2}2\)
+\\(\displaystyle  \lambda f(x)+(1-\lambda)f(y) = f(z) + \frac{f''(\xi)(x-z)^2+f''(\eta)(y-z)^2}2\\)
 
  болж, теорем батлагдана.
 
-Дээрхээс арай өөр бас нэг баталгааг сонирхуулахад, \({y\in(a,b)}\) ба \({\lambda\in(0,1)}\) тоонуудыг бэхлээд, \({x}\)-ээс хамаарсан 
+Дээрхээс арай өөр бас нэг баталгааг сонирхуулахад, \\({y\in(a,b)}\\) ба \\({\lambda\in(0,1)}\\) тоонуудыг бэхлээд, \\({x}\\)-ээс хамаарсан 
 
-\(\displaystyle  g(x) = \lambda f(x) + (1-\lambda)f(y) - f(\lambda x + (1-\lambda)y)\)
+\\(\displaystyle  g(x) = \lambda f(x) + (1-\lambda)f(y) - f(\lambda x + (1-\lambda)y)\\)
 
  гэсэн функц авч үзвэл, 
 
-\(\displaystyle  g'(x) = \lambda f'(x) - \lambda f'(\lambda x + (1-\lambda)y)\)
+\\(\displaystyle  g'(x) = \lambda f'(x) - \lambda f'(\lambda x + (1-\lambda)y)\\)
 
- болно. Хэрэв \({f''\geq0}\) бол \({f'}\) нь үл буурах, \({f''>0}\) бол \({f'}\) нь өсөх функц байна. Тэгэхээр эхний (\({f''\geq0}\)) тохиолдолд нь \({x>y}\) бол \({g'(x)\geq0}\) ба \({x\(\displaystyle  g(x)\geq g(y)=0.\)
+ болно. Хэрэв \\({f''\geq0}\\) бол \\({f'}\\) нь үл буурах, \\({f''>0}\\) бол \\({f'}\\) нь өсөх функц байна. Тэгэхээр эхний (\\({f''\geq0}\\)) тохиолдолд нь \\({x>y}\\) бол \\({g'(x)\geq0}\\) ба \\({x\\(\displaystyle  g(x)\geq g(y)=0.\\)
 
- Харин сүүлийн (\({f''>0}\)) тохиолдолд нь \({x>y}\) бол \({g'(x)>0}\) ба \({x\(\displaystyle  g(x)>g(y)=0,\)
+ Харин сүүлийн (\\({f''>0}\\)) тохиолдолд нь \\({x>y}\\) бол \\({g'(x)>0}\\) ба \\({x\\(\displaystyle  g(x)>g(y)=0,\\)
 
  болж, баталгаа гүйцнэ.
 
 ##  Нийлбэр ба максимумын шинжүүрийн баталгаа 
 
-Өмнөх баталгаан дахьтай төстэйгөөр, \({x,y\in(a,b)}\) ба \({\lambda\in(0,1)}\) тоонуудыг бэхлээд, 
+Өмнөх баталгаан дахьтай төстэйгөөр, \\({x,y\in(a,b)}\\) ба \\({\lambda\in(0,1)}\\) тоонуудыг бэхлээд, 
 
-\(\displaystyle  z = \lambda x+(1-\lambda)y\)
+\\(\displaystyle  z = \lambda x+(1-\lambda)y\\)
 
- гэсэн тэмдэглэгээ оруулбал, \({f}\) ба \({g}\) функцүүдийн гүдгэр чанараар [
+ гэсэн тэмдэглэгээ оруулбал, \\({f}\\) ба \\({g}\\) функцүүдийн гүдгэр чанараар [
 
-\(\displaystyle  f(z) \leq \lambda f(x)+(1-\lambda)f(y), \qquad g(z) \leq \lambda g(x)+(1-\lambda)g(y) \ \ \ \ \ (4)\)
+\\(\displaystyle  f(z) \leq \lambda f(x)+(1-\lambda)f(y), \qquad g(z) \leq \lambda g(x)+(1-\lambda)g(y) \ \ \ \ \ (4)\\)
 
 ] байна. Эдгээрийг хооронд нь нэмбэл 
 
-\(\displaystyle  f(z) + g(z) \leq \lambda [f(x)+g(x)]+(1-\lambda)[f(y)+g(y)] ,\)
+\\(\displaystyle  f(z) + g(z) \leq \lambda [f(x)+g(x)]+(1-\lambda)[f(y)+g(y)] ,\\)
 
  болж, гүдгэр функцүүдийн нийлбэр гүдгэр гэсэн теоремын эхний хэсэг батлагдана. Хэрэв [(4)](#epf-sum-max-conv) тэнцэл бишүүдийн аль нэг нь эрс бол дээрх тэнцэл биш мөн эрс болж хувирна. Тэгэхээр нийлбэрийг эрс гүдгэр болгохын тулд аль нэг нэмэгдэхүүн нь л эрс гүдгэр (ба нөгөөх нь зүгээр гүдгэр) байхад хангалттай.
 
 Цаашилбал, [(4)](#epf-sum-max-conv) тэнцэл бишүүдээс 
 
-\(\displaystyle  f(z) \leq \lambda \max\{f(x),g(x)\}+(1-\lambda)\max\{f(y),g(y)\}\)
+\\(\displaystyle  f(z) \leq \lambda \max\{f(x),g(x)\}+(1-\lambda)\max\{f(y),g(y)\}\\)
 
  ба 
 
-\(\displaystyle  g(z) \leq \lambda \max\{f(x),g(x)\}+(1-\lambda)\max\{f(y),g(y)\}\)
+\\(\displaystyle  g(z) \leq \lambda \max\{f(x),g(x)\}+(1-\lambda)\max\{f(y),g(y)\}\\)
 
  гарах нь тодорхой тул 
 
-\(\displaystyle  \max\{f(z),g(z)\} \leq \lambda \max\{f(x),g(x)\}+(1-\lambda)\max\{f(y),g(y)\}\)
+\\(\displaystyle  \max\{f(z),g(z)\} \leq \lambda \max\{f(x),g(x)\}+(1-\lambda)\max\{f(y),g(y)\}\\)
 
  болж, теоремын сүүлийн хэсэг батлагдана. Энэ үр дүнг харин эрс болгохын тулд [(4)](#epf-sum-max-conv) тэнцэл бишүүд хоёулаа эрс байх шаардлагатай.
 
 ##  Дундаж цэгийн шинжүүрийн баталгаа 
 
-Дундаж цэгийн шинжүүр гэж юу билээ гэдгийг товч сануулахад, \({f}\) нь тасралтгүй функц бөгөөд 
+Дундаж цэгийн шинжүүр гэж юу билээ гэдгийг товч сануулахад, \\({f}\\) нь тасралтгүй функц бөгөөд 
 
-\(\displaystyle  f\big(\frac{x+y}2\big) \leq \frac{f(x)+f(y)}2\)
+\\(\displaystyle  f\big(\frac{x+y}2\big) \leq \frac{f(x)+f(y)}2\\)
 
  тэнцэл бишийг хангадаг бол гүдгэр байна гэсэн шинжүүр байгаа. Юуны өмнө  
 
-\(\displaystyle  f\big(\frac{x_1+x_2+x_3+x_4}4\big) = f\Big(\frac{\frac{x_1+x_2}2+\frac{x_3+x_4}2}2\Big) \leq \frac12f\big(\frac{x_1+x_2}2\big)+\frac12f\big(\frac{x_3+x_4}2\big)\\ {}\qquad\qquad\qquad\qquad\qquad \leq \frac{f(x_1)+f(x_2)+f(x_3)+f(x_4)}4\)
+\\(\displaystyle  f\big(\frac{x_1+x_2+x_3+x_4}4\big) = f\Big(\frac{\frac{x_1+x_2}2+\frac{x_3+x_4}2}2\Big) \leq \frac12f\big(\frac{x_1+x_2}2\big)+\frac12f\big(\frac{x_3+x_4}2\big)\\ {}\qquad\qquad\qquad\qquad\qquad \leq \frac{f(x_1)+f(x_2)+f(x_3)+f(x_4)}4\\)
 
-  гэх мэтчилэн үргэлжлүүлбэл \({N=2^m}\) хэлбэртэй тоонуудын хувьд [
+  гэх мэтчилэн үргэлжлүүлбэл \\({N=2^m}\\) хэлбэртэй тоонуудын хувьд [
 
-\(\displaystyle  f\big(\frac{x_1+\ldots+x_N}N\big) \leq \frac{f(x_1)+\ldots+f(x_N)}N \ \ \ \ \ (5)\)
+\\(\displaystyle  f\big(\frac{x_1+\ldots+x_N}N\big) \leq \frac{f(x_1)+\ldots+f(x_N)}N \ \ \ \ \ (5)\\)
 
-] гэж гарна. Тэгээд үүндээ \({x_1=\ldots=x_k=x}\) ба \({x_{k+1}=\ldots=x_N=y}\) гэж орлуулбал 
+] гэж гарна. Тэгээд үүндээ \\({x_1=\ldots=x_k=x}\\) ба \\({x_{k+1}=\ldots=x_N=y}\\) гэж орлуулбал 
 
-\(\displaystyle  f\Big(\frac{kx+(N-k)y}N\Big) \leq \frac{k}Nf(x)+\frac{N-k}Nf(y)\)
+\\(\displaystyle  f\Big(\frac{kx+(N-k)y}N\Big) \leq \frac{k}Nf(x)+\frac{N-k}Nf(y)\\)
 
- буюу, \({f}\) функц маань \({\lambda=\frac{k}{2^m}}\) хэлбэрийн рациональ жингийн хувьд гүдгэр чанарыг хангах нь харагдаж байна.
+ буюу, \\({f}\\) функц маань \\({\lambda=\frac{k}{2^m}}\\) хэлбэрийн рациональ жингийн хувьд гүдгэр чанарыг хангах нь харагдаж байна.
 
-Дээрх үр дүнг дурын рациональ жингийн хувьд өргөтгөхөд амархан. Үүний тулд дурын \({n(5)] томъёонд 
+Дээрх үр дүнг дурын рациональ жингийн хувьд өргөтгөхөд амархан. Үүний тулд дурын \\({n(5)] томъёонд 
 
-\(\displaystyle  x_{n+1}=\ldots=x_N=z=\frac{x_1+\ldots+x_n}n\)
+\\(\displaystyle  x_{n+1}=\ldots=x_N=z=\frac{x_1+\ldots+x_n}n\\)
 
  гэж орлуулбал 
 
-\(\displaystyle  f\big(\frac{x_1+\ldots+x_n+(N-n)z}N\big) \leq \frac{f(x_1)+\ldots+f(x_n)+(N-n)f(z)}N\)
+\\(\displaystyle  f\big(\frac{x_1+\ldots+x_n+(N-n)z}N\big) \leq \frac{f(x_1)+\ldots+f(x_n)+(N-n)f(z)}N\\)
 
  болно. Ингээд 
 
-\(\displaystyle  \frac{x_1+\ldots+x_n+(N-n)z}N = \frac{nz+(N-n)z}N=z\)
+\\(\displaystyle  \frac{x_1+\ldots+x_n+(N-n)z}N = \frac{nz+(N-n)z}N=z\\)
 
  гэдгийг анзаарвал 
 
-\(\displaystyle  Nf(z) \leq f(x_1)+\ldots+f(x_n)+(N-n)f(z)\)
+\\(\displaystyle  Nf(z) \leq f(x_1)+\ldots+f(x_n)+(N-n)f(z)\\)
 
  буюу 
 
-\(\displaystyle  f(z) \leq \frac{f(x_1)+\ldots+f(x_n)}n\)
+\\(\displaystyle  f(z) \leq \frac{f(x_1)+\ldots+f(x_n)}n\\)
 
  гэж мөрдөнө.
 
-Одоо \({\lambda\in(0,1)}\) гэсэн дурын бодит тоо аваад, \({\lambda_n}\) гэсэн рациональ тоон дараааллыг \({\lambda_n\rightarrow\lambda}\) байхаар сонгож авъя. Тэгвэл 
+Одоо \\({\lambda\in(0,1)}\\) гэсэн дурын бодит тоо аваад, \\({\lambda_n}\\) гэсэн рациональ тоон дараааллыг \\({\lambda_n\rightarrow\lambda}\\) байхаар сонгож авъя. Тэгвэл 
 
-\(\displaystyle  \lambda x+(1-\lambda)y-(\lambda_n x+(1-\lambda_n)y) = (\lambda-\lambda_n)(x-y)\)
+\\(\displaystyle  \lambda x+(1-\lambda)y-(\lambda_n x+(1-\lambda_n)y) = (\lambda-\lambda_n)(x-y)\\)
 
  тул 
 
-\(\displaystyle  \varepsilon_n = |f(\lambda x+(1-\lambda)y)-f(\lambda_n x+(1-\lambda_n)y)|\)
+\\(\displaystyle  \varepsilon_n = |f(\lambda x+(1-\lambda)y)-f(\lambda_n x+(1-\lambda_n)y)|\\)
 
- хэмжигдэхүүн \({n\rightarrow\infty}\) үед 0 рүү дөхөх нь тодорхой. Цаашилбал  
+ хэмжигдэхүүн \\({n\rightarrow\infty}\\) үед 0 рүү дөхөх нь тодорхой. Цаашилбал  
 
-\(\displaystyle  f(\lambda x+(1-\lambda)y) \leq f(\lambda_n x+(1-\lambda_n)y) + \varepsilon_n \leq \lambda_n f(x)+(1-\lambda_n)f(y) + \varepsilon_n\\ {}\qquad\qquad\qquad\qquad \leq \lambda f(x)+(1-\lambda)f(y) + \varepsilon_n + (\lambda-\lambda_n)(f(x)-f(y))\)
+\\(\displaystyle  f(\lambda x+(1-\lambda)y) \leq f(\lambda_n x+(1-\lambda_n)y) + \varepsilon_n \leq \lambda_n f(x)+(1-\lambda_n)f(y) + \varepsilon_n\\ {}\qquad\qquad\qquad\qquad \leq \lambda f(x)+(1-\lambda)f(y) + \varepsilon_n + (\lambda-\lambda_n)(f(x)-f(y))\\)
 
-  гэдгээс \({n\rightarrow\infty}\) хязгаар авбал 
+  гэдгээс \\({n\rightarrow\infty}\\) хязгаар авбал 
 
-\(\displaystyle  f(\lambda x+(1-\lambda)y) \leq \lambda f(x)+(1-\lambda)f(y)\)
+\\(\displaystyle  f(\lambda x+(1-\lambda)y) \leq \lambda f(x)+(1-\lambda)f(y)\\)
 
- гарч, \({f}\) функцийн гүдгэр болох нь батлагдана.
+ гарч, \\({f}\\) функцийн гүдгэр болох нь батлагдана.
 
-Эцэст нь, хоорондоо ялгаатай \({x,y\in(a,b)}\) болгоны хувьд 
+Эцэст нь, хоорондоо ялгаатай \\({x,y\in(a,b)}\\) болгоны хувьд 
 
-\(\displaystyle  f\big(\frac{x+y}2\big) < \frac{f(x)+f(y)}2\)
+\\(\displaystyle  f\big(\frac{x+y}2\big) < \frac{f(x)+f(y)}2\\)
 
- байдаг бол \({f}\)-ийг эрс гүдгэр гэж харуулах үлдлээ. Үүний тулд \({\lambda\in(0,1)}\) гэсэн дурын бодит тоо сонгож аваад 
+ байдаг бол \\({f}\\)-ийг эрс гүдгэр гэж харуулах үлдлээ. Үүний тулд \\({\lambda\in(0,1)}\\) гэсэн дурын бодит тоо сонгож аваад 
 
-\(\displaystyle  z = \lambda x+(1-\lambda)y\)
+\\(\displaystyle  z = \lambda x+(1-\lambda)y\\)
 
- гэе. Энэ илэрхийлэлд \({x}\), \({y}\) нь тэгш эрхтэй оролцож байгаа тул, шаардлагатай тохиолдолд \({x}\), \({y}\) хоёрын утгуудыг хооронд нь солих замаар \({0<\lambda\leq\frac12}\) гэж үзэж болно. Тэгэхээр 
+ гэе. Энэ илэрхийлэлд \\({x}\\), \\({y}\\) нь тэгш эрхтэй оролцож байгаа тул, шаардлагатай тохиолдолд \\({x}\\), \\({y}\\) хоёрын утгуудыг хооронд нь солих замаар \\({0<\lambda\leq\frac12}\\) гэж үзэж болно. Тэгэхээр 
 
-\(\displaystyle  z = \lambda x+(1-\lambda)y = 2\lambda\cdot\frac{x+y}2+(1-2\lambda)y\)
+\\(\displaystyle  z = \lambda x+(1-\lambda)y = 2\lambda\cdot\frac{x+y}2+(1-2\lambda)y\\)
 
- гэж бичвэл \({2\lambda\leq1}\) учраас \({f}\)-ийн гүдгэр чанараас  
+ гэж бичвэл \\({2\lambda\leq1}\\) учраас \\({f}\\)-ийн гүдгэр чанараас  
 
-\(\displaystyle  f(z) \leq 2\lambda f\big(\frac{x+y}2\big)+(1-2\lambda)f(y) < 2\lambda\cdot\frac{f(x)+f(y)}2+(1-2\lambda)f(y)\\ {}\qquad = \lambda f(x)+(1-\lambda)f(y)\)
+\\(\displaystyle  f(z) \leq 2\lambda f\big(\frac{x+y}2\big)+(1-2\lambda)f(y) < 2\lambda\cdot\frac{f(x)+f(y)}2+(1-2\lambda)f(y)\\ {}\qquad = \lambda f(x)+(1-\lambda)f(y)\\)
 
   гарч, теоремын баталгаа дуусна.
 
 ##  Жишээнүүд 
 
-**Жишээ 8.**  Эерэг \({a,b,c}\) тоонууд \({a+b+c=1}\) нөхцлийг хангадаг бол 
+**Жишээ 8.**  Эерэг \\({a,b,c}\\) тоонууд \\({a+b+c=1}\\) нөхцлийг хангадаг бол 
 
-\(\displaystyle  a\sqrt[3]{1+b-c} + b\sqrt[3]{1+c-a} + c\sqrt[3]{1+a-b} \leq 1\)
+\\(\displaystyle  a\sqrt[3]{1+b-c} + b\sqrt[3]{1+c-a} + c\sqrt[3]{1+a-b} \leq 1\\)
 
  гэж харуул. 
 
-*Бодолт.*  Хэрэв \({a,b,c}\) тоонуудаа жин гэж үзээд, \({f(x)=\sqrt[3]{x}}\) гэсэн хотгор функцийн хувьд Йенсений тэнцэл бишийг бичвэл 
+*Бодолт.*  Хэрэв \\({a,b,c}\\) тоонуудаа жин гэж үзээд, \\({f(x)=\sqrt[3]{x}}\\) гэсэн хотгор функцийн хувьд Йенсений тэнцэл бишийг бичвэл 
 
-\(\displaystyle  \sum_{\mathrm{cyc}}a\sqrt[3]{1+b-c} \leq \sqrt[3]{\sum_{\mathrm{cyc}}a(1+b-c)}\)
+\\(\displaystyle  \sum_{\mathrm{cyc}}a\sqrt[3]{1+b-c} \leq \sqrt[3]{\sum_{\mathrm{cyc}}a(1+b-c)}\\)
 
- гарна. Энд \({\sum_{\mathrm{cyc}}}\) тэмдэглэгээ нь \({a\rightarrow b\rightarrow c\rightarrow a}\) маягаар «циклдэж» нийлбэр авахыг илэрхийлж байгаа. Тухайлбал 
+ гарна. Энд \\({\sum_{\mathrm{cyc}}}\\) тэмдэглэгээ нь \\({a\rightarrow b\rightarrow c\rightarrow a}\\) маягаар «циклдэж» нийлбэр авахыг илэрхийлж байгаа. Тухайлбал 
 
-\(\displaystyle  \sum_{\mathrm{cyc}}a(1+b-c) = a(1+b-c) + b(1+c-a) + c(1+a-b) = a + b +c =1\)
+\\(\displaystyle  \sum_{\mathrm{cyc}}a(1+b-c) = a(1+b-c) + b(1+c-a) + c(1+a-b) = a + b +c =1\\)
 
- тул, бидний батлах гэсэн зүйл батлагдана. Эцэст нь, \({f}\) функцийн хотгор болохыг 
+ тул, бидний батлах гэсэн зүйл батлагдана. Эцэст нь, \\({f}\\) функцийн хотгор болохыг 
 
-\(\displaystyle  f'(x) = (x^{1/3})' = \frac1{3x^{2/3}}, \qquad f''(x) = - \frac{2}{9x^{5/3}}\)
+\\(\displaystyle  f'(x) = (x^{1/3})' = \frac1{3x^{2/3}}, \qquad f''(x) = - \frac{2}{9x^{5/3}}\\)
 
- тооцооноос харахад амархан. \(\Box\)
+ тооцооноос харахад амархан. \\(\Box\\)
 
-**Жишээ 9.**  Хэрэв \({\frac12\(\displaystyle  \frac{a_1\cdots a_n}{(a_1+\ldots+a_n)^n} \geq \frac{(1-a_1)\cdots(1-a_n)}{(n-a_1-\ldots-a_n)^n}\)
+**Жишээ 9.**  Хэрэв \\({\frac12\\(\displaystyle  \frac{a_1\cdots a_n}{(a_1+\ldots+a_n)^n} \geq \frac{(1-a_1)\cdots(1-a_n)}{(n-a_1-\ldots-a_n)^n}\\)
 
  гэж харуул. 
 
 *Бодолт.*  Хоёр талаас нь логарифм авснаар дээрх тэнцэл бишийг 
 
-\(\displaystyle  \frac1n\sum_{k=1}^n \big( \ln a_k - \ln(1-a_k) \big) \geq \ln(a_1+\ldots+a_n) - \ln(1-a_1+\ldots+1-a_n)\)
+\\(\displaystyle  \frac1n\sum_{k=1}^n \big( \ln a_k - \ln(1-a_k) \big) \geq \ln(a_1+\ldots+a_n) - \ln(1-a_1+\ldots+1-a_n)\\)
 
- тэнцэл биштэй адилхан болохыг харж болно. Энэ нь \({f(x)=\ln x-\ln(1-x)}\) функцийн хувьд бичсэн Йенсений тэнцэл биш байгаа. Тэгэхээр \({f}\)-ийн эхний хоёр уламжлалыг тооцвол 
+ тэнцэл биштэй адилхан болохыг харж болно. Энэ нь \\({f(x)=\ln x-\ln(1-x)}\\) функцийн хувьд бичсэн Йенсений тэнцэл биш байгаа. Тэгэхээр \\({f}\\)-ийн эхний хоёр уламжлалыг тооцвол 
 
-\(\displaystyle  f'(x) = \frac1x+\frac1{1-x}, \qquad f''(x) = -\frac1{x^2} + \frac1{(1-x)^2} ,\)
+\\(\displaystyle  f'(x) = \frac1x+\frac1{1-x}, \qquad f''(x) = -\frac1{x^2} + \frac1{(1-x)^2} ,\\)
 
- болох ба эндээс \({f}\) нь \({(\frac12,1)}\) завсар дээр гүдгэр гэдэг нь тодорхой. \(\Box\)
+ болох ба эндээс \\({f}\\) нь \\({(\frac12,1)}\\) завсар дээр гүдгэр гэдэг нь тодорхой. \\(\Box\\)
 
-**Жишээ 10.**  Хэрэв \({a_1,\ldots,a_n\geq1}\) бол 
+**Жишээ 10.**  Хэрэв \\({a_1,\ldots,a_n\geq1}\\) бол 
 
-\(\displaystyle  \frac{n}{1+\sqrt[n]{a_1\cdots a_n}} \leq \frac1{1+a_1}+\ldots+\frac1{1+a_n}\)
+\\(\displaystyle  \frac{n}{1+\sqrt[n]{a_1\cdots a_n}} \leq \frac1{1+a_1}+\ldots+\frac1{1+a_n}\\)
 
  гэж харуул. 
 
-*Бодолт.*  Энд \({a_k=e^{x_k}}\) гэсэн орлуулга хийвэл тэнцэл биш маань 
+*Бодолт.*  Энд \\({a_k=e^{x_k}}\\) гэсэн орлуулга хийвэл тэнцэл биш маань 
 
-\(\displaystyle  \frac1{1+e^{(x_1+\ldots+x_n)/n}} \leq \frac1n\Big( \frac1{1+e^{a_1}}+\ldots+\frac1{1+e^{a_n}} \Big)\)
+\\(\displaystyle  \frac1{1+e^{(x_1+\ldots+x_n)/n}} \leq \frac1n\Big( \frac1{1+e^{a_1}}+\ldots+\frac1{1+e^{a_n}} \Big)\\)
 
  буюу 
 
-\(\displaystyle  f(x) = \frac1{1+e^x}\)
+\\(\displaystyle  f(x) = \frac1{1+e^x}\\)
 
  функцийн хувьд бичсэн Йенсений тэнцэл биш болж хувирна. Ингээд 
 
-\(\displaystyle  f'(x) = - \frac{e^x}{(1+e^x)^2}, \qquad f''(x) = \frac{e^x(e^x-1)}{(1+e^x)^3},\)
+\\(\displaystyle  f'(x) = - \frac{e^x}{(1+e^x)^2}, \qquad f''(x) = \frac{e^x(e^x-1)}{(1+e^x)^3},\\)
 
- гэдгээс \({f}\) нь \({(0,\infty)}\) мужид гүдгэр \(\Box\)
+ гэдгээс \\({f}\\) нь \\({(0,\infty)}\\) мужид гүдгэр \\(\Box\\)
 
 Эцэст нь, [Тибериу Поповичугийн](https://en.wikipedia.org/wiki/Tiberiu_Popoviciu) нэгэн тэнцэл бишийг ач үзье.
 
-**Жишээ 11.**  Хэрэв \({f}\) нь \({[a,b]}\) завсар дээрх гүдгэр функц бол дурын \({x,y,z\in[a,b]}\) цэгүүдийн хувьд 
+**Жишээ 11.**  Хэрэв \\({f}\\) нь \\({[a,b]}\\) завсар дээрх гүдгэр функц бол дурын \\({x,y,z\in[a,b]}\\) цэгүүдийн хувьд 
 
-\(\displaystyle  2f\big(\frac{x+y}2\big) + 2f\big(\frac{y+z}2\big) + 2f\big(\frac{z+x}2\big) \leq f(x) + f(y) + f(z) + 3f\big(\frac{x+y+z}3\big)\)
+\\(\displaystyle  2f\big(\frac{x+y}2\big) + 2f\big(\frac{y+z}2\big) + 2f\big(\frac{z+x}2\big) \leq f(x) + f(y) + f(z) + 3f\big(\frac{x+y+z}3\big)\\)
 
  тэнцэл биш биелнэ. 
 
-*Бодолт.*  Энэ тэнцэл бишид \({x}\), \({y}\), \({z}\) хувьсагчид тэгш эрхтэй оролцож байгаа учир, бодлогын ерөнхий чанарыг алдалгүйгээр, \({y}\) нь \({x}\), \({z}\) хоёрын дунд (ө.х. \({x\leq y\leq z}\) эсвэл \({z\leq y\leq x}\)) гэж үзэж болно. Түүнчлэн, шаардлагатай тохиолдолд \({x}\), \({z}\) хоёрын утгуудыг хооронд нь солих замаар \({\frac{x+z}2}\) нь \({y}\), \({z}\) хоёрын дунд байдаг гэж үзэж болно. Ингээд 
+*Бодолт.*  Энэ тэнцэл бишид \\({x}\\), \\({y}\\), \\({z}\\) хувьсагчид тэгш эрхтэй оролцож байгаа учир, бодлогын ерөнхий чанарыг алдалгүйгээр, \\({y}\\) нь \\({x}\\), \\({z}\\) хоёрын дунд (ө.х. \\({x\leq y\leq z}\\) эсвэл \\({z\leq y\leq x}\\)) гэж үзэж болно. Түүнчлэн, шаардлагатай тохиолдолд \\({x}\\), \\({z}\\) хоёрын утгуудыг хооронд нь солих замаар \\({\frac{x+z}2}\\) нь \\({y}\\), \\({z}\\) хоёрын дунд байдаг гэж үзэж болно. Ингээд 
 
-\(\displaystyle  2f\big(\frac{x+y}2\big) \leq f(x) + f(y)\)
+\\(\displaystyle  2f\big(\frac{x+y}2\big) \leq f(x) + f(y)\\)
 
  гэдгийг тооцвол дээрх тэнцэл биш нь [
 
-\(\displaystyle  2f\big(\frac{y+z}2\big) + 2f\big(\frac{z+x}2\big) \leq f(z) + 3f\big(\frac{x+y+z}3\big) \ \ \ \ \ (6)\)
+\\(\displaystyle  2f\big(\frac{y+z}2\big) + 2f\big(\frac{z+x}2\big) \leq f(z) + 3f\big(\frac{x+y+z}3\big) \ \ \ \ \ (6)\\)
 
-] гэсэнтэй адилхан. Одоо \({\frac{x+z}2}\) нь \({y}\), \({z}\) хоёрын дунд гэдгээс \({\frac{x+z}2}\) нь \({\frac{x+y+z}3}\) ба \({z}\) хоёрын дунд оршино гэж гарна. Тэгэхээр 
+] гэсэнтэй адилхан. Одоо \\({\frac{x+z}2}\\) нь \\({y}\\), \\({z}\\) хоёрын дунд гэдгээс \\({\frac{x+z}2}\\) нь \\({\frac{x+y+z}3}\\) ба \\({z}\\) хоёрын дунд оршино гэж гарна. Тэгэхээр 
 
-\(\displaystyle  \frac{x+z}2 = \lambda\frac{x+y+z}3 + (1-\lambda) z\)
-
- ба 
-
-\(\displaystyle  \frac{y+z}2 = \mu\frac{x+y+z}3 + (1-\mu) z\)
-
- байх \({\lambda,\mu\in[0,1]}\) хоёр тоо олдоно. Дээрх хоёр тэнцэтгэлийг хооронд нь нэмбэл 
-
-\(\displaystyle  \frac{x+y}2+z = (\lambda+\mu)\frac{x+y+z}3 + (2-\lambda-\mu) z = (\lambda+\mu)\frac{x+y-2z}3 + 2z\)
-
- гарах тул \({\lambda+\mu=\frac32}\). Эцэст нь, Йенсенийг хэрэглэн 
-
-\(\displaystyle  f\big(\frac{x+z}2\big) \leq \lambda f\big(\frac{x+y+z}3\big) + (1-\lambda) f(z)\)
+\\(\displaystyle  \frac{x+z}2 = \lambda\frac{x+y+z}3 + (1-\lambda) z\\)
 
  ба 
 
-\(\displaystyle  f\big(\frac{y+z}2\big) \leq \mu f\big(\frac{x+y+z}3\big) + (1-\mu) f(z)\)
+\\(\displaystyle  \frac{y+z}2 = \mu\frac{x+y+z}3 + (1-\mu) z\\)
 
- гэж гаргаад, эдгээрийг хооронд нь нэмснээр [(6)](#epopoviciu-pf-1) тэнцэл биш батлагдана. \(\Box\)
+ байх \\({\lambda,\mu\in[0,1]}\\) хоёр тоо олдоно. Дээрх хоёр тэнцэтгэлийг хооронд нь нэмбэл 
+
+\\(\displaystyle  \frac{x+y}2+z = (\lambda+\mu)\frac{x+y+z}3 + (2-\lambda-\mu) z = (\lambda+\mu)\frac{x+y-2z}3 + 2z\\)
+
+ гарах тул \\({\lambda+\mu=\frac32}\\). Эцэст нь, Йенсенийг хэрэглэн 
+
+\\(\displaystyle  f\big(\frac{x+z}2\big) \leq \lambda f\big(\frac{x+y+z}3\big) + (1-\lambda) f(z)\\)
+
+ ба 
+
+\\(\displaystyle  f\big(\frac{y+z}2\big) \leq \mu f\big(\frac{x+y+z}3\big) + (1-\mu) f(z)\\)
+
+ гэж гаргаад, эдгээрийг хооронд нь нэмснээр [(6)](#epopoviciu-pf-1) тэнцэл биш батлагдана. \\(\Box\\)
 
  [![](/blog/assets/wp-media/2020/12/johan_ludvig_william_valdemar_jensen_by_vilhelm_rieger-2.jpg)](/blog/assets/wp-media/2020/12/johan_ludvig_william_valdemar_jensen_by_vilhelm_rieger-2.jpg) Иоган Йенсен (1859–1925).

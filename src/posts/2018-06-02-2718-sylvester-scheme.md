@@ -17,357 +17,357 @@ templateEngineOverride: "md"
 
 [Өмнөх постоор](/blog/2018/05/28/arithmetic-functions/) танилцсан шинэ ойлголтуудынхаа хүрээнд Чебышёвын онолыг «тайлбарлах» гэж оролдъё. Чебышёвын онолын гол асуудал нь
 
-\(\displaystyle \sum_{k\leq x}\psi(x/k)=T(x)\equiv\sum_{n\leq x}\ln n=x\ln x-x+O(\ln x)\)
+\\(\displaystyle \sum_{k\leq x}\psi(x/k)=T(x)\equiv\sum_{n\leq x}\ln n=x\ln x-x+O(\ln x)\\)
 
-харьцааг ойролцоогоор ч болтугай урвуулж, \(\psi(x)\) функцийн талаар мэдээлэл гаргаж авах явдал байгаа. Үүнийг урвуулах нэг арга бол, \(\Lambda=\mu*\ln\) адилтгалаас эхлээд, өмнөх постны хуйлаасыг нийлбэрчлэх теоремыг ашиглан
+харьцааг ойролцоогоор ч болтугай урвуулж, \\(\psi(x)\\) функцийн талаар мэдээлэл гаргаж авах явдал байгаа. Үүнийг урвуулах нэг арга бол, \\(\Lambda=\mu*\ln\\) адилтгалаас эхлээд, өмнөх постны хуйлаасыг нийлбэрчлэх теоремыг ашиглан
 
-\(\displaystyle \psi(x)=\sum_{n\leq x}\Lambda(n)=\sum_{n\leq x}(\mu*\ln)(n)=\sum_{k\leq x}\mu(k)T(x/k)\)
+\\(\displaystyle \psi(x)=\sum_{n\leq x}\Lambda(n)=\sum_{n\leq x}(\mu*\ln)(n)=\sum_{k\leq x}\mu(k)T(x/k)\\)
 
-гэж гаргах явдал юм. Энэ томъёо \(\psi(x)\) функцийг \(T(x)\) функцээр яг илэрхийлэх боловч, [өмнө өгүүлснээр](/blog/2018/05/28/arithmetic-functions/) Мёбиусын функцийн талаарх мэдлэгийг шаардах тул,  \(\mathit1*\Lambda=\ln\) адилтгалыг \(\nu\approx\mu\) гэсэн функцтэй хуйлбал
+гэж гаргах явдал юм. Энэ томъёо \\(\psi(x)\\) функцийг \\(T(x)\\) функцээр яг илэрхийлэх боловч, [өмнө өгүүлснээр](/blog/2018/05/28/arithmetic-functions/) Мёбиусын функцийн талаарх мэдлэгийг шаардах тул,  \\(\mathit1*\Lambda=\ln\\) адилтгалыг \\(\nu\approx\mu\\) гэсэн функцтэй хуйлбал
 
-\(\nu*\mathit1*\Lambda=\nu*\ln\)
+\\(\nu*\mathit1*\Lambda=\nu*\ln\\)
 
 болно. Үүнийг нийлбэрчилбэл
 
-\(\displaystyle V(x)=\sum_{n\leq x}(\nu*\mathit1*\Lambda)(n)=\sum_{n\leq x}(\nu*\ln)(n)=\sum_{k\leq x}\nu(k)T(x/k)\qquad(*)\)
+\\(\displaystyle V(x)=\sum_{n\leq x}(\nu*\mathit1*\Lambda)(n)=\sum_{n\leq x}(\nu*\ln)(n)=\sum_{k\leq x}\nu(k)T(x/k)\qquad(*)\\)
 
 болох ба зүүн гар талыг нь
 
-\(\displaystyle V(x)=\sum_{n\leq x}(\nu*\mathit1*\Lambda)(n)=\sum_{k\leq x}(\nu*\mathit1)(k)\psi(x/k)=\sum_{k\leq x}E(x/k)\Lambda(k)\qquad(**)\)
+\\(\displaystyle V(x)=\sum_{n\leq x}(\nu*\mathit1*\Lambda)(n)=\sum_{k\leq x}(\nu*\mathit1)(k)\psi(x/k)=\sum_{k\leq x}E(x/k)\Lambda(k)\qquad(**)\\)
 
 гэж хоёр янзаар нийлбэрчлэх боломжтой. Энд
 
-\(\displaystyle E(x)=\sum_{n\leq x}(\nu*\mathit1)(n)=\sum_{k\leq x}\Big[\frac{x}{k}\Big]\nu(k).\)
+\\(\displaystyle E(x)=\sum_{n\leq x}(\nu*\mathit1)(n)=\sum_{k\leq x}\Big[\frac{x}{k}\Big]\nu(k).\\)
 
 Жишээлбэл, Чебышёвын
 
-\(\displaystyle V(x)=T(x)-T(x/2)-T(x/3)-T(x/5)+T(x/30)\)
+\\(\displaystyle V(x)=T(x)-T(x/2)-T(x/3)-T(x/5)+T(x/30)\\)
 
  сонголтыг (*) томъёотой харьцуулбал
 
-\(\nu_*=\delta_1-\delta_2-\delta_3-\delta_5+\delta_{30}\)
+\\(\nu_*=\delta_1-\delta_2-\delta_3-\delta_5+\delta_{30}\\)
 
-функцэд харгалзах нь харагдана. Энд \(\delta_m(n)=\delta_{m,n}\) буюу, \(\delta_m(n)\) нь \(n=m\) үед л \(\delta_m(n)=1\), бусад үед \(\delta_m(n)=0\) гэж тодорхойлогдсон функц.
+функцэд харгалзах нь харагдана. Энд \\(\delta_m(n)=\delta_{m,n}\\) буюу, \\(\delta_m(n)\\) нь \\(n=m\\) үед л \\(\delta_m(n)=1\\), бусад үед \\(\delta_m(n)=0\\) гэж тодорхойлогдсон функц.
 
-Одоо (*)-(**) томъоноос \(\psi(x)\) функцийн үнэлгээг гаргаж авч болдог байхын тулд \(\nu\) функц ямар ямар шинж чанартай байх хэрэгтэй вэ? гэсэн ауултанд хариулахыг оролдъё.
-
-	
-- Юуны түрүүнд, \(T(x)=x\ln x+O(x)\) гэдгийг санаад, \((*)\) томъёоны зүүн гар тал \(\approx\psi(x)\) гэж бодвол, уг томъёоны баруун гар тал \(O(x)\) хэмжээтэй байхын тулд \(\sum_n\nu(n)/n=0\) байх хэрэгтэй. Чебышёвын схем энэ шаардлагыг хангана.
+Одоо (*)-(**) томъоноос \\(\psi(x)\\) функцийн үнэлгээг гаргаж авч болдог байхын тулд \\(\nu\\) функц ямар ямар шинж чанартай байх хэрэгтэй вэ? гэсэн ауултанд хариулахыг оролдъё.
 
 	
-- Хоёрдугаарт, \((*)\) томъёоны зүүн гар тал буюу \((**)\) томъёоны баруун гар тал \(\approx\psi(x)\) байхын тулд ядаж \(x\) бага үед \(E(x)\approx1\) байх хэрэгтэй. Чебышёвын схемын хувьд \(1\leq x<6\) мужид \(E(x)=1\) байгаа.
+- Юуны түрүүнд, \\(T(x)=x\ln x+O(x)\\) гэдгийг санаад, \\((*)\\) томъёоны зүүн гар тал \\(\approx\psi(x)\\) гэж бодвол, уг томъёоны баруун гар тал \\(O(x)\\) хэмжээтэй байхын тулд \\(\sum_n\nu(n)/n=0\\) байх хэрэгтэй. Чебышёвын схем энэ шаардлагыг хангана.
 
 	
-- Эцэст нь, хялбарыг бодож \(\nu(n)\neq0\) байх \(n\)-ийн тоог төгсгөлөг гэж шаардаж болно.
+- Хоёрдугаарт, \\((*)\\) томъёоны зүүн гар тал буюу \\((**)\\) томъёоны баруун гар тал \\(\approx\psi(x)\\) байхын тулд ядаж \\(x\\) бага үед \\(E(x)\approx1\\) байх хэрэгтэй. Чебышёвын схемын хувьд \\(1\leq x<6\\) мужид \\(E(x)=1\\) байгаа.
+
+	
+- Эцэст нь, хялбарыг бодож \\(\nu(n)\neq0\\) байх \\(n\\)-ийн тоог төгсгөлөг гэж шаардаж болно.
 
 Ерөнхий тохиолдолд
 
-\(\displaystyle \sum_n\frac{\nu(n)}n=0\qquad(\dagger)\)
+\\(\displaystyle \sum_n\frac{\nu(n)}n=0\qquad(\dagger)\\)
 
-гэж шаардвал, Стирлингийн \(T(x)=x\ln x-x+O(\ln x)\) ойролцооллыг ашиглан (*) томъёоноос
+гэж шаардвал, Стирлингийн \\(T(x)=x\ln x-x+O(\ln x)\\) ойролцооллыг ашиглан (*) томъёоноос
 
-\(\displaystyle V(x)=\sum_{n\leq x}\nu(n)T(x/n)=\underbrace{-\Big(\sum_{n}\frac{\nu(n)\ln n}{n}\Big)}_{A(\nu)}x+O(\ln x)=A(\nu)x+O(\ln x)\)
+\\(\displaystyle V(x)=\sum_{n\leq x}\nu(n)T(x/n)=\underbrace{-\Big(\sum_{n}\frac{\nu(n)\ln n}{n}\Big)}_{A(\nu)}x+O(\ln x)=A(\nu)x+O(\ln x)\\)
 
 гэж гарна. Жишээ нь, Чебышёвын схемийн хувьд
 
-\(\displaystyle A_*=A(\nu_*)=\frac{\ln2}2+\frac{\ln3}3+\frac{\ln5}5-\frac{\ln30}{30}=0.92129\ldots\)
+\\(\displaystyle A_*=A(\nu_*)=\frac{\ln2}2+\frac{\ln3}3+\frac{\ln5}5-\frac{\ln30}{30}=0.92129\ldots\\)
 
-байдгийг бид мэднэ. Цааш нь, \(x\geq1\) үед
+байдгийг бид мэднэ. Цааш нь, \\(x\geq1\\) үед
 
-\(E(x)\leq1\)
+\\(E(x)\leq1\\)
 
-гэж үзвэл (**) томъёоноос \(\psi(x)\)-ийн доод зааг
+гэж үзвэл (**) томъёоноос \\(\psi(x)\\)-ийн доод зааг
 
-\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\leq\sum_{k\leq x}\Lambda(k)=\psi(x)\)
+\\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\leq\sum_{k\leq x}\Lambda(k)=\psi(x)\\)
 
-гээд шууд гарч ирнэ. Нөгөө талаас, \(1\leq x\(E(x)\geq1\)
+гээд шууд гарч ирнэ. Нөгөө талаас, \\(1\leq x\\(E(x)\geq1\\)
 
 гэж үзвэл
 
-\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\geq\sum_{x/N
+\\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\geq\sum_{x/N
 болох ба,
 
-\(\displaystyle \psi(x)-\psi(x/N)\leq V(x)=A(\nu)x+O(\ln x),\\\psi(x/N)-\psi(x/N^2)\leq V(x/N)=A(\nu)x/N+O(\ln x),\\\psi(x/N^2)-\psi(x/N^3)\leq V(x/N^2)=A(\nu)x/N^2+O(\ln x),\\\ldots\)
+\\(\displaystyle \psi(x)-\psi(x/N)\leq V(x)=A(\nu)x+O(\ln x),\\\psi(x/N)-\psi(x/N^2)\leq V(x/N)=A(\nu)x/N+O(\ln x),\\\psi(x/N^2)-\psi(x/N^3)\leq V(x/N^2)=A(\nu)x/N^2+O(\ln x),\\\ldots\\)
 
-гэсэн \([\frac{\ln x}{\ln N}]\) ширхэг мөрийг хооронд нь нэмснээр
+гэсэн \\([\frac{\ln x}{\ln N}]\\) ширхэг мөрийг хооронд нь нэмснээр
 
-\(\displaystyle \psi(x)\leq(1+N^{-1}+N^{-2}+\ldots)A(\nu)x+O(\ln^2\!x)=\frac{N}{N-1}A(\nu)x+O(\ln^2\!x)\)
+\\(\displaystyle \psi(x)\leq(1+N^{-1}+N^{-2}+\ldots)A(\nu)x+O(\ln^2\!x)=\frac{N}{N-1}A(\nu)x+O(\ln^2\!x)\\)
 
 гэсэн зааг олдоно. Дээрх хоёр заагийг нэгтгэж бичвэл
 
-\(\displaystyle A(\nu)x+O(\ln x)\leq\psi(x)\leq\frac{N}{N-1}A(\nu)x+O(\ln^2\!x).\qquad(\dagger\dagger)\)
+\\(\displaystyle A(\nu)x+O(\ln x)\leq\psi(x)\leq\frac{N}{N-1}A(\nu)x+O(\ln^2\!x).\qquad(\dagger\dagger)\\)
 
-Чебышёвын схемийн хувьд \(E(x)\) нь 30 үетэй, үргэлж \(0\leq E(x)\leq1\) байдаг. Түүнчлэн \(x<6\) үед \(E(x)=1\) тул \(N=6\) гэсэн үг. Эндээс [бидний танил](/blog/2018/05/17/bounds-on-psi/)
+Чебышёвын схемийн хувьд \\(E(x)\\) нь 30 үетэй, үргэлж \\(0\leq E(x)\leq1\\) байдаг. Түүнчлэн \\(x<6\\) үед \\(E(x)=1\\) тул \\(N=6\\) гэсэн үг. Эндээс [бидний танил](/blog/2018/05/17/bounds-on-psi/)
 
-\(\displaystyle A_*x+O(\ln x)\leq\psi(x)\leq\frac65A_*x+O(\ln^2\!x)\)
+\\(\displaystyle A_*x+O(\ln x)\leq\psi(x)\leq\frac65A_*x+O(\ln^2\!x)\\)
 
-зааг шууд мөрдөнө. Дараах зурагт Чебышёвын схемд харгалзах \(E(x)\) функцийг дүрслэв.
+зааг шууд мөрдөнө. Дараах зурагт Чебышёвын схемд харгалзах \\(E(x)\\) функцийг дүрслэв.
 
 [![](/blog/assets/wp-media/2018/05/echeb-e1527539937897.png)](https://t8m8r.wordpress.com/wp-content/uploads/2018/05/echeb.png)
 
-\((**)\) томъёоноос
+\\((**)\\) томъёоноос
 
-\(\displaystyle V(x)=\sum_{n\leq x}E(x/n)\Lambda(n)=\sum_{n\leq x}\big(E(n)-E(n-1)\big)\psi(x/n)\)
+\\(\displaystyle V(x)=\sum_{n\leq x}E(x/n)\Lambda(n)=\sum_{n\leq x}\big(E(n)-E(n-1)\big)\psi(x/n)\\)
 
-тул \(V(x)\) функцийг \(\psi(x/n)\) функцүүдээр задалсан задаргааг энэ график дээрээс шууд «уншиж» болно. Жишээлбэл, Чебышёвын схем дээр
+тул \\(V(x)\\) функцийг \\(\psi(x/n)\\) функцүүдээр задалсан задаргааг энэ график дээрээс шууд «уншиж» болно. Жишээлбэл, Чебышёвын схем дээр
 
-\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)+\psi(x/11)-\psi(x/12)+\ldots.\)
+\\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)+\psi(x/11)-\psi(x/12)+\ldots.\\)
 
 [![](/blog/assets/wp-media/2018/05/echeb11.png)](/blog/assets/wp-media/2018/05/echeb11.png)
 
-Энэ зургийг харж байгаад, \(\psi(x)\) функцийн үл буурах чанарыг ашиглаад
+Энэ зургийг харж байгаад, \\(\psi(x)\\) функцийн үл буурах чанарыг ашиглаад
 
-\(\displaystyle V(x)=\psi(x)\underbrace{-\psi(x/6)+\psi(x/7)}_{\leq0}\underbrace{-\psi(x/10)+\psi(x/11)}_{\leq0}\underbrace{-\psi(x/12)+\ldots}_{\leq0}\\{}\qquad\leq\psi(x)\)
+\\(\displaystyle V(x)=\psi(x)\underbrace{-\psi(x/6)+\psi(x/7)}_{\leq0}\underbrace{-\psi(x/10)+\psi(x/11)}_{\leq0}\underbrace{-\psi(x/12)+\ldots}_{\leq0}\\{}\qquad\leq\psi(x)\\)
 
-\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\underbrace{\psi(x/7)-\psi(x/10)}_{\geq0}+\underbrace{\psi(x/11)-\psi(x/12)}_{\geq0}+\ldots\\{}\qquad\geq\psi(x)-\psi(x/6)\)
+\\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\underbrace{\psi(x/7)-\psi(x/10)}_{\geq0}+\underbrace{\psi(x/11)-\psi(x/12)}_{\geq0}+\ldots\\{}\qquad\geq\psi(x)-\psi(x/6)\\)
 
 тэнцэл бишүүдийг гаргаж авахад амархан. Үүнийг дор зургаар дүрсэлж үзүүлэв. Үл буурах чанараар хооронд нь хослуулан устгасан гишүүдийг тасархай улаан шугамаар холбосон. [![](/blog/assets/wp-media/2018/05/echebe1.png)](/blog/assets/wp-media/2018/05/echebe1.png)
 
 Чебышёвын ажлаас 30-40 жилийн дараа [Жеймс Сильвестр](https://en.wikipedia.org/wiki/James_Joseph_Sylvester) ба түүний хамтрагч Жеймс Хаммонд нар
 
-\(\nu_1=\delta_1-2\delta_2,\\\nu_2=\delta_1-\delta_2-2\delta_3+\delta_6,\\\nu_3=\delta_1-\delta_2-\delta_3-\delta_4+\delta_{12}\)
+\\(\nu_1=\delta_1-2\delta_2,\\\nu_2=\delta_1-\delta_2-2\delta_3+\delta_6,\\\nu_3=\delta_1-\delta_2-\delta_3-\delta_4+\delta_{12}\\)
 
 гэсэн 3 шинэ схемийг олсон. Сильвестрийн өөрийнх нь тэмдэглэгээгээр эдгээрийг
 
-\(\nu_1=[1;2,2],\qquad\nu_2=[1,6;2,3,3],\qquad\nu_3=[1,12;2,3,4]\)
+\\(\nu_1=[1;2,2],\qquad\nu_2=[1,6;2,3,3],\qquad\nu_3=[1,12;2,3,4]\\)
 
 гэж бичнэ. Энэ тэмдэглэгээгээр Чебышёвын схем
 
-\(\nu_*=[1,30;2,3,5]\)
+\\(\nu_*=[1,30;2,3,5]\\)
 
-болно гэсэн үг. Дээрх шинэ схемүүд бүгд \({}(\dagger)\) нөхцлийг хангах ба үргэлж \(0\leq E(x)\leq1\) байдаг. Түүнчлэн
-
-	
-- \(\nu_1\) схемийн хувьд \(E(x)\)-ийн үе нь 2 ба \(x<2\) үед \(E(x)=1\).
+болно гэсэн үг. Дээрх шинэ схемүүд бүгд \\({}(\dagger)\\) нөхцлийг хангах ба үргэлж \\(0\leq E(x)\leq1\\) байдаг. Түүнчлэн
 
 	
-- \(\nu_2\) схемийн хувьд \(E(x)\)-ийн үе нь 6 ба \(x<3\) үед \(E(x)=1\).
+- \\(\nu_1\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 2 ба \\(x<2\\) үед \\(E(x)=1\\).
 
 	
-- \(\nu_3\) схемийн хувьд \(E(x)\)-ийн үе нь 12 ба \(x<4\) үед \(E(x)=1\).
+- \\(\nu_2\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 6 ба \\(x<3\\) үед \\(E(x)=1\\).
 
-Дээрх 3 схемийн \(E(x)\) функцүүдийг дараах зурагт дүрслэв.
+	
+- \\(\nu_3\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 12 ба \\(x<4\\) үед \\(E(x)=1\\).
+
+Дээрх 3 схемийн \\(E(x)\\) функцүүдийг дараах зурагт дүрслэв.
 
 [![](/blog/assets/wp-media/2018/05/e123.png)](/blog/assets/wp-media/2018/05/e123.png)
 
-Ингээд \((\dagger\dagger)\) томъёонд орсон \(A(\nu)\) ба \(B(\nu)=\frac{N}{N-1}A(\nu)\) тогтмолуудыг дээрх схем тус бүр дээр бодвол
+Ингээд \\((\dagger\dagger)\\) томъёонд орсон \\(A(\nu)\\) ба \\(B(\nu)=\frac{N}{N-1}A(\nu)\\) тогтмолуудыг дээрх схем тус бүр дээр бодвол
 
-\(A(\nu_1)=0.6931\ldots,\qquad B(\nu_1)=2A(\nu_1)=1.3862\ldots,\\A(\nu_2)=0.7803\ldots,\qquad B(\nu_2)=\frac32A(\nu_2)=1.1705\ldots,\\A(\nu_3)=0.8522\ldots,\qquad B(\nu_3)=\frac43A(\nu_3)=1.1363\ldots\)
+\\(A(\nu_1)=0.6931\ldots,\qquad B(\nu_1)=2A(\nu_1)=1.3862\ldots,\\A(\nu_2)=0.7803\ldots,\qquad B(\nu_2)=\frac32A(\nu_2)=1.1705\ldots,\\A(\nu_3)=0.8522\ldots,\qquad B(\nu_3)=\frac43A(\nu_3)=1.1363\ldots\\)
 
 гарна. Эдгээр хосуудын аль нь ч Чебышёвын
 
-\(A(\nu_*)=0.9212\ldots,\qquad B(\nu_*)=\frac65A(\nu_*)=1.1055\ldots\)
+\\(A(\nu_*)=0.9212\ldots,\qquad B(\nu_*)=\frac65A(\nu_*)=1.1055\ldots\\)
 
-хосыг давж гарахгүй боловч \(\psi(x)=O(x)\) ба \(\frac1{\psi(x)}=O(x)\) заагуудыг нэг их ажил удалгүйгээр өгөх тул зарим үед илүү сонирхол татаж мэднэ. Жишээлбэл, Бертраны постулатыг батлахад \(\nu_2\) схем байхад л хангалттай.
+хосыг давж гарахгүй боловч \\(\psi(x)=O(x)\\) ба \\(\frac1{\psi(x)}=O(x)\\) заагуудыг нэг их ажил удалгүйгээр өгөх тул зарим үед илүү сонирхол татаж мэднэ. Жишээлбэл, Бертраны постулатыг батлахад \\(\nu_2\\) схем байхад л хангалттай.
 
-Үнэндээ, дээрх 4 схемээс өөр \(0\leq E(x)\leq1\) байдаг схем өдий хүртэл олдоогүй. Чебышёвын тогтмолуудыг сайжруулахын тулд энэ шаардлагыг хангадаггүй илүү ерөнхий схемүүдийг Сильвестр авч үзсэн. Тухайлбал
+Үнэндээ, дээрх 4 схемээс өөр \\(0\leq E(x)\leq1\\) байдаг схем өдий хүртэл олдоогүй. Чебышёвын тогтмолуудыг сайжруулахын тулд энэ шаардлагыг хангадаггүй илүү ерөнхий схемүүдийг Сильвестр авч үзсэн. Тухайлбал
 
-\(\nu_4=\delta_1-\delta_2-\delta_3-\delta_6,\\\nu_5=\delta_1+\delta_{15}-\delta_2-\delta_3-\delta_5-\delta_{30},\\\nu_6=\delta_1+\delta_6+\delta_{70}-\delta_2-\delta_3-\delta_5-\delta_7-\delta_{210}\)
+\\(\nu_4=\delta_1-\delta_2-\delta_3-\delta_6,\\\nu_5=\delta_1+\delta_{15}-\delta_2-\delta_3-\delta_5-\delta_{30},\\\nu_6=\delta_1+\delta_6+\delta_{70}-\delta_2-\delta_3-\delta_5-\delta_7-\delta_{210}\\)
 
 буюу Сильвестрийн тэмдэглэгээгээр
 
-\(\nu_4=[1,6;2,3],\qquad\nu_5=[1,15;2,3,5,30],\qquad\nu_6=[1,6,70;2,3,5,7,210]\)
+\\(\nu_4=[1,6;2,3],\qquad\nu_5=[1,15;2,3,5,30],\qquad\nu_6=[1,6,70;2,3,5,7,210]\\)
 
-схемүүд бүгд \({}(\dagger)\) нөхцлийг хангах ба үргэлж \(0\leq E(x)\leq2\) байдаг. Түүнчлэн
-
-	
-- \(\nu_4\) схемийн хувьд \(E(x)\)-ийн үе нь 6 ба \(x<6\) үед \(E(x)\geq1\), \(x<5\) үед \(E(x)=1\).
+схемүүд бүгд \\({}(\dagger)\\) нөхцлийг хангах ба үргэлж \\(0\leq E(x)\leq2\\) байдаг. Түүнчлэн
 
 	
-- \(\nu_5\) схемийн хувьд \(E(x)\)-ийн үе нь 30 ба \(x<6\) үед \(E(x)=1\), \(x<17\) үед \(E(x)\leq1\).
+- \\(\nu_4\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 6 ба \\(x<6\\) үед \\(E(x)\geq1\\), \\(x<5\\) үед \\(E(x)=1\\).
 
 	
-- \(\nu_6\) схемийн хувьд \(E(x)\)-ийн үе нь 210 ба \(x<10\) үед \(E(x)=1\), \(x<13\) үед \(E(x)\leq1\).
+- \\(\nu_5\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 30 ба \\(x<6\\) үед \\(E(x)=1\\), \\(x<17\\) үед \\(E(x)\leq1\\).
+
+	
+- \\(\nu_6\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 210 ба \\(x<10\\) үед \\(E(x)=1\\), \\(x<13\\) үед \\(E(x)\leq1\\).
 
 [![](/blog/assets/wp-media/2018/05/e456.png)](/blog/assets/wp-media/2018/05/e456.png)
 
-Сүүлийн схемийн \(E(x)\) функцийн үе 210 тул дээрх зурагт багтаагүй байгаа. Үүний нэг бүтэн үеийг дор дүрслэв.
+Сүүлийн схемийн \\(E(x)\\) функцийн үе 210 тул дээрх зурагт багтаагүй байгаа. Үүний нэг бүтэн үеийг дор дүрслэв.
 
 [![](/blog/assets/wp-media/2018/05/e5.png)](/blog/assets/wp-media/2018/05/e5.png)
 
-Одоо \(x\geq1\) үед \(\chi(x)=1\) байдаг, \(x<1\) үед \(\chi(x)=0\) байдаг \(\chi(x)\) гэсэн функц тодорхойлбол, дээр авч үзсэн \(E(x)\) функцүүд бүгд
+Одоо \\(x\geq1\\) үед \\(\chi(x)=1\\) байдаг, \\(x<1\\) үед \\(\chi(x)=0\\) байдаг \\(\chi(x)\\) гэсэн функц тодорхойлбол, дээр авч үзсэн \\(E(x)\\) функцүүд бүгд
 
-\(E(x)\geq\chi(x)-\chi(x/N),\qquad E(x)\leq\chi(x)+\chi(x/M)\)
+\\(E(x)\geq\chi(x)-\chi(x/N),\qquad E(x)\leq\chi(x)+\chi(x/M)\\)
 
 тэнцэл бишүүдийг хангана. Үүнд
 
 	
-- \(\nu_4\) схемийн хувьд \(N=6\) ба \(M=5\).
+- \\(\nu_4\\) схемийн хувьд \\(N=6\\) ба \\(M=5\\).
 
 	
-- \(\nu_5\) схемийн хувьд \(N=6\) ба \(M=17\).
+- \\(\nu_5\\) схемийн хувьд \\(N=6\\) ба \\(M=17\\).
 
 	
-- \(\nu_6\) схемийн хувьд \(N=10\) ба \(M=13\).
+- \\(\nu_6\\) схемийн хувьд \\(N=10\\) ба \\(M=13\\).
 
-Эдгээр схемүүдийн \(A(\nu)\) тогтмолууд нь
+Эдгээр схемүүдийн \\(A(\nu)\\) тогтмолууд нь
 
-\(A(\nu_4)=1.0114\ldots,\quad A(\nu_5)=0.9675\ldots,\quad A(\nu_6)=0.9787\ldots.\)
+\\(A(\nu_4)=1.0114\ldots,\quad A(\nu_5)=0.9675\ldots,\quad A(\nu_6)=0.9787\ldots.\\)
 
-Бидний анх гаргасан \((\dagger\dagger)\) томъёоны дээд заагт ямар ч өөрчлөлт орохгүй:
+Бидний анх гаргасан \\((\dagger\dagger)\\) томъёоны дээд заагт ямар ч өөрчлөлт орохгүй:
 
-\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\geq\sum_{x/N
+\\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\geq\sum_{x/N
 тул
 
-\(\psi(x)\leq\frac{N}{N-1}A(\nu)x+O(\ln^2\!x).\qquad(\ddagger)\)
+\\(\psi(x)\leq\frac{N}{N-1}A(\nu)x+O(\ln^2\!x).\qquad(\ddagger)\\)
 
 Нөгөө заагийнх нь хувьд
 
-\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\leq\sum_{k\leq x}\Big(1+\chi\Big(\frac{x}{Mk}\Big)\Big)\Lambda(k)=\psi(x)+\psi(x/M)\)
+\\(\displaystyle V(x)=\sum_{k\leq x}E(x/k)\Lambda(k)\leq\sum_{k\leq x}\Big(1+\chi\Big(\frac{x}{Mk}\Big)\Big)\Lambda(k)=\psi(x)+\psi(x/M)\\)
 
-болох ба \((\ddagger)\) заагаа ашиглавал
+болох ба \\((\ddagger)\\) заагаа ашиглавал
 
-\(\psi(x)\geq V(x)-\psi(x/M)\geq\big(1-\frac{N}{M(N-1)}\big)A(\nu)x+O(\ln^2\!x)\)
+\\(\psi(x)\geq V(x)-\psi(x/M)\geq\big(1-\frac{N}{M(N-1)}\big)A(\nu)x+O(\ln^2\!x)\\)
 
-гэж гарна. Жишээ болгож \(\nu_5\) схемийн хувьд \(V(x)\leq\psi(x)+\psi(x/17)\) ба \(V(x)\geq\psi(x)-\psi(x/6)\) тэнцэл бишүүдийг график аргаар яаж гаргаж болохыг үзүүлье.
+гэж гарна. Жишээ болгож \\(\nu_5\\) схемийн хувьд \\(V(x)\leq\psi(x)+\psi(x/17)\\) ба \\(V(x)\geq\psi(x)-\psi(x/6)\\) тэнцэл бишүүдийг график аргаар яаж гаргаж болохыг үзүүлье.
 
 [![](/blog/assets/wp-media/2018/05/e4e1.png)](/blog/assets/wp-media/2018/05/e4e1.png)
 
-Ингээд \(A'(\nu)=\big(1-\frac{N}{M(N-1)}\big)A(\nu)\) ба \(B(\nu)=\frac{N}{N-1}A(\nu)\) тогтмолуудыг схем тус бүр дээр бодвол
+Ингээд \\(A'(\nu)=\big(1-\frac{N}{M(N-1)}\big)A(\nu)\\) ба \\(B(\nu)=\frac{N}{N-1}A(\nu)\\) тогтмолуудыг схем тус бүр дээр бодвол
 
-\(A'(\nu_4)=\frac{19}{25}A(\nu_4)=0.7686\ldots,\qquad B(\nu_4)=\frac65A(\nu_4)=1.2136\ldots,\\A'(\nu_5)=\frac{79}{85}A(\nu_5)=0.8992\ldots,\qquad B(\nu_5)=\frac65A(\nu_5)=1.1610\ldots,\\A'(\nu_6)=\frac{107}{117}A(\nu_6)=0.8951\ldots,\qquad B(\nu_6)=\frac{10}9A(\nu_6)=1.0875\ldots.\)
+\\(A'(\nu_4)=\frac{19}{25}A(\nu_4)=0.7686\ldots,\qquad B(\nu_4)=\frac65A(\nu_4)=1.2136\ldots,\\A'(\nu_5)=\frac{79}{85}A(\nu_5)=0.8992\ldots,\qquad B(\nu_5)=\frac65A(\nu_5)=1.1610\ldots,\\A'(\nu_6)=\frac{107}{117}A(\nu_6)=0.8951\ldots,\qquad B(\nu_6)=\frac{10}9A(\nu_6)=1.0875\ldots.\\)
 
-Энэ дундаас \(B(\nu_6)\) тогтмол Чебышёвын \(B(\nu_*)=1.1055\ldots\) тогтмолоос бага байгаа нь бидний хөдөлмөр ямар ч байсан талаар болоогүйг харуулна. Гэхдээ иймэрхүү маягаар явбал ахиц гаргахад их хүндрэх төлөвтэй.
+Энэ дундаас \\(B(\nu_6)\\) тогтмол Чебышёвын \\(B(\nu_*)=1.1055\ldots\\) тогтмолоос бага байгаа нь бидний хөдөлмөр ямар ч байсан талаар болоогүйг харуулна. Гэхдээ иймэрхүү маягаар явбал ахиц гаргахад их хүндрэх төлөвтэй.
 
-Чебышёвын онолд Сильвестрийн оруулсан гол хувь нэмэр нь ямар ч схем өгөгдсөн байсан гэсэн түүнээс гарах тогтмолуудын утгыг давтагдах процесс ашиглан сайжруулах арга олсон явдал юм. Хялбарыг бодоод гол санааг нь \(\nu_4\) схемийн хувьд тайлбарлая. Энэ схемийн хувьд \(a_0=A'(\nu_4)\), \(b_0=B(\nu_4)\) тогтмолуудтайгаар
+Чебышёвын онолд Сильвестрийн оруулсан гол хувь нэмэр нь ямар ч схем өгөгдсөн байсан гэсэн түүнээс гарах тогтмолуудын утгыг давтагдах процесс ашиглан сайжруулах арга олсон явдал юм. Хялбарыг бодоод гол санааг нь \\(\nu_4\\) схемийн хувьд тайлбарлая. Энэ схемийн хувьд \\(a_0=A'(\nu_4)\\), \\(b_0=B(\nu_4)\\) тогтмолуудтайгаар
 
-\(a_0x+O(\ln^2\!x)\leq\psi(x)\leq b_0x+O(\ln^2\!x)\qquad(\ddagger\ddagger)\)
+\\(a_0x+O(\ln^2\!x)\leq\psi(x)\leq b_0x+O(\ln^2\!x)\qquad(\ddagger\ddagger)\\)
 
 байгаа. Үүнийг анх гаргахдаа
 
-\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\underbrace{\psi(x/5)-\psi(x/6)}_{\geq0}+\underbrace{\psi(x/7)+\psi(x/11)-2\psi(x/12)}_{\geq0}+\ldots\\{}\qquad\geq\psi(x)-\psi(x/6)\)
+\\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\underbrace{\psi(x/5)-\psi(x/6)}_{\geq0}+\underbrace{\psi(x/7)+\psi(x/11)-2\psi(x/12)}_{\geq0}+\ldots\\{}\qquad\geq\psi(x)-\psi(x/6)\\)
 
 ба
 
-\(\displaystyle V(x)=\psi(x)+\psi(x/5)\underbrace{-2\psi(x/6)+\psi(x/7)+\psi(x/11)}_{\leq0}\underbrace{-2\psi(x/12)+\psi(x/13)+\psi(x/17)}_{\leq0}+\ldots\\{}\qquad\leq\psi(x)+\psi(x/5)\)
+\\(\displaystyle V(x)=\psi(x)+\psi(x/5)\underbrace{-2\psi(x/6)+\psi(x/7)+\psi(x/11)}_{\leq0}\underbrace{-2\psi(x/12)+\psi(x/13)+\psi(x/17)}_{\leq0}+\ldots\\{}\qquad\leq\psi(x)+\psi(x/5)\\)
 
 заагуудыг ашигласан. Эдгээрийг сайжруулах үүднээс эхнийхийг нь
 
-\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\underbrace{\psi(x/5)-\psi(x/6)}_{\geq0}+\psi(x/7)-\psi(x/12)+\underbrace{\psi(x/11)-\psi(x/12)}_{\geq0}+\ldots\\{}\qquad\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/12)\)
+\\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\underbrace{\psi(x/5)-\psi(x/6)}_{\geq0}+\psi(x/7)-\psi(x/12)+\underbrace{\psi(x/11)-\psi(x/12)}_{\geq0}+\ldots\\{}\qquad\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/12)\\)
 
 хоёрдахийг нь
 
-\(\displaystyle V(x)=\psi(x)+\psi(x/5)-\psi(x/6)+\psi(x/11)\underbrace{-\psi(x/6)+\psi(x/7)}_{\leq0}\underbrace{-2\psi(x/12)+\ldots}_{\leq0}\\{}\qquad\leq\psi(x)+\psi(x/5)-\psi(x/6)+\psi(x/11)\)
+\\(\displaystyle V(x)=\psi(x)+\psi(x/5)-\psi(x/6)+\psi(x/11)\underbrace{-\psi(x/6)+\psi(x/7)}_{\leq0}\underbrace{-2\psi(x/12)+\ldots}_{\leq0}\\{}\qquad\leq\psi(x)+\psi(x/5)-\psi(x/6)+\psi(x/11)\\)
 
-болгож өөрчлөе. Гол санаа нь юу вэ гэхээр жишээ нь \(\psi(x/7)-\psi(x/12)\) илэрхийлэлд \(x/7\) ба \(x/12\) нь хоорондоо хол учраас үүнийг \(\psi(x/7)-\psi(x/12)\geq0\) гээд орхисны оронд \((\ddagger\ddagger)\) үнэлгээнүүдээ хэрэглэвэл илүү үр дүнтэй байж мэднэ. Дээрх хоёр заагийг графикаар дүрсэлбэл
+болгож өөрчлөе. Гол санаа нь юу вэ гэхээр жишээ нь \\(\psi(x/7)-\psi(x/12)\\) илэрхийлэлд \\(x/7\\) ба \\(x/12\\) нь хоорондоо хол учраас үүнийг \\(\psi(x/7)-\psi(x/12)\geq0\\) гээд орхисны оронд \\((\ddagger\ddagger)\\) үнэлгээнүүдээ хэрэглэвэл илүү үр дүнтэй байж мэднэ. Дээрх хоёр заагийг графикаар дүрсэлбэл
 
 [![](/blog/assets/wp-media/2018/05/e441.png)](/blog/assets/wp-media/2018/05/e441.png)
 
 Үүнд цэнхэр цэгүүд нь өмнө нь байсан гишүүдийг, ногоон цэгүүд нь сая нэмэгдсэн гишүүдийг тэмдэглэнэ. Цаашид бид цэнхэр цэгүүдийг нь *онцгой цэгүүд* гэж ярьж байх болно. Ингээд
 
-\(\displaystyle \psi(x)-\psi(x/6)\leq V(x)-\psi(x/7)+\psi(x/12)\leq V(x)-\big(\frac{a_0}7-\frac{b_0}{12}\big)x+O(\ln^2\!x)\)
+\\(\displaystyle \psi(x)-\psi(x/6)\leq V(x)-\psi(x/7)+\psi(x/12)\leq V(x)-\big(\frac{a_0}7-\frac{b_0}{12}\big)x+O(\ln^2\!x)\\)
 
-\(\displaystyle \psi(x)\geq V(x)-\psi(x/5)+\psi(x/6)-\psi(x/11)\geq V(x)+\big(\frac{a_0}6-\frac{b_0}{11}-\frac{b_0}{5}\big)x+O(\ln^2\!x)\)
+\\(\displaystyle \psi(x)\geq V(x)-\psi(x/5)+\psi(x/6)-\psi(x/11)\geq V(x)+\big(\frac{a_0}6-\frac{b_0}{11}-\frac{b_0}{5}\big)x+O(\ln^2\!x)\\)
 
-гарах ба \(A=A(\nu_4)\) гэсэн тэмдэглэгээтэйгээр
+гарах ба \\(A=A(\nu_4)\\) гэсэн тэмдэглэгээтэйгээр
 
-\(\displaystyle \big(A+\frac{a_0}6-\frac{b_0}{11}-\frac{b_0}{5}\big)x+O(\ln^2\!x)\leq\psi(x)\leq \frac65\big(A-\frac{a_0}7+\frac{b_0}{12}\big)x+O(\ln^2\!x).\)
+\\(\displaystyle \big(A+\frac{a_0}6-\frac{b_0}{11}-\frac{b_0}{5}\big)x+O(\ln^2\!x)\leq\psi(x)\leq \frac65\big(A-\frac{a_0}7+\frac{b_0}{12}\big)x+O(\ln^2\!x).\\)
 
-Тэгэхээр \(\{a_i\}\) ба \(\{b_i\}\) дарааллуудыг
+Тэгэхээр \\(\{a_i\}\\) ба \\(\{b_i\}\\) дарааллуудыг
 
-\(\begin{cases}a_{i+1}&=A+\frac{a_i}6-\frac{b_i}{11}-\frac{b_i}{5}\\b_{i+1}&=\frac65\big(A-\frac{a_i}7+\frac{b_i}{12}\big)\end{cases}\qquad(\S)\)
+\\(\begin{cases}a_{i+1}&=A+\frac{a_i}6-\frac{b_i}{11}-\frac{b_i}{5}\\b_{i+1}&=\frac65\big(A-\frac{a_i}7+\frac{b_i}{12}\big)\end{cases}\qquad(\S)\\)
 
 рекуррент томъёогоор тодорхойлбол,
 
-\(\displaystyle a_ix+O(\ln^2\!x)\leq\psi(x)\leq b_ix+O(\ln^2\!x)\)
+\\(\displaystyle a_ix+O(\ln^2\!x)\leq\psi(x)\leq b_ix+O(\ln^2\!x)\\)
 
-байх нь ойлгомжтой. Одоо \(i\to\infty\) үед \(a_i\to a=\alpha A\) ба \(b_i\to b=\beta A\) гэж таавал, дээрх рекуррент харьцаанууд хязгаартаа
+байх нь ойлгомжтой. Одоо \\(i\to\infty\\) үед \\(a_i\to a=\alpha A\\) ба \\(b_i\to b=\beta A\\) гэж таавал, дээрх рекуррент харьцаанууд хязгаартаа
 
-\(\begin{cases}\alpha&=1+\frac{\alpha}6-\frac{\beta}{11}-\frac{\beta}{5}\\\beta&=\frac65\big(1-\frac{\alpha}7+\frac{\beta}{12}\big)\end{cases}\)
+\\(\begin{cases}\alpha&=1+\frac{\alpha}6-\frac{\beta}{11}-\frac{\beta}{5}\\\beta&=\frac65\big(1-\frac{\alpha}7+\frac{\beta}{12}\big)\end{cases}\\)
 
 болж хувирах ба эндээс
 
-\(\displaystyle\alpha=\frac{4242}{5391}=0.7868\ldots,\qquad\beta=\frac{6380}{5391}=1.0552\ldots\)
+\\(\displaystyle\alpha=\frac{4242}{5391}=0.7868\ldots,\qquad\beta=\frac{6380}{5391}=1.0552\ldots\\)
 
 гэж гарна. Иймд хэрэв бидний таамаглал
 
-\(a_i\to a=\alpha A=0.7958\ldots,\qquad b_i\to b=\beta A=1.1969\ldots\)
+\\(a_i\to a=\alpha A=0.7958\ldots,\qquad b_i\to b=\beta A=1.1969\ldots\\)
 
-үнэн бол ямар ч \(\varepsilon>0\) тооны хувьд
+үнэн бол ямар ч \\(\varepsilon>0\\) тооны хувьд
 
-\(\displaystyle (a-\varepsilon)x+O(\ln^2\!x)\leq\psi(x)\leq (b+\varepsilon)x+O(\ln^2\!x)\)
+\\(\displaystyle (a-\varepsilon)x+O(\ln^2\!x)\leq\psi(x)\leq (b+\varepsilon)x+O(\ln^2\!x)\\)
 
-тэнцэл биш биелэх тул, эдгээр \(a,\,b\) тогтмолууд нь анхны
+тэнцэл биш биелэх тул, эдгээр \\(a,\,b\\) тогтмолууд нь анхны
 
-\(A'(\nu_4)=0.7686\ldots,\qquad B(\nu_4)=1.2136\ldots\)
+\\(A'(\nu_4)=0.7686\ldots,\qquad B(\nu_4)=1.2136\ldots\\)
 
-тогтмолуудын утгыг дээрх рекуррент процедурын хүчинд бага зэрэг сайжруулчихлаа гэсэн үг. Энэ таамаглалыг батлахын тулд \(a_i=(\alpha+\Delta\alpha_i)A\) ба \(b_i=(\beta+\Delta\beta_i)A\) гэсэн тэмдэглэгээнүүд оруулснаар
+тогтмолуудын утгыг дээрх рекуррент процедурын хүчинд бага зэрэг сайжруулчихлаа гэсэн үг. Энэ таамаглалыг батлахын тулд \\(a_i=(\alpha+\Delta\alpha_i)A\\) ба \\(b_i=(\beta+\Delta\beta_i)A\\) гэсэн тэмдэглэгээнүүд оруулснаар
 
-\(\begin{cases}\Delta\alpha_{i+1}&=\frac{\Delta\alpha_i}6-\frac{\Delta\beta_i}{11}-\frac{\Delta\beta_i}{5}=\frac{\Delta\alpha_i}6-\frac{16}{55}\Delta\beta_i\\\Delta\beta_{i+1}&=\frac65\big(-\frac{\Delta\alpha_i}7+\frac{\Delta\beta_i}{12}\big)=-\frac{6}{35}\Delta\alpha_i+\frac1{10}{\Delta\beta_i}\end{cases}\)
+\\(\begin{cases}\Delta\alpha_{i+1}&=\frac{\Delta\alpha_i}6-\frac{\Delta\beta_i}{11}-\frac{\Delta\beta_i}{5}=\frac{\Delta\alpha_i}6-\frac{16}{55}\Delta\beta_i\\\Delta\beta_{i+1}&=\frac65\big(-\frac{\Delta\alpha_i}7+\frac{\Delta\beta_i}{12}\big)=-\frac{6}{35}\Delta\alpha_i+\frac1{10}{\Delta\beta_i}\end{cases}\\)
 
 буюу
 
-\(\displaystyle \begin{pmatrix}\Delta\alpha_{i+1}\\\Delta\beta_{i+1}\end{pmatrix}=\begin{pmatrix}\frac16&-\frac{16}{55}\\-\frac{6}{35}&\frac1{10}\end{pmatrix}\begin{pmatrix}\Delta\alpha_{i}\\\Delta\beta_{i}\end{pmatrix}\)
+\\(\displaystyle \begin{pmatrix}\Delta\alpha_{i+1}\\\Delta\beta_{i+1}\end{pmatrix}=\begin{pmatrix}\frac16&-\frac{16}{55}\\-\frac{6}{35}&\frac1{10}\end{pmatrix}\begin{pmatrix}\Delta\alpha_{i}\\\Delta\beta_{i}\end{pmatrix}\\)
 
 болно. Энд орсон матрицын хувийн утгууд нь
 
-\(\lambda_1=-0.0924\ldots,\qquad\lambda_2=0.3591\ldots\)
+\\(\lambda_1=-0.0924\ldots,\qquad\lambda_2=0.3591\ldots\\)
 
-тул \(C_1,\ldots,C_4\) тогтмолуудын утга ямар ч байсан гэсэн
+тул \\(C_1,\ldots,C_4\\) тогтмолуудын утга ямар ч байсан гэсэн
 
-\(\displaystyle \Delta\alpha_{i}=C_{1}\lambda_1^i+C_{2}\lambda_2^i,\qquad\Delta\beta_{i}=C_{3}\lambda_1^i+C_{4}\lambda_2^i\)
+\\(\displaystyle \Delta\alpha_{i}=C_{1}\lambda_1^i+C_{2}\lambda_2^i,\qquad\Delta\beta_{i}=C_{3}\lambda_1^i+C_{4}\lambda_2^i\\)
 
-дарааллууд \(i\to\infty\) үед хоёул 0 рүү тэмүүлнэ. Түүнчлэн, энэ процедурын үр дүн болсон \(a,\,b\) тогтмолуудын утга нь эхний \(a_0,\, b_0\) тогтмолуудаас хамаарахгүй, зөвхөн \((\S)\) рекуррент харьцааны коэффициентүүдээс хамаарах нь тодорхой. Үнэндээ \(a_0=0\) эсвэл \(a_0<0\) байсан ч дээрх томъёонууд бүгд хүчинтэй болохыг дахиад нэг шалгаарай. Тэгэхээр Сильвестрийн процедур нь, жишээ нь \(a_0=0,\,b_0=100\) гэсэн маш хялбар заагаас эхлээд, сайн чанарын заагийг дараалан дөхөх аргаар гаргаж авдаг арга юм. Дорх зурагт \(a_0=0.1,\,b_0=3\) ба \(a_0=0,\,b_0=6\) гэсэн хоёр янзын анхны нөхцөлтэй \(\{a_i\},\,\{b_i\}\) дарааллууд ямар байхыг үзүүлэв.
+дарааллууд \\(i\to\infty\\) үед хоёул 0 рүү тэмүүлнэ. Түүнчлэн, энэ процедурын үр дүн болсон \\(a,\,b\\) тогтмолуудын утга нь эхний \\(a_0,\, b_0\\) тогтмолуудаас хамаарахгүй, зөвхөн \\((\S)\\) рекуррент харьцааны коэффициентүүдээс хамаарах нь тодорхой. Үнэндээ \\(a_0=0\\) эсвэл \\(a_0<0\\) байсан ч дээрх томъёонууд бүгд хүчинтэй болохыг дахиад нэг шалгаарай. Тэгэхээр Сильвестрийн процедур нь, жишээ нь \\(a_0=0,\,b_0=100\\) гэсэн маш хялбар заагаас эхлээд, сайн чанарын заагийг дараалан дөхөх аргаар гаргаж авдаг арга юм. Дорх зурагт \\(a_0=0.1,\,b_0=3\\) ба \\(a_0=0,\,b_0=6\\) гэсэн хоёр янзын анхны нөхцөлтэй \\(\{a_i\},\,\{b_i\}\\) дарааллууд ямар байхыг үзүүлэв.
 
 [![](/blog/assets/wp-media/2018/05/iter12.png)](/blog/assets/wp-media/2018/05/iter12.png)
 
-Сильвестрийн процедурыг цааш нь хэрэглэхээсээ өмнө, рекуррент томъёонд хүргэдэг тэнцэл бишүүдийг анх гаргахдаа \(V(x)\)-ийн задаргаанаас аль гишүүдийг нь авч үлдэхээ яаж шийдэх вэ гэсэн асуудлыг авч үзье. Энэ процедурын \(i\)-р алхмаар
+Сильвестрийн процедурыг цааш нь хэрэглэхээсээ өмнө, рекуррент томъёонд хүргэдэг тэнцэл бишүүдийг анх гаргахдаа \\(V(x)\\)-ийн задаргаанаас аль гишүүдийг нь авч үлдэхээ яаж шийдэх вэ гэсэн асуудлыг авч үзье. Энэ процедурын \\(i\\)-р алхмаар
 
-\(\displaystyle a_ix+O(\ln^2\!x)\leq\psi(x)\leq b_ix+O(\ln^2\!x)\)
+\\(\displaystyle a_ix+O(\ln^2\!x)\leq\psi(x)\leq b_ix+O(\ln^2\!x)\\)
 
-гэсэн зааг гарч ирнэ. Үүний дараагийн алхам дахь дээд заагт \(\psi(x/m)-\psi(x/n)\) хос ямар нөлөө үзүүлэх вэ гэвэл
+гэсэн зааг гарч ирнэ. Үүний дараагийн алхам дахь дээд заагт \\(\psi(x/m)-\psi(x/n)\\) хос ямар нөлөө үзүүлэх вэ гэвэл
 
-\(V(x)=\psi(x)+\ldots+\psi(x/m)-\psi(x/n)+\ldots\\{}\qquad\displaystyle\geq\psi(x)+\ldots+\big(\frac{a_i}{m}-\frac{b_i}{n}\big)x+\ldots\)
+\\(V(x)=\psi(x)+\ldots+\psi(x/m)-\psi(x/n)+\ldots\\{}\qquad\displaystyle\geq\psi(x)+\ldots+\big(\frac{a_i}{m}-\frac{b_i}{n}\big)x+\ldots\\)
 
-тул, \(\displaystyle\frac{a_i}{m}-\frac{b_i}{n}>0\) буюу
+тул, \\(\displaystyle\frac{a_i}{m}-\frac{b_i}{n}>0\\) буюу
 
-\(\displaystyle\frac{n}{m}>\frac{b_i}{a_i}\)
+\\(\displaystyle\frac{n}{m}>\frac{b_i}{a_i}\\)
 
 үед эерэг нөлөөтэй, эсрэгээрээ
 
-\(\displaystyle\frac{n}{m}<\frac{b_i}{a_i}\)
+\\(\displaystyle\frac{n}{m}<\frac{b_i}{a_i}\\)
 
 үед сөрөг нөлөөтэй. Өөрөөр хэлбэл, индексээрээ хэт ойрхон хосуудыг процедурт оруулбал эцсийн үр дүнд муугаар нөлөөлнө. Доод заагийн хувьд мэдээж адилхан.
 
-Тэгэхээр \(\rho>1\) гэсэн нэг тогтмол тоог сонгож аваад, онцгой гишүүдээсээ гадна, \(V(x)\)-ийн дээд заагт \(\frac{n}{m}>\frac{b_i}{a_i}\) байх бүх \(\psi(x/m)-\psi(x/n)\) хэлбэрийн хосуудыг, \(V(x)\)-ийн доод заагт \(\frac{n}{m}>\frac{b_i}{a_i}\) байх бүх \(-\psi(x/m)+\psi(x/n)\) хэлбэрийн хосуудыг оруулъя. Жишээлбэл, \(\nu_4\) схем дээр \(\rho=1.3\) гэж авбал, дараах цэгүүд гарч ирнэ.
+Тэгэхээр \\(\rho>1\\) гэсэн нэг тогтмол тоог сонгож аваад, онцгой гишүүдээсээ гадна, \\(V(x)\\)-ийн дээд заагт \\(\frac{n}{m}>\frac{b_i}{a_i}\\) байх бүх \\(\psi(x/m)-\psi(x/n)\\) хэлбэрийн хосуудыг, \\(V(x)\\)-ийн доод заагт \\(\frac{n}{m}>\frac{b_i}{a_i}\\) байх бүх \\(-\psi(x/m)+\psi(x/n)\\) хэлбэрийн хосуудыг оруулъя. Жишээлбэл, \\(\nu_4\\) схем дээр \\(\rho=1.3\\) гэж авбал, дараах цэгүүд гарч ирнэ.
 
 [![](/blog/assets/wp-media/2018/05/e444.png)](/blog/assets/wp-media/2018/05/e444.png)
 
 Цэнхрээр тэмдэглэгдсэн нь мэдээж байнга байж байх ёстой «онцгой гишүүд». Дээрх жишээтэй харьцуулахад зааг бүрт нэг нэг хос нэмэгдсэн байгаа. Тодруулбал
 
-\(\displaystyle V(x)\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/12)+\psi(x/13)-\psi(x/18)\)
+\\(\displaystyle V(x)\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/12)+\psi(x/13)-\psi(x/18)\\)
 
-\(\displaystyle V(x)\leq\psi(x)+\psi(x/5)-\psi(x/6)+\psi(x/11)-\psi(x/12)+\psi(x/17)\)
+\\(\displaystyle V(x)\leq\psi(x)+\psi(x/5)-\psi(x/6)+\psi(x/11)-\psi(x/12)+\psi(x/17)\\)
 
 заагуудаас
 
-\(\begin{cases}a_{i+1}&=A+\big(\frac16+\frac1{12}\big)a_i-\big(\frac15+\frac1{11}+\frac1{17}\big)b_i\\b_{i+1}&=\frac65A-\big(\frac17+\frac1{13}\big)\cdot\frac65a_i+\big(\frac1{12}+\frac1{18}\big)\cdot\frac65b_i\end{cases}\)
+\\(\begin{cases}a_{i+1}&=A+\big(\frac16+\frac1{12}\big)a_i-\big(\frac15+\frac1{11}+\frac1{17}\big)b_i\\b_{i+1}&=\frac65A-\big(\frac17+\frac1{13}\big)\cdot\frac65a_i+\big(\frac1{12}+\frac1{18}\big)\cdot\frac65b_i\end{cases}\\)
 
 гэсэн давталт төрөх ба хязгаар нь
 
-\(a_i\to a=0.7852\ldots,\qquad b_i\to b=1.5381\ldots\)
+\\(a_i\to a=0.7852\ldots,\qquad b_i\to b=1.5381\ldots\\)
 
-Энэ нь бидний дээр олсон \(a=0.7958\ldots,\,\,b=1.1969\ldots\) утгуудыг бодвол сул байгаа нь процедурт анхнаасаа хэтэрхий олон гишүүн нэмчихжээ гэсэн үг. Бидний сүүлд нэмсэн гишүүд \(\psi(x/13)-\psi(x/18)\) ба \(-\psi(x/12)+\psi(x/17)\) байгаа. Эдгээрийн индексүүдийн харьцааг хос хосоор нь бодож үзвэл
+Энэ нь бидний дээр олсон \\(a=0.7958\ldots,\,\,b=1.1969\ldots\\) утгуудыг бодвол сул байгаа нь процедурт анхнаасаа хэтэрхий олон гишүүн нэмчихжээ гэсэн үг. Бидний сүүлд нэмсэн гишүүд \\(\psi(x/13)-\psi(x/18)\\) ба \\(-\psi(x/12)+\psi(x/17)\\) байгаа. Эдгээрийн индексүүдийн харьцааг хос хосоор нь бодож үзвэл
 
-\(\displaystyle\frac{18}{13}=1.3846\ldots<\frac{b}{a}=1.5381\ldots,\qquad\frac{17}{12}=1.4166\ldots<\frac{b}{a}\)
+\\(\displaystyle\frac{18}{13}=1.3846\ldots<\frac{b}{a}=1.5381\ldots,\qquad\frac{17}{12}=1.4166\ldots<\frac{b}{a}\\)
 
-тул давталтын төгсгөл хавьд эдгээр хосууд нь \(\frac{b}{a}\) харьцааг багасгахгүй «хойш нь чангааж» байсан болж таарлаа. Үүнээс дүгнэвэл
-
-	
-- Ямар нэг хосын индексүүдийн харьцаа эцсийн \(\frac{b}{a}\) харьцаанаас бага бол уг хосыг процедураас хассанаар эцсийн харьцаа сайжирна.
+тул давталтын төгсгөл хавьд эдгээр хосууд нь \\(\frac{b}{a}\\) харьцааг багасгахгүй «хойш нь чангааж» байсан болж таарлаа. Үүнээс дүгнэвэл
 
 	
-- Анхнаасаа \(\rho\) параметрийг \(\rho\approx\frac{b}{a}\) гэж эцсийн харьцаатай ойролцоо байхаар таахыг оролдох хэрэгтэй.
+- Ямар нэг хосын индексүүдийн харьцаа эцсийн \\(\frac{b}{a}\\) харьцаанаас бага бол уг хосыг процедураас хассанаар эцсийн харьцаа сайжирна.
 
-Дорх зурагт \(\nu_4\) схемийн хувьд Сильвестрийн процедурын үр дүн \(\rho\) параметраас хэрхэн хамаарахыг үзүүлэв. Эхний график дээр \(a,\,b\) тогтмолуудыг, хоёрдахь графикт давталтын матрицын хувийн утгуудыг, гуравдахь графикт \(V(x)\) функцийн дээд доод заагт хэдэн ширхэг гишүүн оруулсныг дүрсэлсэн. Эндээс \(a,\,b\) тогтмолуудын оптималь утга нь \(\rho=1.5\) утгын ойролцоо, \(V(x)\)-ийн дээд доод заагт тус бүр 4 гишүүн авах үед тохионо гэдэг нь харагдаж байгаа. Энэ нь бидний дээр олсон \(a=0.7958\ldots,\,\,b=1.1969\ldots\) утгууд юм.
+	
+- Анхнаасаа \\(\rho\\) параметрийг \\(\rho\approx\frac{b}{a}\\) гэж эцсийн харьцаатай ойролцоо байхаар таахыг оролдох хэрэгтэй.
+
+Дорх зурагт \\(\nu_4\\) схемийн хувьд Сильвестрийн процедурын үр дүн \\(\rho\\) параметраас хэрхэн хамаарахыг үзүүлэв. Эхний график дээр \\(a,\,b\\) тогтмолуудыг, хоёрдахь графикт давталтын матрицын хувийн утгуудыг, гуравдахь графикт \\(V(x)\\) функцийн дээд доод заагт хэдэн ширхэг гишүүн оруулсныг дүрсэлсэн. Эндээс \\(a,\,b\\) тогтмолуудын оптималь утга нь \\(\rho=1.5\\) утгын ойролцоо, \\(V(x)\\)-ийн дээд доод заагт тус бүр 4 гишүүн авах үед тохионо гэдэг нь харагдаж байгаа. Энэ нь бидний дээр олсон \\(a=0.7958\ldots,\,\,b=1.1969\ldots\\) утгууд юм.
 
 [![](/blog/assets/wp-media/2018/06/e4ab1.png)](/blog/assets/wp-media/2018/06/e4ab1.png)
 
-Одоо Сильвестрийн процедурыг Чебышёвын схем дээр хэрэглэе. Үүнд \(\rho=1.2\) гэж авснаар
+Одоо Сильвестрийн процедурыг Чебышёвын схем дээр хэрэглэе. Үүнд \\(\rho=1.2\\) гэж авснаар
 
-\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)+\underbrace{\psi(x/11)-\psi(x/12)+\ldots}_{\geq0}\\{}\qquad\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)\)
+\\(\displaystyle V(x)=\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)+\underbrace{\psi(x/11)-\psi(x/12)+\ldots}_{\geq0}\\{}\qquad\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)\\)
 
-\(\displaystyle V(x)=\psi(x)\underbrace{-\psi(x/6)+\psi(x/7)-\ldots+\psi(x/23}_{\leq0})-\psi(x/24)+\psi(x/29)\underbrace{-\psi(x/30)+\ldots}_{\leq0}\\{}\qquad\leq\psi(x)-\psi(x/24)+\psi(x/29)\)
+\\(\displaystyle V(x)=\psi(x)\underbrace{-\psi(x/6)+\psi(x/7)-\ldots+\psi(x/23}_{\leq0})-\psi(x/24)+\psi(x/29)\underbrace{-\psi(x/30)+\ldots}_{\leq0}\\{}\qquad\leq\psi(x)-\psi(x/24)+\psi(x/29)\\)
 
 үнэлгээнүүд гарч ирнэ. Эдгээрийг графикаар дүрсэлбэл
 
@@ -375,132 +375,132 @@ templateEngineOverride: "md"
 
 Эндээс
 
-\(\begin{cases}a_{i+1}&=A+\frac{a_i}{24}-\frac{b_i}{29}\\b_{i+1}&=\frac65\big(A-\frac{a_i}7+\frac{b_i}{10}\big)\end{cases}\)
+\\(\begin{cases}a_{i+1}&=A+\frac{a_i}{24}-\frac{b_i}{29}\\b_{i+1}&=\frac65\big(A-\frac{a_i}7+\frac{b_i}{10}\big)\end{cases}\\)
 
-гэсэн давталт үүснэ. Үүнд \(A=A(\nu_*)=0.9212\ldots.\) Өмнөх жишээг дагаад \(a_i=\alpha_i A\) ба \(b_i=\beta_i A\) гэсэн тэмдэглэгээнүүд оруулбал рекуррент харьцаа маань
+гэсэн давталт үүснэ. Үүнд \\(A=A(\nu_*)=0.9212\ldots.\\) Өмнөх жишээг дагаад \\(a_i=\alpha_i A\\) ба \\(b_i=\beta_i A\\) гэсэн тэмдэглэгээнүүд оруулбал рекуррент харьцаа маань
 
-\(\displaystyle \begin{pmatrix}\alpha_{i+1}\\\beta_{i+1}\end{pmatrix}=\begin{pmatrix}1\\\frac65\end{pmatrix}+\begin{pmatrix}\frac1{24}&-\frac1{29}\\-\frac{6}{35}&\frac6{50}\end{pmatrix}\begin{pmatrix}\alpha_{i}\\\beta_{i}\end{pmatrix}\)
+\\(\displaystyle \begin{pmatrix}\alpha_{i+1}\\\beta_{i+1}\end{pmatrix}=\begin{pmatrix}1\\\frac65\end{pmatrix}+\begin{pmatrix}\frac1{24}&-\frac1{29}\\-\frac{6}{35}&\frac6{50}\end{pmatrix}\begin{pmatrix}\alpha_{i}\\\beta_{i}\end{pmatrix}\\)
 
 боллоо. Энд орсон матрицын хувийн утгууд нь
 
-\(\lambda_1=-0.0054\ldots,\qquad\lambda_2=0.1671\ldots\)
+\\(\lambda_1=-0.0054\ldots,\qquad\lambda_2=0.1671\ldots\\)
 
-тул \(C_1,\ldots,C_4\) тогтмолуудын утга ямар ч байсан гэсэн
+тул \\(C_1,\ldots,C_4\\) тогтмолуудын утга ямар ч байсан гэсэн
 
-\(\displaystyle \alpha_{i}=\alpha+C_{1}\lambda_1^i+C_{2}\lambda_2^i,\qquad\beta_{i}=\beta+C_{3}\lambda_1^i+C_{4}\lambda_2^i\)
+\\(\displaystyle \alpha_{i}=\alpha+C_{1}\lambda_1^i+C_{2}\lambda_2^i,\qquad\beta_{i}=\beta+C_{3}\lambda_1^i+C_{4}\lambda_2^i\\)
 
-дарааллууд \(i\to\infty\) үед харгалзан \(\alpha\) ба \(\beta\) гэсэн тогтмолууд руу тэмүүлнэ. Рекуррент харьцаандаа \(\alpha_i=\alpha,\,\beta_i=\beta\) гэж тавьснаар эдгээр тогтмолуудын утга
+дарааллууд \\(i\to\infty\\) үед харгалзан \\(\alpha\\) ба \\(\beta\\) гэсэн тогтмолууд руу тэмүүлнэ. Рекуррент харьцаандаа \\(\alpha_i=\alpha,\,\beta_i=\beta\\) гэж тавьснаар эдгээр тогтмолуудын утга
 
-\(\displaystyle\alpha=\frac{51072}{50999},\qquad\beta=\frac{59595}{50999}\)
+\\(\displaystyle\alpha=\frac{51072}{50999},\qquad\beta=\frac{59595}{50999}\\)
 
 гэж шууд олдох ба, эндээс
 
-\(\displaystyle a_ix+O(\ln^2\!x)\leq\psi(x)\leq b_ix+O(\ln^2\!x)\)
+\\(\displaystyle a_ix+O(\ln^2\!x)\leq\psi(x)\leq b_ix+O(\ln^2\!x)\\)
 
 тэнцэл бишүүд
 
-\(a_i\to\alpha A=0.9226\ldots,\qquad b_i\to\beta A=1.0765\ldots\)
+\\(a_i\to\alpha A=0.9226\ldots,\qquad b_i\to\beta A=1.0765\ldots\\)
 
 байх тогтмолуудтайгаар мөрдөгдөнө. Үүнийг Чебышёвын
 
-\(A(\nu_*)=A=0.9212\ldots,\qquad B(\nu_*)=\frac65A=1.1055\ldots\)
+\\(A(\nu_*)=A=0.9212\ldots,\qquad B(\nu_*)=\frac65A=1.1055\ldots\\)
 
 тогтмолуудтай харьцуулахад мэдэгдэхүйц сайжирсан байгаа. Эдгээр нь Чебышёвын схемийн хувьд оптималь юм (Зураг).
 
 [![](/blog/assets/wp-media/2018/06/ecab1.png)](/blog/assets/wp-media/2018/06/ecab1.png)
 
-Чебышёвын схем дээр рекуррент процедураа хэрэглэх замаар өмнөх параграфт дурдсан \(a=0.9226\ldots,\,\,b=1.0765\ldots\) утгуудыг Сильвестр [1881 оны ажлаараа](https://quod.lib.umich.edu/cgi/t/text/text-idx?c=umhistmath;idno=AAS8085.0003.001) (хуудас 530–545) гаргаж авсан. Энэ ажилд \(\nu_1\) ба \(\nu_4\) схемүүд анх дурдагдсан. Сүүлд энэ сэдвээр тэр [1892 онд бас нэг ажил](https://archive.org/details/collectedmathem04sylvrich) (хуудас 687–731) хэвлүүлсэн бөгөөд тэндээ \(\nu_2,\,\nu_3,\,\nu_5,\,\nu_6\) схемүүдээс гадна
+Чебышёвын схем дээр рекуррент процедураа хэрэглэх замаар өмнөх параграфт дурдсан \\(a=0.9226\ldots,\,\,b=1.0765\ldots\\) утгуудыг Сильвестр [1881 оны ажлаараа](https://quod.lib.umich.edu/cgi/t/text/text-idx?c=umhistmath;idno=AAS8085.0003.001) (хуудас 530–545) гаргаж авсан. Энэ ажилд \\(\nu_1\\) ба \\(\nu_4\\) схемүүд анх дурдагдсан. Сүүлд энэ сэдвээр тэр [1892 онд бас нэг ажил](https://archive.org/details/collectedmathem04sylvrich) (хуудас 687–731) хэвлүүлсэн бөгөөд тэндээ \\(\nu_2,\,\nu_3,\,\nu_5,\,\nu_6\\) схемүүдээс гадна
 
-\(\nu_7=[1,6,10,210,231,1155;2,3,5,7,11,105]\\\nu_8=[1, 6, 10, 14, 105;2, 3, 5, 7, 11, 13, 385, 1001]\)
+\\(\nu_7=[1,6,10,210,231,1155;2,3,5,7,11,105]\\\nu_8=[1, 6, 10, 14, 105;2, 3, 5, 7, 11, 13, 385, 1001]\\)
 
-гэсэн хоёр аварга схем шинээр дэвшүүлсэн. Энэ дотроос \(\nu_3\) схемийг нь Сильвестрийн хамтрагч Хаммонд олсныг мөн тэмдэглэсэн байгаа.
+гэсэн хоёр аварга схем шинээр дэвшүүлсэн. Энэ дотроос \\(\nu_3\\) схемийг нь Сильвестрийн хамтрагч Хаммонд олсныг мөн тэмдэглэсэн байгаа.
 
-Сильвестрийн процедурыг \(\nu_5\) схем дээр \(\rho=1.2\) параметртэйгээр хэрэглэвэл дараах дүр зураг харагдана.
+Сильвестрийн процедурыг \\(\nu_5\\) схем дээр \\(\rho=1.2\\) параметртэйгээр хэрэглэвэл дараах дүр зураг харагдана.
 
 [![](/blog/assets/wp-media/2018/05/e5e5.png)](/blog/assets/wp-media/2018/05/e5e5.png)
 
 Өөрөөр хэлбэл
 
-\(\displaystyle V(x)\leq\psi(x)+\psi(x/17)-\psi(x/24)+\psi(x/29)\\{}\qquad-\psi(x/30)+\psi(x/47)-\psi(x/60)+\psi(x/77)\)
+\\(\displaystyle V(x)\leq\psi(x)+\psi(x/17)-\psi(x/24)+\psi(x/29)\\{}\qquad-\psi(x/30)+\psi(x/47)-\psi(x/60)+\psi(x/77)\\)
 
-\(\displaystyle V(x)\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)+\psi(x/13)-\psi(x/30)\\{}\qquad+\psi(x/43)-\psi(x/60)+\psi(x/73)-\psi(x/90)\)
+\\(\displaystyle V(x)\geq\psi(x)-\psi(x/6)+\psi(x/7)-\psi(x/10)+\psi(x/13)-\psi(x/30)\\{}\qquad+\psi(x/43)-\psi(x/60)+\psi(x/73)-\psi(x/90)\\)
 
 гэсэн үнэлгээнүүд төрөх ба эндээс гарах давталт нь
 
-\(\begin{cases}a_{i+1}&=A+\big(\frac1{24}+\frac1{30}+\frac1{60}\big)a_i-\big(\frac1{17}+\frac1{29}+\frac1{47}+\frac1{77}\big)b_i\\b_{i+1}&=\frac65A-\big(\frac17+\frac1{13}+\frac1{43}+\frac1{73}\big)\cdot\frac65a_i+\big(\frac1{10}+\frac1{30}+\frac1{60}+\frac1{90}\big)\cdot\frac65b_i\end{cases}\)
+\\(\begin{cases}a_{i+1}&=A+\big(\frac1{24}+\frac1{30}+\frac1{60}\big)a_i-\big(\frac1{17}+\frac1{29}+\frac1{47}+\frac1{77}\big)b_i\\b_{i+1}&=\frac65A-\big(\frac17+\frac1{13}+\frac1{43}+\frac1{73}\big)\cdot\frac65a_i+\big(\frac1{10}+\frac1{30}+\frac1{60}+\frac1{90}\big)\cdot\frac65b_i\end{cases}\\)
 
 Үүний хязгаарыг олбол
 
-\(a_i\to a=0.9119\ldots,\qquad b_i\to b=1.0909\ldots\)
+\\(a_i\to a=0.9119\ldots,\qquad b_i\to b=1.0909\ldots\\)
 
-ба харьцаа нь \(\frac{b}{a}=1.1963\ldots\). Эдгээр нь \(\nu_5\) схемийн хувьд оптималь утгууд болно (Зураг).
+ба харьцаа нь \\(\frac{b}{a}=1.1963\ldots\\). Эдгээр нь \\(\nu_5\\) схемийн хувьд оптималь утгууд болно (Зураг).
 
 [![](/blog/assets/wp-media/2018/06/e5ab.png)](/blog/assets/wp-media/2018/06/e5ab.png)
 
-Дараачийн \(\nu_6\) схемийн хувьд, \(\rho=1.1\) гэж авбал
+Дараачийн \\(\nu_6\\) схемийн хувьд, \\(\rho=1.1\\) гэж авбал
 
-\(V(x)\leq\psi(x)+\psi(x/13)-\psi(x/10)+\psi(x/11)-\psi(x/15)+\psi(x/17)\\{}\qquad-\psi(x/14)+\psi(x/19)-\psi(x/20)+\psi(x/73)-\psi(x/230)+\psi(x/283)\\{}\qquad-\psi(x/440)+\psi(x/493)-\psi(x/110)+\psi(x/139)\)
+\\(V(x)\leq\psi(x)+\psi(x/13)-\psi(x/10)+\psi(x/11)-\psi(x/15)+\psi(x/17)\\{}\qquad-\psi(x/14)+\psi(x/19)-\psi(x/20)+\psi(x/73)-\psi(x/230)+\psi(x/283)\\{}\qquad-\psi(x/440)+\psi(x/493)-\psi(x/110)+\psi(x/139)\\)
 
-\(V(x)\geq\psi(x)-\psi(x/10)+\psi(x/11)-\psi(x/15)+\psi(x/17)-\psi(x/21)\\{}\qquad+\psi(x/23)-\psi(x/28)+\psi(x/31)-\psi(x/35)+\psi(x/71)-\psi(x/100)\\{}\qquad+\psi(x/281)-\psi(x/310)+\psi(x/137)-\psi(x/190)+\psi(x/347)-\psi(x/400)\)
+\\(V(x)\geq\psi(x)-\psi(x/10)+\psi(x/11)-\psi(x/15)+\psi(x/17)-\psi(x/21)\\{}\qquad+\psi(x/23)-\psi(x/28)+\psi(x/31)-\psi(x/35)+\psi(x/71)-\psi(x/100)\\{}\qquad+\psi(x/281)-\psi(x/310)+\psi(x/137)-\psi(x/190)+\psi(x/347)-\psi(x/400)\\)
 
-гэсэн гишүүд шүүгдэж үлдэнэ. Сильвестр өөрөө \(\rho=1.1\) гэж авсан боловч дээрх заагуудаас харгалзан \(-\psi(x/440)+\psi(x/493)\) ба \(\psi(x/281)-\psi(x/310)\) гишүүдийг (санамсаргүй эсвэл санаатай) орхигдуулснаар
+гэсэн гишүүд шүүгдэж үлдэнэ. Сильвестр өөрөө \\(\rho=1.1\\) гэж авсан боловч дээрх заагуудаас харгалзан \\(-\psi(x/440)+\psi(x/493)\\) ба \\(\psi(x/281)-\psi(x/310)\\) гишүүдийг (санамсаргүй эсвэл санаатай) орхигдуулснаар
 
-\(a=0.941854\ldots,\qquad b=1.056726\ldots\)
+\\(a=0.941854\ldots,\qquad b=1.056726\ldots\\)
 
 гэсэн үр дүнд хүрсэн. Орхигдуулсан гишүүдийг оруулаад тооцвол
 
-\(a=0.941806\ldots,\qquad b=1.056825\ldots\)
+\\(a=0.941806\ldots,\qquad b=1.056825\ldots\\)
 
-болох тул Сильвестр дээр дурдагдсан гишүүдийг зориуд орхигдуулсан байж болох талтай. Гэхдээ яасан ч байлаа гэсэн, \(\nu_6\) схемийн хувьд дээрх утгууд оптималь биш бөгөөд, оптималь утга нь \(\rho=1.105\) дээр
+болох тул Сильвестр дээр дурдагдсан гишүүдийг зориуд орхигдуулсан байж болох талтай. Гэхдээ яасан ч байлаа гэсэн, \\(\nu_6\\) схемийн хувьд дээрх утгууд оптималь биш бөгөөд, оптималь утга нь \\(\rho=1.105\\) дээр
 
-\(a=0.944462\ldots,\qquad b=1.055800\ldots\)
+\\(a=0.944462\ldots,\qquad b=1.055800\ldots\\)
 
-байгаа. Дорх зурагт \(\rho\) параметрийг хувьсгасан үр дүнг үзүүлэв.
+байгаа. Дорх зурагт \\(\rho\\) параметрийг хувьсгасан үр дүнг үзүүлэв.
 
 [![](/blog/assets/wp-media/2018/06/e6ab.png)](/blog/assets/wp-media/2018/06/e6ab.png)
 
-Эцэст нь, сүүлийн хоёр аварга схемийг нэг нэгээр нь сонирхоё. Эхний \(\nu_7\) схемийн хувьд \(E(x)\)-ийн үе нь 2310 бөгөөд үргэлж \(-2\leq E(x)\leq2\). Цаашилбал, \(x<15\) үед \(E(x)\geq1\) ба хамгийн анхны \(E(x)=2\) болох цэг нь \(x=13\). Түүнчлэн, хамгийн анх \(x=105\) дээр \(E(x)=-1\), \(x=616\) дээр \(E(x)=-2\) утгаа авдаг.
+Эцэст нь, сүүлийн хоёр аварга схемийг нэг нэгээр нь сонирхоё. Эхний \\(\nu_7\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 2310 бөгөөд үргэлж \\(-2\leq E(x)\leq2\\). Цаашилбал, \\(x<15\\) үед \\(E(x)\geq1\\) ба хамгийн анхны \\(E(x)=2\\) болох цэг нь \\(x=13\\). Түүнчлэн, хамгийн анх \\(x=105\\) дээр \\(E(x)=-1\\), \\(x=616\\) дээр \\(E(x)=-2\\) утгаа авдаг.
 
 [![](/blog/assets/wp-media/2018/05/e7.png)](/blog/assets/wp-media/2018/05/e7.png)
 
-Энд ялангуяа \(V(x)\)-ийн доод заагтай ажиллахад хэт нүсэр тул Сильвестр \(\rho=1.1\) утганд \(\nu_7\) схемээс гарах дээд заагийг \(\nu_6\) схемээс гарах доод заагтай хамтатган давталт зохиож,
+Энд ялангуяа \\(V(x)\\)-ийн доод заагтай ажиллахад хэт нүсэр тул Сильвестр \\(\rho=1.1\\) утганд \\(\nu_7\\) схемээс гарах дээд заагийг \\(\nu_6\\) схемээс гарах доод заагтай хамтатган давталт зохиож,
 
-\(a=0.946197\ldots,\qquad b=1.055185\ldots\)
+\\(a=0.946197\ldots,\qquad b=1.055185\ldots\\)
 
-гэсэн үр дүн гаргаж авсан. Түүнчлэн, \(V(x)\)-ийн доод заагийн зөвхөн \(\psi(x/616)\) хүртэлх гишүүдийг тооцон дахиад ганц давталт хийснээр
+гэсэн үр дүн гаргаж авсан. Түүнчлэн, \\(V(x)\\)-ийн доод заагийн зөвхөн \\(\psi(x/616)\\) хүртэлх гишүүдийг тооцон дахиад ганц давталт хийснээр
 
-\(b=1.054239\ldots\)
+\\(b=1.054239\ldots\\)
 
-болтол нь сайжруулсан. Бидний хувьд бол компьютер ашиглан \(\nu_7\) схемийн хувьд оптималь параметр нь \(\rho=1.113\) гэдгийг төвөггүй олж болох ба энэ үед
+болтол нь сайжруулсан. Бидний хувьд бол компьютер ашиглан \\(\nu_7\\) схемийн хувьд оптималь параметр нь \\(\rho=1.113\\) гэдгийг төвөггүй олж болох ба энэ үед
 
-\(a=0.946585\ldots,\qquad b=1.054309\ldots\)
+\\(a=0.946585\ldots,\qquad b=1.054309\ldots\\)
 
-байна. Тэгэхээр \(\nu_7\) схемийг \(\nu_6\) схемтэй эрлийзжүүлснээр \(b\) тогтмолын утга сайжирчээ. Дорх зурагт \(\nu_7\) схемийн хувьд \(\rho\) параметрийг хувьсган судалсан үр дүнг үзүүлэв.
+байна. Тэгэхээр \\(\nu_7\\) схемийг \\(\nu_6\\) схемтэй эрлийзжүүлснээр \\(b\\) тогтмолын утга сайжирчээ. Дорх зурагт \\(\nu_7\\) схемийн хувьд \\(\rho\\) параметрийг хувьсган судалсан үр дүнг үзүүлэв.
 
 [![](/blog/assets/wp-media/2018/06/e7ab.png)](/blog/assets/wp-media/2018/06/e7ab.png)
 
-Хамгийн сүүлд, манай үнэмлэхүй аварга \(\nu_8\) схемийн хувьд \(E(x)\)-ийн үе нь 30030 бөгөөд үргэлж \(-1\leq E(x)\leq4\). Цаашилбал, \(x<15\) үед \(E(x)\geq1\) ба хамгийн анхны \(E(x)=2\) болох цэг нь \(x=19\). Түүнчлэн, хамгийн анх \(x=66\) дээр \(E(x)=-1\), \(x=229\) дээр \(E(x)=3\), \(x=1891\) дээр \(E(x)=4\) утгаа авдаг.
+Хамгийн сүүлд, манай үнэмлэхүй аварга \\(\nu_8\\) схемийн хувьд \\(E(x)\\)-ийн үе нь 30030 бөгөөд үргэлж \\(-1\leq E(x)\leq4\\). Цаашилбал, \\(x<15\\) үед \\(E(x)\geq1\\) ба хамгийн анхны \\(E(x)=2\\) болох цэг нь \\(x=19\\). Түүнчлэн, хамгийн анх \\(x=66\\) дээр \\(E(x)=-1\\), \\(x=229\\) дээр \\(E(x)=3\\), \\(x=1891\\) дээр \\(E(x)=4\\) утгаа авдаг.
 
 [![](/blog/assets/wp-media/2018/05/e8.png)](/blog/assets/wp-media/2018/05/e8.png)
 
 Сильвестр үүнээс
 
-\(a=0.95695\ldots,\qquad b=1.04423\ldots\)
+\\(a=0.95695\ldots,\qquad b=1.04423\ldots\\)
 
-гэсэн хувийн рекордоо гаргаж авсан. Үнэндээ, энэ схемийн оптималь үр дүн \(\rho=1.09\) дээр тохиох ба
+гэсэн хувийн рекордоо гаргаж авсан. Үнэндээ, энэ схемийн оптималь үр дүн \\(\rho=1.09\\) дээр тохиох ба
 
-\(a=0.957600\ldots,\qquad b=1.043521\ldots\)
+\\(a=0.957600\ldots,\qquad b=1.043521\ldots\\)
 
-юм. Дорх зурагт \(\rho\) параметрийн утгыг хувьсгасан судалгааг дүрслэв.
+юм. Дорх зурагт \\(\rho\\) параметрийн утгыг хувьсгасан судалгааг дүрслэв.
 
 [![](/blog/assets/wp-media/2018/06/e8ab.png)](/blog/assets/wp-media/2018/06/e8ab.png)
 
-Дээр дурдсан оптималь \(a,\,b\) утганд хүргэдэг тэнцэл бишүүдийг сонирхуулбал:
+Дээр дурдсан оптималь \\(a,\,b\\) утганд хүргэдэг тэнцэл бишүүдийг сонирхуулбал:
 
-\(V(x)\leq\psi(x)+\psi(x/19)+\psi(x/229)+\psi(x/1891)-\psi(x/15)+\psi(x/17)\\{}\qquad-\psi(x/26)+\psi(x/29)-\psi(x/65)+\psi(x/71)-\psi(x/21)+\psi(x/31)\\{}\qquad-\psi(x/33)+\psi(x/43)-\psi(x/44)+\psi(x/61)-\psi(x/63)+\psi(x/73)\\{}\qquad-\psi(x/75)+\psi(x/103)-\psi(x/385)+\psi(x/421)-\psi(x/242)+\psi(x/271)\\{}\qquad-\psi(x/285)+\psi(x/323)-\psi(x/385)+\psi(x/439)-\psi(x/440)+\psi(x/493)\\{}\qquad-\psi(x/494)+\psi(x/571)-\psi(x/770)+\psi(x/841)-\psi(x/1155)+\psi(x/1273)\\{}\qquad-\psi(x/3080)+\psi(x/3361)-\psi(x/1924)+\psi(x/3001)\\{}\qquad-\psi(x/3003)+\psi(x/3781)-\psi(x/4004)+\psi(x/4861)\\{}\qquad-\psi(x/5005)+\psi(x/6511)-\psi(x/6864)+\psi(x/7981)\\{}\qquad-\psi(x/7995)+\psi(x/8821)-\psi(x/8853)+\psi(x/9931)\\{}\qquad-\psi(x/10725)+\psi(x/11933)-\psi(x/11934)+\psi(x/13441)\\{}\qquad-\psi(x/13442)+\psi(x/14923)-\psi(x/17654)+\psi(x/19951)\)
+\\(V(x)\leq\psi(x)+\psi(x/19)+\psi(x/229)+\psi(x/1891)-\psi(x/15)+\psi(x/17)\\{}\qquad-\psi(x/26)+\psi(x/29)-\psi(x/65)+\psi(x/71)-\psi(x/21)+\psi(x/31)\\{}\qquad-\psi(x/33)+\psi(x/43)-\psi(x/44)+\psi(x/61)-\psi(x/63)+\psi(x/73)\\{}\qquad-\psi(x/75)+\psi(x/103)-\psi(x/385)+\psi(x/421)-\psi(x/242)+\psi(x/271)\\{}\qquad-\psi(x/285)+\psi(x/323)-\psi(x/385)+\psi(x/439)-\psi(x/440)+\psi(x/493)\\{}\qquad-\psi(x/494)+\psi(x/571)-\psi(x/770)+\psi(x/841)-\psi(x/1155)+\psi(x/1273)\\{}\qquad-\psi(x/3080)+\psi(x/3361)-\psi(x/1924)+\psi(x/3001)\\{}\qquad-\psi(x/3003)+\psi(x/3781)-\psi(x/4004)+\psi(x/4861)\\{}\qquad-\psi(x/5005)+\psi(x/6511)-\psi(x/6864)+\psi(x/7981)\\{}\qquad-\psi(x/7995)+\psi(x/8821)-\psi(x/8853)+\psi(x/9931)\\{}\qquad-\psi(x/10725)+\psi(x/11933)-\psi(x/11934)+\psi(x/13441)\\{}\qquad-\psi(x/13442)+\psi(x/14923)-\psi(x/17654)+\psi(x/19951)\\)
 
 ба
 
-\(V(x)\geq\psi(x)-\psi(x/15)-\psi(x/66)+\psi(x/67)-\psi(x/78)+\psi(x/79)-\psi(x/418)\\{}\qquad+\psi(x/419)-\psi(x/2068)+\psi(x/2081)-\psi(x/3135)+\psi(x/3149)-\psi(x/5005)\\{}\qquad+\psi(x/5039)-\psi(x/7007)+\psi(x/7349)-\psi(x/8086)\\{}\qquad+\psi(x/8087)-\psi(x/9009)+\psi(x/9011)-\psi(x/10036)\\{}\qquad+\psi(x/10079)-\psi(x/12376)+\psi(x/15107)-\psi(x/16588)\\{}\qquad+\psi(x/16589)-\psi(x/18096)+\psi(x/17)-\psi(x/22)+\psi(x/23)-\psi(x/26)\\{}\qquad+\psi(x/29)-\psi(x/35)+\psi(x/41)-\psi(x/45)+\psi(x/47)-\psi(x/52)\\{}\qquad+\psi(x/59)-\psi(x/65)+\psi(x/107)-\psi(x/135)+\psi(x/210)-\psi(x/275)\\{}\qquad+\psi(x/289)-\psi(x/385)+\psi(x/521)-\psi(x/585)+\psi(x/629)-\psi(x/795)\\{}\qquad+\psi(x/839)-\psi(x/936)+\psi(x/1049)-\psi(x/1144)+\psi(x/1717)-\psi(x/1925)\\{}\qquad+\psi(x/19)-\psi(x/21).\)
+\\(V(x)\geq\psi(x)-\psi(x/15)-\psi(x/66)+\psi(x/67)-\psi(x/78)+\psi(x/79)-\psi(x/418)\\{}\qquad+\psi(x/419)-\psi(x/2068)+\psi(x/2081)-\psi(x/3135)+\psi(x/3149)-\psi(x/5005)\\{}\qquad+\psi(x/5039)-\psi(x/7007)+\psi(x/7349)-\psi(x/8086)\\{}\qquad+\psi(x/8087)-\psi(x/9009)+\psi(x/9011)-\psi(x/10036)\\{}\qquad+\psi(x/10079)-\psi(x/12376)+\psi(x/15107)-\psi(x/16588)\\{}\qquad+\psi(x/16589)-\psi(x/18096)+\psi(x/17)-\psi(x/22)+\psi(x/23)-\psi(x/26)\\{}\qquad+\psi(x/29)-\psi(x/35)+\psi(x/41)-\psi(x/45)+\psi(x/47)-\psi(x/52)\\{}\qquad+\psi(x/59)-\psi(x/65)+\psi(x/107)-\psi(x/135)+\psi(x/210)-\psi(x/275)\\{}\qquad+\psi(x/289)-\psi(x/385)+\psi(x/521)-\psi(x/585)+\psi(x/629)-\psi(x/795)\\{}\qquad+\psi(x/839)-\psi(x/936)+\psi(x/1049)-\psi(x/1144)+\psi(x/1717)-\psi(x/1925)\\{}\qquad+\psi(x/19)-\psi(x/21).\\)
 
 Жич: Энэ постны тооцоо болон зургуудыг хийсэн Python програмыг [энэ хаягнаас](https://github.com/gantemur/numbers/blob/master/sylvester.ipynb) авч болно.

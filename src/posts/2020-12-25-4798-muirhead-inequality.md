@@ -19,65 +19,65 @@ templateEngineOverride: "md"
 
 [Кошийн тэнцэл бишийг](/blog/2020/12/03/amgm/) өргөтгөсөн [Маклорены тэнцэл биш](/blog/2020/12/21/newton-maclaurin/) гэгчийг бид өмнөх постоороо танилцуулсан. Жишээ нь, энэ тэнцэл бишийн 3 тоон дээрх хувилбар нь 
 
-\(\displaystyle  \sqrt[3]{xyz} \leq \sqrt{\frac{xy+yz+zx}3}\leq\frac{x+y+z}3.\)
+\\(\displaystyle  \sqrt[3]{xyz} \leq \sqrt{\frac{xy+yz+zx}3}\leq\frac{x+y+z}3.\\)
 
  Кошийн тэнцэл бишийг үүнтэй төстэй боловч арай өөр чиглэлд өргөтгөсөн өргөтгөлийг [1903 онд](https://www.cambridge.org/core/journals/proceedings-of-the-edinburgh-mathematical-society/article/some-methods-applicable-to-identities-and-inequalities-of-symmetric-algebraic-functions-of-n-letters/F222600CC0076146E369EE27C8559F78) Шотландын математикч [Роберт Мюрхед](https://en.wikipedia.org/wiki/Robert_Franklin_Muirhead) баталжээ. Тэрбээр  
 
-\(\displaystyle  F_a(x,y,z) = x^{a_1}y^{a_2}z^{a_3} + x^{a_1}z^{a_2}y^{a_3} + y^{a_1}z^{a_2}x^{a_3}\\ {}\qquad\qquad\quad + y^{a_1}x^{a_2}z^{a_3} + z^{a_1}x^{a_2}y^{a_3} + z^{a_1}y^{a_2}x^{a_3}\)
+\\(\displaystyle  F_a(x,y,z) = x^{a_1}y^{a_2}z^{a_3} + x^{a_1}z^{a_2}y^{a_3} + y^{a_1}z^{a_2}x^{a_3}\\ {}\qquad\qquad\quad + y^{a_1}x^{a_2}z^{a_3} + z^{a_1}x^{a_2}y^{a_3} + z^{a_1}y^{a_2}x^{a_3}\\)
 
- маягийн илэрхийллүүд \({a=(a_1,a_2,a_3)}\) илтгэгчдээсээ хамаараад эерэг \({x,y,z}\)-ийн хувьд хоорондоо яаж эрэмбэлэгдэх вэ гэдгийг шийдсэн юм. Дээрх хэлбэрийн нийлбэрийг *тэгшхэмт нийлбэр* гэдэг ба товчоор 
+ маягийн илэрхийллүүд \\({a=(a_1,a_2,a_3)}\\) илтгэгчдээсээ хамаараад эерэг \\({x,y,z}\\)-ийн хувьд хоорондоо яаж эрэмбэлэгдэх вэ гэдгийг шийдсэн юм. Дээрх хэлбэрийн нийлбэрийг *тэгшхэмт нийлбэр* гэдэг ба товчоор 
 
-\(\displaystyle  F_a(x,y,z) = \sum_{\mathrm{sym}}x^{a_1}y^{a_2}z^{a_3}\)
+\\(\displaystyle  F_a(x,y,z) = \sum_{\mathrm{sym}}x^{a_1}y^{a_2}z^{a_3}\\)
 
  гэж бичих нь бий.
 
 Мюрхедийн тэнцэл бишийн 2 хувьсагчтай тохиолдол нь 
 
-\(\displaystyle  F_a(x,y) = \sum_{\mathrm{sym}}x^{a_1}y^{a_2} = x^{a_1}y^{a_2} + y^{a_1}x^{a_2}\)
+\\(\displaystyle  F_a(x,y) = \sum_{\mathrm{sym}}x^{a_1}y^{a_2} = x^{a_1}y^{a_2} + y^{a_1}x^{a_2}\\)
 
- илэрхийллүүдийг эрэмбэлэх ба бүх эерэг \({x,y}\)-ийн хувьд 
+ илэрхийллүүдийг эрэмбэлэх ба бүх эерэг \\({x,y}\\)-ийн хувьд 
 
-\(\displaystyle  F_a(x,y) \leq F_b(x,y)\)
+\\(\displaystyle  F_a(x,y) \leq F_b(x,y)\\)
 
  тэнцэл биш биелэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь [
 
-\(\displaystyle  a_1=\lambda b_1+(1-\lambda)b_2, \qquad a_2=\lambda b_2+(1-\lambda)b_1, \ \ \ \ \ (1)\)
+\\(\displaystyle  a_1=\lambda b_1+(1-\lambda)b_2, \qquad a_2=\lambda b_2+(1-\lambda)b_1, \ \ \ \ \ (1)\\)
 
-] байх \({0\leq\lambda\leq1}\) тоо олдох явдал юм гэж тунхагладаг. Дээрх тэнцэл биш [жинтэй Коши](/blog/2020/12/03/amgm/) эсвэл [Юнгийн тэнцэл бишээс](/blog/2020/12/17/young-inequality/) шууд 
+] байх \\({0\leq\lambda\leq1}\\) тоо олдох явдал юм гэж тунхагладаг. Дээрх тэнцэл биш [жинтэй Коши](/blog/2020/12/03/amgm/) эсвэл [Юнгийн тэнцэл бишээс](/blog/2020/12/17/young-inequality/) шууд 
 
-\(\displaystyle  x^{a_1}y^{a_2} =(x^{b_1}y^{b_2})^\lambda(x^{b_2}y^{b_1})^{1-\lambda} \leq \lambda x^{b_1}y^{b_2}+(1-\lambda)x^{b_2}y^{b_1}\)
+\\(\displaystyle  x^{a_1}y^{a_2} =(x^{b_1}y^{b_2})^\lambda(x^{b_2}y^{b_1})^{1-\lambda} \leq \lambda x^{b_1}y^{b_2}+(1-\lambda)x^{b_2}y^{b_1}\\)
 
  маягаар мөрдөнө. Хэрэв [(1)](#ecvx-hull-2-1) нөхцлийг вектор хэлбэрээр 
 
-\(\displaystyle  (a_1,a_2)=\lambda(b_1,b_2)+(1-\lambda)(b_2,b_1)\)
+\\(\displaystyle  (a_1,a_2)=\lambda(b_1,b_2)+(1-\lambda)(b_2,b_1)\\)
 
- гэж бичвэл, \({a=(a_1,a_2)}\) цэг нь \({b=(b_1,b_2)}\) ба \({b'=(b_2,b_1)}\) цэгүүдийг холбосон хэрчим дээр оршиж байгааг харж болно.
+ гэж бичвэл, \\({a=(a_1,a_2)}\\) цэг нь \\({b=(b_1,b_2)}\\) ба \\({b'=(b_2,b_1)}\\) цэгүүдийг холбосон хэрчим дээр оршиж байгааг харж болно.
 
  [![](/blog/assets/wp-media/2020/12/png-image-2-e1608935913169.png)](https://t8m8r.wordpress.com/wp-content/uploads/2020/12/png-image-2.png) Дээрх нөхцлийн b=(3,1) байх тохиолдол. 
 
-Одоо 3 хувьсагчийн хувьд дээрх [(1)](#ecvx-hull-2-1) нөхцлийг шууд өргөтгөе гэвэл, \({b=(b_1,b_2,b_3)}\) вектор нь 3 байгуулагчтай тул, \({(b_1,b_3,b_2)}\), \({(b_3,b_2,b_1)}\) гэх мэт бүх 6 сэлгэмэлд харгалзах цэгүүдийн үүсгэх гүдгэр дүрсийг авч үзэх хэрэгтэй. Энэ гүдгэр дүрс нь \({a_1+a_2+a_3=C}\) гэсэн хавтгай дээр орших гүдгэр 6 өнцөгт болохыг амархан шалгаж болно. Тэгэхээр Мюрхед юу гэж хэлдэг вэ гэвэл: Бүх эерэг \({x,y,z}\)-ийн хувьд 
+Одоо 3 хувьсагчийн хувьд дээрх [(1)](#ecvx-hull-2-1) нөхцлийг шууд өргөтгөе гэвэл, \\({b=(b_1,b_2,b_3)}\\) вектор нь 3 байгуулагчтай тул, \\({(b_1,b_3,b_2)}\\), \\({(b_3,b_2,b_1)}\\) гэх мэт бүх 6 сэлгэмэлд харгалзах цэгүүдийн үүсгэх гүдгэр дүрсийг авч үзэх хэрэгтэй. Энэ гүдгэр дүрс нь \\({a_1+a_2+a_3=C}\\) гэсэн хавтгай дээр орших гүдгэр 6 өнцөгт болохыг амархан шалгаж болно. Тэгэхээр Мюрхед юу гэж хэлдэг вэ гэвэл: Бүх эерэг \\({x,y,z}\\)-ийн хувьд 
 
-\(\displaystyle  F_a(x,y,z) \leq F_b(x,y,z)\)
+\\(\displaystyle  F_a(x,y,z) \leq F_b(x,y,z)\\)
 
  тэнцэл биш биелэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь  
 
-\(\displaystyle  a= \lambda_1 (b_1,b_2,b_3) +\lambda_2 (b_1,b_3,b_2) +\lambda_3 (b_2,b_3,b_1)\\ {}\qquad+\lambda_4 (b_2,b_1,b_3) +\lambda_5 (b_3,b_1,b_2) +\lambda_6 (b_3,b_2,b_1)\)
+\\(\displaystyle  a= \lambda_1 (b_1,b_2,b_3) +\lambda_2 (b_1,b_3,b_2) +\lambda_3 (b_2,b_3,b_1)\\ {}\qquad+\lambda_4 (b_2,b_1,b_3) +\lambda_5 (b_3,b_1,b_2) +\lambda_6 (b_3,b_2,b_1)\\)
 
  ба 
 
-\(\displaystyle  \lambda_1+\lambda_2+\lambda_3+\lambda_4+\lambda_5+\lambda_6=1\)
+\\(\displaystyle  \lambda_1+\lambda_2+\lambda_3+\lambda_4+\lambda_5+\lambda_6=1\\)
 
- байх сөрөг биш \({\lambda_1,\ldots,\lambda_6}\) тоонууд олдох явдал юм. Өөрөөр хэлбэл, \({a\in{\mathbb R}^3}\) цэг нь \({b\in{\mathbb R}^3}\) векторын байгуулагчдыг сэлгэхэд гарах 6 вектор дээр оройтой гүдгэр 6 өнцөгт дотор оршино. Жишээлбэл, \({a=(\frac13,\frac13,\frac13)}\) ба \({b=(1,0,0)}\) гэвэл 
+ байх сөрөг биш \\({\lambda_1,\ldots,\lambda_6}\\) тоонууд олдох явдал юм. Өөрөөр хэлбэл, \\({a\in{\mathbb R}^3}\\) цэг нь \\({b\in{\mathbb R}^3}\\) векторын байгуулагчдыг сэлгэхэд гарах 6 вектор дээр оройтой гүдгэр 6 өнцөгт дотор оршино. Жишээлбэл, \\({a=(\frac13,\frac13,\frac13)}\\) ба \\({b=(1,0,0)}\\) гэвэл 
 
-\(\displaystyle  F_a(x,y,z) = 6x^{1/3}y^{1/3}z^{1/3} = 6\sqrt[3]{xyz},\)
+\\(\displaystyle  F_a(x,y,z) = 6x^{1/3}y^{1/3}z^{1/3} = 6\sqrt[3]{xyz},\\)
 
  
 
-\(\displaystyle  F_b(x,y,z) = 2x+2y+2z,\)
+\\(\displaystyle  F_b(x,y,z) = 2x+2y+2z,\\)
 
  ба 
 
-\(\displaystyle  a = \frac26(1,0,0) + \frac26(0,1,0) + \frac26(0,0,1)\)
+\\(\displaystyle  a = \frac26(1,0,0) + \frac26(0,1,0) + \frac26(0,0,1)\\)
 
  тул 3 хувьсагчтай Кошийн тэнцэл биш мөрдөнө.
 
@@ -85,263 +85,263 @@ templateEngineOverride: "md"
 
 Ерөнхий тохиолдолд, Мюрхедийн тэнцэл бишийг дараах маягаар томъёолж болно.
 
-**Теорем 1.**  Дурын эерэг \({x_1,\ldots,x_n}\) тоонуудын хувьд [
+**Теорем 1.**  Дурын эерэг \\({x_1,\ldots,x_n}\\) тоонуудын хувьд [
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \ \ \ \ \ (2)\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \ \ \ \ \ (2)\\)
 
 ] тэнцэл биш биелэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь [
 
-\(\displaystyle  a=\sum_{\sigma\in S_n} \lambda_\sigma (b_{\sigma(1)},\ldots,b_{\sigma(n)}) \ \ \ \ \ (3)\)
+\\(\displaystyle  a=\sum_{\sigma\in S_n} \lambda_\sigma (b_{\sigma(1)},\ldots,b_{\sigma(n)}) \ \ \ \ \ (3)\\)
 
 ] ба [
 
-\(\displaystyle  \sum_{\sigma\in S_n}\lambda_\sigma=1 \ \ \ \ \ (4)\)
+\\(\displaystyle  \sum_{\sigma\in S_n}\lambda_\sigma=1 \ \ \ \ \ (4)\\)
 
-] байх сөрөг биш \({\{\lambda_\sigma:\sigma\in S_n\}}\) тоонууд олдох явдал юм. Энд \({S_n}\) нь \({\{1,\ldots,n\}}\) тоонуудын бүх сэлгэмлийн олонлог. Цаашилбал, [(3)](#emuirhead-cvx-hull) ба [(4)](#emuirhead-cvx-hull-sum-1) нөхцлүүд биелдэг бөгөөд \({a}\) векторын байгуулагчид \({b}\) векторын байгуулагчдын сэлгэмэл биш үед [(2)](#emuirhead-ineq-1) тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \({x_1=\ldots=x_n}\). 
+] байх сөрөг биш \\({\{\lambda_\sigma:\sigma\in S_n\}}\\) тоонууд олдох явдал юм. Энд \\({S_n}\\) нь \\({\{1,\ldots,n\}}\\) тоонуудын бүх сэлгэмлийн олонлог. Цаашилбал, [(3)](#emuirhead-cvx-hull) ба [(4)](#emuirhead-cvx-hull-sum-1) нөхцлүүд биелдэг бөгөөд \\({a}\\) векторын байгуулагчид \\({b}\\) векторын байгуулагчдын сэлгэмэл биш үед [(2)](#emuirhead-ineq-1) тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \\({x_1=\ldots=x_n}\\). 
 
-Жинтэй Кошийн тэнцэл бишийг \({\{\lambda_\sigma:\sigma\in S_n\}}\) илгэгчидтэйгээр хэрэглэн энэ теоремыг хялбархан баталж болдог. Өөрөөр хэлбэл, хэрэв бид \({\{\lambda_\sigma:\sigma\in S_n\}}\) тоонуудыг мэдэж байвал дээрх теоремын оронд жинтэй Кошийн тэнцэл бишийг өөрийг нь шууд ашигласан ч болно гэсэн үг. Тэгэхээр \({\{\lambda_\sigma:\sigma\in S_n\}}\) тоонуудын утгыг тооцоолохгүйгээр, ийм тоонууд оршин байх эсэхийг шалгаж болох уу гэсэн асуулт гарна.
+Жинтэй Кошийн тэнцэл бишийг \\({\{\lambda_\sigma:\sigma\in S_n\}}\\) илгэгчидтэйгээр хэрэглэн энэ теоремыг хялбархан баталж болдог. Өөрөөр хэлбэл, хэрэв бид \\({\{\lambda_\sigma:\sigma\in S_n\}}\\) тоонуудыг мэдэж байвал дээрх теоремын оронд жинтэй Кошийн тэнцэл бишийг өөрийг нь шууд ашигласан ч болно гэсэн үг. Тэгэхээр \\({\{\lambda_\sigma:\sigma\in S_n\}}\\) тоонуудын утгыг тооцоолохгүйгээр, ийм тоонууд оршин байх эсэхийг шалгаж болох уу гэсэн асуулт гарна.
 
-Жишээлбэл, \({n=2}\) үед [(1)](#ecvx-hull-2-1) нөхцөл биелж байхын тулд юуны түрүүнд 
+Жишээлбэл, \\({n=2}\\) үед [(1)](#ecvx-hull-2-1) нөхцөл биелж байхын тулд юуны түрүүнд 
 
-\(\displaystyle  a_1+a_2=b_1+b_2\)
+\\(\displaystyle  a_1+a_2=b_1+b_2\\)
 
- байх хэрэгтэй. Түүнчлэн, ерөнхий чанарыг алдагдуулахгүйгээр \({a_1\geq a_2}\) ба \({b_1\geq b_1}\) гэж үзвэл, \({a_1\leq b_1}\) байх хэрэгтэй. Энэ хоёр нөхцөл хангалттай болохыг шалгаж болно.
+ байх хэрэгтэй. Түүнчлэн, ерөнхий чанарыг алдагдуулахгүйгээр \\({a_1\geq a_2}\\) ба \\({b_1\geq b_1}\\) гэж үзвэл, \\({a_1\leq b_1}\\) байх хэрэгтэй. Энэ хоёр нөхцөл хангалттай болохыг шалгаж болно.
 
-Цаашилбал, \({n=3}\) үед \({a_1\geq a_2\geq a_3}\) ба \({b_1\geq b_1\geq b_3}\) гэж үзсэнээр дээрх нөхцлүүд 
+Цаашилбал, \\({n=3}\\) үед \\({a_1\geq a_2\geq a_3}\\) ба \\({b_1\geq b_1\geq b_3}\\) гэж үзсэнээр дээрх нөхцлүүд 
 
-\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ a_1+a_2+a_3&=&b_1+b_2+b_3 \end{array}\)
+\\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ a_1+a_2+a_3&=&b_1+b_2+b_3 \end{array}\\)
 
- болж хувирдаг. Мюрхедийн тэнцэл биш биелж байхын тулд энэ нөхцөл *зайлшгүй* гэдгийг дараах маягаар харж болно. Юуны түрүүнд, \({x=y=z=t}\) гэж авбал дурын эерэг \({t}\)-ийн хувьд 
+ болж хувирдаг. Мюрхедийн тэнцэл биш биелж байхын тулд энэ нөхцөл *зайлшгүй* гэдгийг дараах маягаар харж болно. Юуны түрүүнд, \\({x=y=z=t}\\) гэж авбал дурын эерэг \\({t}\\)-ийн хувьд 
 
-\(\displaystyle  F_a(t,t,t) = t^{a_1+a_2+a_3} \leq F_b(t,t,t) = t^{b_1+b_2+b_3}\)
+\\(\displaystyle  F_a(t,t,t) = t^{a_1+a_2+a_3} \leq F_b(t,t,t) = t^{b_1+b_2+b_3}\\)
 
- байхын тулд \({a_1+a_2+a_3=b_1+b_2+b_3}\) байх хэрэгтэй. Дараа нь \({x=y=t}\) ба \({z=1}\) гэж авбал дурын эерэг \({t}\)-ийн хувьд 
+ байхын тулд \\({a_1+a_2+a_3=b_1+b_2+b_3}\\) байх хэрэгтэй. Дараа нь \\({x=y=t}\\) ба \\({z=1}\\) гэж авбал дурын эерэг \\({t}\\)-ийн хувьд 
 
-\(\displaystyle  F_a(t,t,1) = 2t^{a_1+a_2}+2t^{a_1+a_3}+2t^{a_2+a_3} \leq F_b(t,t,1)\)
+\\(\displaystyle  F_a(t,t,1) = 2t^{a_1+a_2}+2t^{a_1+a_3}+2t^{a_2+a_3} \leq F_b(t,t,1)\\)
 
- байхын тулд \({a_1+a_2\leq b_1+b_2}\) байх хэрэгтэй. Эцэст нь, \({x=t}\) ба \({y=z=1}\) гэж авбал дурын эерэг \({t}\)-ийн хувьд 
+ байхын тулд \\({a_1+a_2\leq b_1+b_2}\\) байх хэрэгтэй. Эцэст нь, \\({x=t}\\) ба \\({y=z=1}\\) гэж авбал дурын эерэг \\({t}\\)-ийн хувьд 
 
-\(\displaystyle  F_a(t,1,1) = 2t^{a_1}+2t^{a_2}+2t^{a_3} \leq F_b(t,1,1)\)
+\\(\displaystyle  F_a(t,1,1) = 2t^{a_1}+2t^{a_2}+2t^{a_3} \leq F_b(t,1,1)\\)
 
- байхын тулд \({a_1\leq b_1}\) байх хэрэгтэй. 
+ байхын тулд \\({a_1\leq b_1}\\) байх хэрэгтэй. 
 
-Дээрх нөхцлийг ерөнхий \({n}\)-ийн хувьд өргөтгөснөөр Мюрхедийн тэнцэл бишийн дараах томъёолол гарч ирнэ.
+Дээрх нөхцлийг ерөнхий \\({n}\\)-ийн хувьд өргөтгөснөөр Мюрхедийн тэнцэл бишийн дараах томъёолол гарч ирнэ.
 
-**Теорем 2.**  Дурын эерэг \({x_1,\ldots,x_n}\) тоонуудын хувьд [
+**Теорем 2.**  Дурын эерэг \\({x_1,\ldots,x_n}\\) тоонуудын хувьд [
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \ \ \ \ \ (5)\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \ \ \ \ \ (5)\\)
 
-] тэнцэл биш биелэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь (\({a_1\geq\ldots\geq a_n}\) ба \({b_1\geq\ldots\geq b_n}\) гэж үзсэн үед) 
+] тэнцэл биш биелэх зайлшгүй бөгөөд хүрэлцээтэй нөхцөл нь (\\({a_1\geq\ldots\geq a_n}\\) ба \\({b_1\geq\ldots\geq b_n}\\) гэж үзсэн үед) 
 
-\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n}, \end{array}\)
+\\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n}, \end{array}\\)
 
- байх явдал юм. Энэ үед \({a}\) вектор нь \({b}\) вектороор *хашигдсан байна* гээд \({a\prec b}\) гэж тэмдэглэдэг. Цаашилбал, \({a\prec b}\) ба \({a\neq b}\) бол [(5)](#emuirhead-ineq-2) тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \({x_1=\ldots=x_n}\). 
+ байх явдал юм. Энэ үед \\({a}\\) вектор нь \\({b}\\) вектороор *хашигдсан байна* гээд \\({a\prec b}\\) гэж тэмдэглэдэг. Цаашилбал, \\({a\prec b}\\) ба \\({a\neq b}\\) бол [(5)](#emuirhead-ineq-2) тэнцэл бишийн тэнцэлдээ хүрэх зайлшгүй нөхцөл нь \\({x_1=\ldots=x_n}\\). 
 
  
 
 ##  Теорем 1-ийн баталгаа 
 
-Теоремын [(3)](#emuirhead-cvx-hull) нөхцлийн \({k}\) дахь байгуулагчийг салгаж бичвэл 
+Теоремын [(3)](#emuirhead-cvx-hull) нөхцлийн \\({k}\\) дахь байгуулагчийг салгаж бичвэл 
 
-\(\displaystyle  a_k=\sum_{\tau\in S_n} \lambda_\tau b_{\tau(k)}\)
+\\(\displaystyle  a_k=\sum_{\tau\in S_n} \lambda_\tau b_{\tau(k)}\\)
 
- болох ба \({x_{\sigma(k)}^{a_k}}\) нэг гишүүнтүүдийг хооронд нь үржүүлээд, [жинтэй Кошийн тэнцэл бишийг](/blog/2020/12/03/amgm/) ашигласнаар 
+ болох ба \\({x_{\sigma(k)}^{a_k}}\\) нэг гишүүнтүүдийг хооронд нь үржүүлээд, [жинтэй Кошийн тэнцэл бишийг](/blog/2020/12/03/amgm/) ашигласнаар 
 
-\(\displaystyle  x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} = \prod_{\tau\in S_n} x_{\sigma(1)}^{\lambda_\tau b_{\tau(1)}} \cdots x_{\sigma(n)}^{\lambda_\tau b_{\tau(n)}} \leq \sum_{\tau\in S_n} \lambda_\tau x_{\sigma(1)}^{b_{\tau(1)}} \cdots x_{\sigma(n)}^{b_{\tau(n)}}\)
+\\(\displaystyle  x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} = \prod_{\tau\in S_n} x_{\sigma(1)}^{\lambda_\tau b_{\tau(1)}} \cdots x_{\sigma(n)}^{\lambda_\tau b_{\tau(n)}} \leq \sum_{\tau\in S_n} \lambda_\tau x_{\sigma(1)}^{b_{\tau(1)}} \cdots x_{\sigma(n)}^{b_{\tau(n)}}\\)
 
- гарна. Үүнээс боломжит бүх \({\sigma}\) сэлгэмлээр нийлбэр авбал 
+ гарна. Үүнээс боломжит бүх \\({\sigma}\\) сэлгэмлээр нийлбэр авбал 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\tau\in S_n} \lambda_\tau \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{\tau(1)}} \cdots x_{\sigma(n)}^{b_{\tau(n)}} .\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\tau\in S_n} \lambda_\tau \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{\tau(1)}} \cdots x_{\sigma(n)}^{b_{\tau(n)}} .\\)
 
- Баруун гар талын дотор талын нийлбэрт \({\tau}\) сэлгэмэл нь хөдлөхгүй, \({\sigma}\) нь боломжит бүх сэлгэмлээр гүйх тул 
+ Баруун гар талын дотор талын нийлбэрт \\({\tau}\\) сэлгэмэл нь хөдлөхгүй, \\({\sigma}\\) нь боломжит бүх сэлгэмлээр гүйх тул 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{\tau(1)}} \cdots x_{\sigma(n)}^{b_{\tau(n)}} = \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{1}} \cdots x_{\sigma(n)}^{b_{n}} .\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{\tau(1)}} \cdots x_{\sigma(n)}^{b_{\tau(n)}} = \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{1}} \cdots x_{\sigma(n)}^{b_{n}} .\\)
 
- Ингээд \({\sum\lambda_\sigma=1}\) гэдгийг тооцсоноор 
+ Ингээд \\({\sum\lambda_\sigma=1}\\) гэдгийг тооцсоноор 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\tau\in S_n} \lambda_\tau \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{1}} \cdots x_{\sigma(n)}^{b_{n}} = \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{1}} \cdots x_{\sigma(n)}^{b_{n}}\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\tau\in S_n} \lambda_\tau \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{1}} \cdots x_{\sigma(n)}^{b_{n}} = \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_{1}} \cdots x_{\sigma(n)}^{b_{n}}\\)
 
  гарч, Мюрхедийн тэнцэл биш [(2)](#emuirhead-ineq-1) батлагдлаа. Түүнчлэн, тэнцэлдээ хүрэх нөхцөл нь жинтэй Кошийн тэнцэл бишийн тэнцэлдээ хүрэх нөхцлөөс шууд мөрдөнө.
 
-Мюрхедийн тэнцэл биш биелдэг байх *хүрэлцээтэй* нөхцөл нь [(3)](#emuirhead-cvx-hull) ба [(4)](#emuirhead-cvx-hull-sum-1) гэдгийг, өөрөөр хэлбэл Теорем 1-ийн хагасыг нь баталлаа. Тодруулбал, дурын эерэг \({x_1,\ldots,x_n}\) тоонуудын хувьд 
+Мюрхедийн тэнцэл биш биелдэг байх *хүрэлцээтэй* нөхцөл нь [(3)](#emuirhead-cvx-hull) ба [(4)](#emuirhead-cvx-hull-sum-1) гэдгийг, өөрөөр хэлбэл Теорем 1-ийн хагасыг нь баталлаа. Тодруулбал, дурын эерэг \\({x_1,\ldots,x_n}\\) тоонуудын хувьд 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n}\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n} \leq \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n}\\)
 
- тэнцэл биш биелнэ гэсэн өгүүлбэрийг \({M(a,b)}\) гэж, 
+ тэнцэл биш биелнэ гэсэн өгүүлбэрийг \\({M(a,b)}\\) гэж, 
 
-\(\displaystyle  a=\sum_{\sigma\in S_n} \lambda_\sigma (b_{\sigma(1)},\ldots,b_{\sigma(n)})\)
+\\(\displaystyle  a=\sum_{\sigma\in S_n} \lambda_\sigma (b_{\sigma(1)},\ldots,b_{\sigma(n)})\\)
 
  ба 
 
-\(\displaystyle  \sum_{\sigma\in S_n}\lambda_\sigma=1\)
+\\(\displaystyle  \sum_{\sigma\in S_n}\lambda_\sigma=1\\)
 
- байх сөрөг биш \({\{\lambda_\sigma:\sigma\in S_n\}}\) тоонууд олдоно гэдгийг \({a\in H(b)}\) гэж тэмдэглэвэл, бид 
+ байх сөрөг биш \\({\{\lambda_\sigma:\sigma\in S_n\}}\\) тоонууд олдоно гэдгийг \\({a\in H(b)}\\) гэж тэмдэглэвэл, бид 
 
-\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad M(a,b)\)
+\\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad M(a,b)\\)
 
- гэж батлаад байна. Харин \({M(a,b)\Rightarrow a\in H(b)}\) гэдгийг бид Теорем 2-ын баталгааны дараа, хэд хэдэн үе шаттайгаар батлах болно.
+ гэж батлаад байна. Харин \\({M(a,b)\Rightarrow a\in H(b)}\\) гэдгийг бид Теорем 2-ын баталгааны дараа, хэд хэдэн үе шаттайгаар батлах болно.
 
  
 
 ##  Теорем 2-ын баталгаа 
 
-Эхлээд \({n=2}\) тохиолдлыг авч үзье. Теоремын нөхцөл ёсоор \({a_1\geq a_2}\), \({b_1\geq b_2}\), \({a_1\leq b_1}\), ба \({a_1+a_2=b_1+b_2}\) байгаа. Ингээд \({a_1-b_2=b_1-a_2\geq0}\) ба \({a_2-b_2=b_1-a_1\geq0}\) гэдгийг тооцсоноор 
+Эхлээд \\({n=2}\\) тохиолдлыг авч үзье. Теоремын нөхцөл ёсоор \\({a_1\geq a_2}\\), \\({b_1\geq b_2}\\), \\({a_1\leq b_1}\\), ба \\({a_1+a_2=b_1+b_2}\\) байгаа. Ингээд \\({a_1-b_2=b_1-a_2\geq0}\\) ба \\({a_2-b_2=b_1-a_1\geq0}\\) гэдгийг тооцсоноор 
 
-\(\displaystyle  \begin{array}{rcl}  \Delta &=& x^{b_1}y^{b_2} + y^{b_1}x^{b_2} - x^{a_1}y^{a_2} - y^{a_1}x^{a_2}\\ &=& x^{b_2}y^{b_2} \big( x^{b_1-b_2} + y^{b_1-b_2} - x^{a_1-b_2}y^{a_2-b_2}-x^{a_2-b_2}y^{a_1-b_2} \big)\\ &=& x^{b_2}y^{b_2} \big( x^{a_2-b_2} (x^{b_1-a_2} - y^{a_1-b_2}) + y^{a_2-b_2} ( y^{b_1-a_2} - x^{a_1-b_2}) \big)\\ &=& x^{b_2}y^{b_2} ( x^{a_2-b_2} - y^{a_2-b_2} ) (x^{a_1-b_2} - y^{a_1-b_2}) \geq 0 \end{array}\)
+\\(\displaystyle  \begin{array}{rcl}  \Delta &=& x^{b_1}y^{b_2} + y^{b_1}x^{b_2} - x^{a_1}y^{a_2} - y^{a_1}x^{a_2}\\ &=& x^{b_2}y^{b_2} \big( x^{b_1-b_2} + y^{b_1-b_2} - x^{a_1-b_2}y^{a_2-b_2}-x^{a_2-b_2}y^{a_1-b_2} \big)\\ &=& x^{b_2}y^{b_2} \big( x^{a_2-b_2} (x^{b_1-a_2} - y^{a_1-b_2}) + y^{a_2-b_2} ( y^{b_1-a_2} - x^{a_1-b_2}) \big)\\ &=& x^{b_2}y^{b_2} ( x^{a_2-b_2} - y^{a_2-b_2} ) (x^{a_1-b_2} - y^{a_1-b_2}) \geq 0 \end{array}\\)
 
- болж, тэнцэл биш батлагдана. Цаашилбал, \({a\neq b}\) бол дээрх тэнцэл бишийн тэнцэлдээ хүрэх нөхцөл нь \({x=y}\).
+ болж, тэнцэл биш батлагдана. Цаашилбал, \\({a\neq b}\\) бол дээрх тэнцэл бишийн тэнцэлдээ хүрэх нөхцөл нь \\({x=y}\\).
 
-Одоо ерөнхий тохиолдол руу ороод, \({a\prec b}\) ба \({a\neq b}\) гэж үзье. Өөрөөр хэлбэл \({a}\), \({b}\) хоорондоо ялгаатай векторууд бөгөөд, 
+Одоо ерөнхий тохиолдол руу ороод, \\({a\prec b}\\) ба \\({a\neq b}\\) гэж үзье. Өөрөөр хэлбэл \\({a}\\), \\({b}\\) хоорондоо ялгаатай векторууд бөгөөд, 
 
-\(\displaystyle  a_1\geq\ldots\geq a_n,\qquad b_1\geq\ldots\geq b_n,\)
+\\(\displaystyle  a_1\geq\ldots\geq a_n,\qquad b_1\geq\ldots\geq b_n,\\)
 
  ба 
 
-\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n} . \end{array}\)
+\\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n} . \end{array}\\)
 
- Хэрэв \({a_1=b_1,\ldots,a_{i-1}=b_{i-1}}\) ба \({a_i\neq b_i}\) бол \({a_ib_k}\) байх \({k}\) олдоно. Ийм \({k}\) индексүүдийн хамгийн багыг нь аваад, түүний дөнгөж өмнөх \({a_j\(\displaystyle  a_jb_k,\)
+ Хэрэв \\({a_1=b_1,\ldots,a_{i-1}=b_{i-1}}\\) ба \\({a_i\neq b_i}\\) бол \\({a_ib_k}\\) байх \\({k}\\) олдоно. Ийм \\({k}\\) индексүүдийн хамгийн багыг нь аваад, түүний дөнгөж өмнөх \\({a_j\\(\displaystyle  a_jb_k,\\)
 
- байх \({j
+ байх \\({j
 Ингээд 
 
-\(\displaystyle  \mu=\frac{b_j+b_k}2,\qquad \Delta=\frac{b_j-b_k}2,\)
+\\(\displaystyle  \mu=\frac{b_j+b_k}2,\qquad \Delta=\frac{b_j-b_k}2,\\)
 
  гэсэн тэмдэглэгээнүүд оруулбал 
 
-\(\displaystyle  b_j=\mu+\Delta, \qquad b_k=\mu-\Delta,\)
+\\(\displaystyle  b_j=\mu+\Delta, \qquad b_k=\mu-\Delta,\\)
 
  байх нь мэдээж. Цааш нь 
 
-\(\displaystyle  \delta = \max\{|a_j-\mu|,|a_k-\mu|\}\)
+\\(\displaystyle  \delta = \max\{|a_j-\mu|,|a_k-\mu|\}\\)
 
- гэвэл, \({b_k\(\displaystyle  c_j=\mu+\delta, \qquad c_k=\mu-\delta,\)
+ гэвэл, \\({b_k\\(\displaystyle  c_j=\mu+\delta, \qquad c_k=\mu-\delta,\\)
 
- ба, бусад бүх индексийнх нь хувьд \({c_i=b_i}\) гэж тодорхойлъё. Тэгвэл 
+ ба, бусад бүх индексийнх нь хувьд \\({c_i=b_i}\\) гэж тодорхойлъё. Тэгвэл 
 
-\(\displaystyle  a_j\leq c_jb_k,\)
+\\(\displaystyle  a_j\leq c_jb_k,\\)
 
- ба \({c_j=a_j}\) эсвэл \({c_k=a_k}\). Түүнчлэн, \({\sum c_i=\sum b_i}\) тул \({a\prec c\prec b}\).
+ ба \\({c_j=a_j}\\) эсвэл \\({c_k=a_k}\\). Түүнчлэн, \\({\sum c_i=\sum b_i}\\) тул \\({a\prec c\prec b}\\).
 
 Одоо 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} - \sum_{\sigma\in S_n} x_{\sigma(1)}^{c_1} \cdots x_{\sigma(n)}^{c_n} = \sum_{\sigma\in S_n} X_\sigma \Big( x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k} - x_{\sigma(j)}^{c_j}x_{\sigma(k)}^{c_k} \Big)\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} - \sum_{\sigma\in S_n} x_{\sigma(1)}^{c_1} \cdots x_{\sigma(n)}^{c_n} = \sum_{\sigma\in S_n} X_\sigma \Big( x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k} - x_{\sigma(j)}^{c_j}x_{\sigma(k)}^{c_k} \Big)\\)
 
  гэсэн ялгаврыг сонирхоё. Энд 
 
-\(\displaystyle  X_\sigma = \frac{x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n}}{x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k}} .\)
+\\(\displaystyle  X_\sigma = \frac{x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n}}{x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k}} .\\)
 
- Бүх сэлгэмлээр авсан дээрх нийлбэрт \({\sigma}\) сэлгэмэлд харгалзах нэмэгдэхүүнийг \({\tau(j)=\sigma(k)}\) ба \({\tau(k)=\sigma(j)}\) бөгөөд бусад бүх индексийнхээ хувьд \({\tau(i)=\sigma(i)}\) байх \({\tau}\) гэсэн сэлгэмэлтэй хослуулбал хаалтан доторх илэрхийлэл Мюрхедийн тэнцэл бишийн \({n=2}\) тохиолдлын улмаас 
+ Бүх сэлгэмлээр авсан дээрх нийлбэрт \\({\sigma}\\) сэлгэмэлд харгалзах нэмэгдэхүүнийг \\({\tau(j)=\sigma(k)}\\) ба \\({\tau(k)=\sigma(j)}\\) бөгөөд бусад бүх индексийнхээ хувьд \\({\tau(i)=\sigma(i)}\\) байх \\({\tau}\\) гэсэн сэлгэмэлтэй хослуулбал хаалтан доторх илэрхийлэл Мюрхедийн тэнцэл бишийн \\({n=2}\\) тохиолдлын улмаас 
 
-\(\displaystyle  x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k} + x_{\sigma(k)}^{b_j}x_{\sigma(j)}^{b_k} - x_{\sigma(j)}^{c_j}x_{\sigma(k)}^{c_k} - x_{\sigma(k)}^{c_j}x_{\sigma(j)}^{c_k} \geq 0\)
+\\(\displaystyle  x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k} + x_{\sigma(k)}^{b_j}x_{\sigma(j)}^{b_k} - x_{\sigma(j)}^{c_j}x_{\sigma(k)}^{c_k} - x_{\sigma(k)}^{c_j}x_{\sigma(j)}^{c_k} \geq 0\\)
 
  болж 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \geq \sum_{\sigma\in S_n} x_{\sigma(1)}^{c_1} \cdots x_{\sigma(n)}^{c_n}\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \geq \sum_{\sigma\in S_n} x_{\sigma(1)}^{c_1} \cdots x_{\sigma(n)}^{c_n}\\)
 
- тэнцэл биш батлагдана. Бид \({c_j=a_j}\) эсвэл \({c_k=a_k}\) гэж мэднэ. Тэгэхээр дээрх аргументийг давтан хэрэгжүүлснээр Мюрхедийн 
+ тэнцэл биш батлагдана. Бид \\({c_j=a_j}\\) эсвэл \\({c_k=a_k}\\) гэж мэднэ. Тэгэхээр дээрх аргументийг давтан хэрэгжүүлснээр Мюрхедийн 
 
-\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \geq \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n}\)
+\\(\displaystyle  \sum_{\sigma\in S_n} x_{\sigma(1)}^{b_1} \cdots x_{\sigma(n)}^{b_n} \geq \sum_{\sigma\in S_n} x_{\sigma(1)}^{a_1} \cdots x_{\sigma(n)}^{a_n}\\)
 
- тэнцэл биш батлагдана. Хэрэв Мюрхедийн тэнцэл биш тэнцэлдээ хүрдэг бөгөөд \({a\neq b}\) бол, \({c_j\neq b_j}\) эсвэл \({c_k\neq b_k}\) байх ямар нэг \({c}\) вектор ба бүх \({\sigma}\) сэлгэмлийн хувьд 
+ тэнцэл биш батлагдана. Хэрэв Мюрхедийн тэнцэл биш тэнцэлдээ хүрдэг бөгөөд \\({a\neq b}\\) бол, \\({c_j\neq b_j}\\) эсвэл \\({c_k\neq b_k}\\) байх ямар нэг \\({c}\\) вектор ба бүх \\({\sigma}\\) сэлгэмлийн хувьд 
 
-\(\displaystyle  x_{\sigma(j)}^{c_j}x_{\sigma(k)}^{c_k} + x_{\sigma(k)}^{c_j}x_{\sigma(j)}^{c_k} = x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k} + x_{\sigma(k)}^{b_j}x_{\sigma(j)}^{b_k}\)
+\\(\displaystyle  x_{\sigma(j)}^{c_j}x_{\sigma(k)}^{c_k} + x_{\sigma(k)}^{c_j}x_{\sigma(j)}^{c_k} = x_{\sigma(j)}^{b_j}x_{\sigma(k)}^{b_k} + x_{\sigma(k)}^{b_j}x_{\sigma(j)}^{b_k}\\)
 
- байх нь тодорхой. Эндээс шууд \({x_1=\ldots=x_n}\) гэж гарна.
+ байх нь тодорхой. Эндээс шууд \\({x_1=\ldots=x_n}\\) гэж гарна.
 
-Мюрхедийн тэнцэл биш биелэх зайлшгүй нөхцлийг бол батлахад амархан. Юуны түрүүнд \({x_1=\ldots=x_n=t}\) гэж авбал дурын эерэг \({t}\)-ийн хувьд 
+Мюрхедийн тэнцэл биш биелэх зайлшгүй нөхцлийг бол батлахад амархан. Юуны түрүүнд \\({x_1=\ldots=x_n=t}\\) гэж авбал дурын эерэг \\({t}\\)-ийн хувьд 
 
-\(\displaystyle  t^{a_1+\ldots+a_n} \leq t^{b_1+\ldots+b_n}\)
+\\(\displaystyle  t^{a_1+\ldots+a_n} \leq t^{b_1+\ldots+b_n}\\)
 
- тэнцэл биш биелэх ёстой. Эндээс \({a_1+\ldots+a_n=b_1+\ldots+b_n}\) гэж гарна. Одоо \({x_1=\ldots=x_k=t}\) ба \({x_{k+1}=\ldots=x_n=1}\) гэж авбал, дурын эерэг \({t}\)-ийн хувьд 
+ тэнцэл биш биелэх ёстой. Эндээс \\({a_1+\ldots+a_n=b_1+\ldots+b_n}\\) гэж гарна. Одоо \\({x_1=\ldots=x_k=t}\\) ба \\({x_{k+1}=\ldots=x_n=1}\\) гэж авбал, дурын эерэг \\({t}\\)-ийн хувьд 
 
-\(\displaystyle  \sum_{1\leq i_1<\ldots
- тэнцэл биш үнэн байх ёстой. Эндээс \({a_1+\ldots+a_k\leq b_1+\ldots+b_k}\) гэж гарна.
+\\(\displaystyle  \sum_{1\leq i_1<\ldots
+ тэнцэл биш үнэн байх ёстой. Эндээс \\({a_1+\ldots+a_k\leq b_1+\ldots+b_k}\\) гэж гарна.
 
-**Тэмдэглэл 3.**  Дээрх баталгаанд \({f(x)=x^\alpha}\) функцийн [монотон чанарыг](/blog/2020/12/17/schur-inequality/) ашигласан тул \({a}\), \({b}\) векторын байгуулагчид заавал рациональ байхаар хязгааралагдахгүй, иррациональ тоонууд байх нь ч зөвшөөрөгдөж байгааг ажиглаарай. Харин Теорем 1-ийн баталгаанд [жинтэй Кошийн тэнцэл бишийг](/blog/2020/12/03/amgm/) ашигласан ба бид одоохондоо жинтэй Кошийг зөвхөн рациональ илтгэгчдийн хувьд батлаад байгаа тул уг баталгаанд \({a}\), \({b}\) векторын байгуулагчид рациональ байх хэрэгтэй. Гэхдээ ямар ч байсан Мюрхедийн тэнцэл биш нь бодит илтгэгчдийн хувьд Теорем 2-оор ийнхүү батлагдаж байна. 
+**Тэмдэглэл 3.**  Дээрх баталгаанд \\({f(x)=x^\alpha}\\) функцийн [монотон чанарыг](/blog/2020/12/17/schur-inequality/) ашигласан тул \\({a}\\), \\({b}\\) векторын байгуулагчид заавал рациональ байхаар хязгааралагдахгүй, иррациональ тоонууд байх нь ч зөвшөөрөгдөж байгааг ажиглаарай. Харин Теорем 1-ийн баталгаанд [жинтэй Кошийн тэнцэл бишийг](/blog/2020/12/03/amgm/) ашигласан ба бид одоохондоо жинтэй Кошийг зөвхөн рациональ илтгэгчдийн хувьд батлаад байгаа тул уг баталгаанд \\({a}\\), \\({b}\\) векторын байгуулагчид рациональ байх хэрэгтэй. Гэхдээ ямар ч байсан Мюрхедийн тэнцэл биш нь бодит илтгэгчдийн хувьд Теорем 2-оор ийнхүү батлагдаж байна. 
 
 ##  Давхар стохастик матрицууд 
 
 Дээрх хоёр баталгааг дүгнэвэл, бид 
 
-\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad M(a,b) \qquad\Longleftrightarrow\qquad a\prec b\)
+\\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad M(a,b) \qquad\Longleftrightarrow\qquad a\prec b\\)
 
- гэж баталчихаад байна. Үүнд \({a}\), \({b}\) векторын байгуулагчид 
+ гэж баталчихаад байна. Үүнд \\({a}\\), \\({b}\\) векторын байгуулагчид 
 
-\(\displaystyle  a_1\geq\ldots\geq a_n,\qquad b_1\geq\ldots\geq b_n\)
+\\(\displaystyle  a_1\geq\ldots\geq a_n,\qquad b_1\geq\ldots\geq b_n\\)
 
- маягаар эрэмбэлэгдсэн, эсвэл \({a\prec b}\) харьцааг тодорхойлохдоо \({a}\), \({b}\) векторын байгуулагчдыг дээрх маягаар эрэмбэлсний дараа 
+ маягаар эрэмбэлэгдсэн, эсвэл \\({a\prec b}\\) харьцааг тодорхойлохдоо \\({a}\\), \\({b}\\) векторын байгуулагчдыг дээрх маягаар эрэмбэлсний дараа 
 
-\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n} , \end{array}\)
+\\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n} , \end{array}\\)
 
- нөхцлийг хангадаг эсэхээр нь тодорхойлсон гэж үзэж болно. Одоо \({M(a,b)\Rightarrow a\in H(b)}\) гэж батлахын тулд \({a\prec b\Rightarrow a\in H(b)}\) гэж харуулахад хангалттай. Энэ төлөвлөгөөг бид нэг шинэ нэмэлт нөхцлөөр дамжуулан гүйцэлдүүлнэ.
+ нөхцлийг хангадаг эсэхээр нь тодорхойлсон гэж үзэж болно. Одоо \\({M(a,b)\Rightarrow a\in H(b)}\\) гэж батлахын тулд \\({a\prec b\Rightarrow a\in H(b)}\\) гэж харуулахад хангалттай. Энэ төлөвлөгөөг бид нэг шинэ нэмэлт нөхцлөөр дамжуулан гүйцэлдүүлнэ.
 
-Юуны өмнө, \({a\in H(b)}\) нөхцлийг 
+Юуны өмнө, \\({a\in H(b)}\\) нөхцлийг 
 
-\(\displaystyle  a_k = \sum_\sigma \lambda_\sigma b_{\sigma(k)} = \sum_{j=1}^n \Big( \sum_{\sigma:\sigma(k)=j} \lambda_\sigma \Big) b_j\)
+\\(\displaystyle  a_k = \sum_\sigma \lambda_\sigma b_{\sigma(k)} = \sum_{j=1}^n \Big( \sum_{\sigma:\sigma(k)=j} \lambda_\sigma \Big) b_j\\)
 
  хэлбэртэй бичээд, 
 
-\(\displaystyle  M_{kj} = \sum_{\sigma:\sigma(k)=j} \lambda_\sigma\)
+\\(\displaystyle  M_{kj} = \sum_{\sigma:\sigma(k)=j} \lambda_\sigma\\)
 
- элементүүдтэй \({M}\) гэсэн матриц тодорхойлбол, 
+ элементүүдтэй \\({M}\\) гэсэн матриц тодорхойлбол, 
 
-\(\displaystyle  a_k = \sum_{j=1}^n M_{kj} b_j\)
+\\(\displaystyle  a_k = \sum_{j=1}^n M_{kj} b_j\\)
 
  буюу 
 
-\(\displaystyle  a=Mb\)
+\\(\displaystyle  a=Mb\\)
 
- болно. Энд \({M_{kj}\geq0}\) байх нь мэдээж. Цааш нь, \({\sum_\sigma\lambda_\sigma=1}\) нөхцлийг ашиглан \({M}\) матрицын мөр ба багануудын нийлбэрийг тооцвол 
+ болно. Энд \\({M_{kj}\geq0}\\) байх нь мэдээж. Цааш нь, \\({\sum_\sigma\lambda_\sigma=1}\\) нөхцлийг ашиглан \\({M}\\) матрицын мөр ба багануудын нийлбэрийг тооцвол 
 
-\(\displaystyle  \sum_{j=1}^n M_{kj} = \sum_{j=1}^n \sum_{\sigma:\sigma(k)=j} \lambda_\sigma = \sum_\sigma \lambda_\sigma = 1\)
+\\(\displaystyle  \sum_{j=1}^n M_{kj} = \sum_{j=1}^n \sum_{\sigma:\sigma(k)=j} \lambda_\sigma = \sum_\sigma \lambda_\sigma = 1\\)
 
  ба 
 
-\(\displaystyle  \sum_{k=1}^n M_{kj} = \sum_{k=1}^n \sum_{\sigma:\sigma(k)=j} \lambda_\sigma = \sum_\sigma \lambda_\sigma = 1\)
+\\(\displaystyle  \sum_{k=1}^n M_{kj} = \sum_{k=1}^n \sum_{\sigma:\sigma(k)=j} \lambda_\sigma = \sum_\sigma \lambda_\sigma = 1\\)
 
- гарна. Өөрөөр хэлбэл, \({M}\) матрицын элементүүд нь сөрөг биш бөгөөд мөр болон багана бүрийн нийлбэр нь 1-тэй тэнцүү. Ийм матрицыг *давхар стохастик матриц* гэж нэрлэдэг.
+ гарна. Өөрөөр хэлбэл, \\({M}\\) матрицын элементүүд нь сөрөг биш бөгөөд мөр болон багана бүрийн нийлбэр нь 1-тэй тэнцүү. Ийм матрицыг *давхар стохастик матриц* гэж нэрлэдэг.
 
-Тэгэхээр \({a\in H(b)}\) бол \({a=Mb}\) байна. Дээр хэлэлцсэн ёсоор \({a\prec b\Rightarrow a\in H(b)}\) гэж харуулъя гэвэл бидэнд 
+Тэгэхээр \\({a\in H(b)}\\) бол \\({a=Mb}\\) байна. Дээр хэлэлцсэн ёсоор \\({a\prec b\Rightarrow a\in H(b)}\\) гэж харуулъя гэвэл бидэнд 
 
-\(\displaystyle  a\in H(b) \qquad\Longleftarrow\qquad a=Mb \qquad\Longleftarrow\qquad a\prec b\)
+\\(\displaystyle  a\in H(b) \qquad\Longleftarrow\qquad a=Mb \qquad\Longleftarrow\qquad a\prec b\\)
 
- маягийн үр дүн хэрэгтэй. Энэ асуудлаар хөөцөлдөхөөсөө өмнө \({a=Mb}\) нөхцлөөс \({a\prec b}\) гэж мөрдөх эсэхийг сонирхоё.
+ маягийн үр дүн хэрэгтэй. Энэ асуудлаар хөөцөлдөхөөсөө өмнө \\({a=Mb}\\) нөхцлөөс \\({a\prec b}\\) гэж мөрдөх эсэхийг сонирхоё.
 
-Бодлогын ерөнхий чанарыг алдагдуулахгүйгээр \({a}\), \({b}\) векторын байгуулагчид ихээсээ бага руугаа эрэмбэлэгдсэн гэж үзэж болно. Ингээд \({1\leq m\leq n}\) гэсэн бүхэл тоо бэхлээд, 
+Бодлогын ерөнхий чанарыг алдагдуулахгүйгээр \\({a}\\), \\({b}\\) векторын байгуулагчид ихээсээ бага руугаа эрэмбэлэгдсэн гэж үзэж болно. Ингээд \\({1\leq m\leq n}\\) гэсэн бүхэл тоо бэхлээд, 
 
-\(\displaystyle  \sum_{k=1}^m a_k = \sum_{k=1}^m \sum_{j=1}^n M_{kj} b_j = \sum_{j=1}^n \sum_{k=1}^m M_{kj} b_j = \sum_{j=1}^n R_j b_j\)
+\\(\displaystyle  \sum_{k=1}^m a_k = \sum_{k=1}^m \sum_{j=1}^n M_{kj} b_j = \sum_{j=1}^n \sum_{k=1}^m M_{kj} b_j = \sum_{j=1}^n R_j b_j\\)
 
- гэж бичье. Үүнд \({R_j}\) нь \({M}\) матрицын \({j}\) дэх баганын эхний \({m}\) элементийн нийлбэр: 
+ гэж бичье. Үүнд \\({R_j}\\) нь \\({M}\\) матрицын \\({j}\\) дэх баганын эхний \\({m}\\) элементийн нийлбэр: 
 
-\(\displaystyle  R_j = \sum_{k=1}^m M_{kj} .\)
+\\(\displaystyle  R_j = \sum_{k=1}^m M_{kj} .\\)
 
  Давхар стохастик нөхцлөөс 
 
-\(\displaystyle  0\leq R_j\leq1,\qquad \sum_j^nR_j=m\)
+\\(\displaystyle  0\leq R_j\leq1,\qquad \sum_j^nR_j=m\\)
 
- байх нь ойлгомжтой. Түүнчлэн, \({m=n}\) үед \({R_j=1}\) тул \({a_1+\ldots+a_n=b_1+\ldots+b_n}\) гэдэг нь илэрхий.
+ байх нь ойлгомжтой. Түүнчлэн, \\({m=n}\\) үед \\({R_j=1}\\) тул \\({a_1+\ldots+a_n=b_1+\ldots+b_n}\\) гэдэг нь илэрхий.
 
 Энэ мөчид бидний зорилго бол 
 
-\(\displaystyle  \Delta =\sum_{k=1}^mb_k - \sum_{k=1}^ma_k = \sum_{k=1}^mb_k - \sum_{j=1}^n R_j b_j\)
+\\(\displaystyle  \Delta =\sum_{k=1}^mb_k - \sum_{k=1}^ma_k = \sum_{k=1}^mb_k - \sum_{j=1}^n R_j b_j\\)
 
  ялгаврыг сөрөг биш гэж харуулах. Үүний тулд 
 
-\(\displaystyle  0 = \sum_{j=1}^n R_j - m = \sum_{j=1}^n R_j - \sum_{k=1}^m 1\)
+\\(\displaystyle  0 = \sum_{j=1}^n R_j - m = \sum_{j=1}^n R_j - \sum_{k=1}^m 1\\)
 
- гэж бичээд, \({b_m}\)-ээр үржүүлэн дээрх ялгавар дээр нэмбэл 
+ гэж бичээд, \\({b_m}\\)-ээр үржүүлэн дээрх ялгавар дээр нэмбэл 
 
-\(\displaystyle  \Delta = \sum_{k=1}^mb_k - \sum_{j=1}^n R_j b_j + \sum_{j=1}^n R_jb_m - \sum_{k=1}^m b_m = \sum_{k=1}^m(b_k-b_m) + \sum_{j=1}^n R_j(b_m-b_j)\)
+\\(\displaystyle  \Delta = \sum_{k=1}^mb_k - \sum_{j=1}^n R_j b_j + \sum_{j=1}^n R_jb_m - \sum_{k=1}^m b_m = \sum_{k=1}^m(b_k-b_m) + \sum_{j=1}^n R_j(b_m-b_j)\\)
 
- болно. Одоо сүүлийн нийлбэрийг хоёр салгаад, \({b}\)-ийн эрэмбэлэгдсэн чанарыг санавал 
+ болно. Одоо сүүлийн нийлбэрийг хоёр салгаад, \\({b}\\)-ийн эрэмбэлэгдсэн чанарыг санавал 
 
-\(\displaystyle  \Delta = \sum_{j=1}^m(1-R_j)(b_j-b_m) + \sum_{j=m+1}^n R_j(b_m-b_j) \geq0\)
+\\(\displaystyle  \Delta = \sum_{j=1}^m(1-R_j)(b_j-b_m) + \sum_{j=m+1}^n R_j(b_m-b_j) \geq0\\)
 
  гарч, бидний батлах гэсэн зүйл батлагдана.
 
 Дүгнэж хэлэхэд, энэ хэсэгт бид 
 
-\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad a=Mb \qquad\Longrightarrow\qquad a\prec b\)
+\\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad a=Mb \qquad\Longrightarrow\qquad a\prec b\\)
 
  гэж баталлаа. Үүний урвуу мөрдлөгөөнүүдийг одоо авч үзье.
 
@@ -349,63 +349,63 @@ templateEngineOverride: "md"
 
 [Годфри Харди](https://en.wikipedia.org/wiki/G._H._Hardy), [Жон Литлвуд](https://en.wikipedia.org/wiki/John_Edensor_Littlewood), [Дьёрдь Пойа](https://en.wikipedia.org/wiki/George_Polya) нарын алдарт «[Тэнцэл биш](https://books.google.ca/books?id=EfvZAQAAQBAJ)» номондоо баталсан дараах үр дүнг толилуулъя.
 
-**Теорем 4.**  Хэрэв \({a\prec b}\) бол \({a=Mb}\) байх давхар стохастик матриц \({M}\) олдоно. 
+**Теорем 4.**  Хэрэв \\({a\prec b}\\) бол \\({a=Mb}\\) байх давхар стохастик матриц \\({M}\\) олдоно. 
 
-Үүний баталгаа нь Теорем 2-ын баталгаатай төстэй. Өгөгдсөн \({a}\), \({b}\) векторууд хоорондоо ялгаатай бөгөөд, 
+Үүний баталгаа нь Теорем 2-ын баталгаатай төстэй. Өгөгдсөн \\({a}\\), \\({b}\\) векторууд хоорондоо ялгаатай бөгөөд, 
 
-\(\displaystyle  a_1\geq\ldots\geq a_n,\qquad b_1\geq\ldots\geq b_n,\)
+\\(\displaystyle  a_1\geq\ldots\geq a_n,\qquad b_1\geq\ldots\geq b_n,\\)
 
  ба 
 
-\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n} , \end{array}\)
+\\(\displaystyle  \begin{array}{rcl}  a_1&\leq&b_1,\\ a_1+a_2&\leq&b_1+b_2,\\ \ldots&&\ldots\\ a_1+\ldots+a_{n-1}&\leq&b_1+\ldots+b_{n-1},\\ a_1+\ldots+a_{n}&=&b_1+\ldots+b_{n} , \end{array}\\)
 
- гэж үзье. Хэрэв \({a_1=b_1,\ldots,a_{i-1}=b_{i-1}}\) ба \({a_i\neq b_i}\) бол \({a_ib_k}\) байх \({k}\) олдоно. Ийм \({k}\) индексүүдийн хамгийн багыг нь аваад, түүний дөнгөж өмнөх \({a_j\(\displaystyle  a_jb_k,\)
+ гэж үзье. Хэрэв \\({a_1=b_1,\ldots,a_{i-1}=b_{i-1}}\\) ба \\({a_i\neq b_i}\\) бол \\({a_ib_k}\\) байх \\({k}\\) олдоно. Ийм \\({k}\\) индексүүдийн хамгийн багыг нь аваад, түүний дөнгөж өмнөх \\({a_j\\(\displaystyle  a_jb_k,\\)
 
- байх \({j\(\displaystyle  \mu=\frac{b_j+b_k}2,\qquad \Delta=\frac{b_j-b_k}2,\)
+ байх \\({j\\(\displaystyle  \mu=\frac{b_j+b_k}2,\qquad \Delta=\frac{b_j-b_k}2,\\)
 
  гэсэн тэмдэглэгээнүүд оруулбал 
 
-\(\displaystyle  b_j=\mu+\Delta, \qquad b_k=\mu-\Delta,\)
+\\(\displaystyle  b_j=\mu+\Delta, \qquad b_k=\mu-\Delta,\\)
 
  байх нь мэдээж. Цааш нь 
 
-\(\displaystyle  \delta = \max\{|a_j-\mu|,|a_k-\mu|\}\)
+\\(\displaystyle  \delta = \max\{|a_j-\mu|,|a_k-\mu|\}\\)
 
- гэвэл, \({b_k\(\displaystyle  c_j=\mu+\delta, \qquad c_k=\mu-\delta,\)
+ гэвэл, \\({b_k\\(\displaystyle  c_j=\mu+\delta, \qquad c_k=\mu-\delta,\\)
 
- ба, бусад бүх индексийнх нь хувьд \({c_i=b_i}\) гэж тодорхойлъё. Тэгвэл 
+ ба, бусад бүх индексийнх нь хувьд \\({c_i=b_i}\\) гэж тодорхойлъё. Тэгвэл 
 
-\(\displaystyle  a_j\leq c_jb_k,\)
+\\(\displaystyle  a_j\leq c_jb_k,\\)
 
- ба \({c_j=a_j}\) эсвэл \({c_k=a_k}\). Түүнчлэн, \({\sum c_i=\sum b_i}\) тул \({a\prec c\prec b}\).
+ ба \\({c_j=a_j}\\) эсвэл \\({c_k=a_k}\\). Түүнчлэн, \\({\sum c_i=\sum b_i}\\) тул \\({a\prec c\prec b}\\).
 
 Дээрх тодорхойлолтуудыг ашиглан 
 
-\(\displaystyle  c_j = \frac{b_j+b_k}2+\delta = \frac{b_j+b_k}2+\frac{b_j-b_k}{2\Delta}\delta = \frac{b_j}2\big(1+\frac\delta\Delta\big) + \frac{b_k}2\big(1-\frac\delta\Delta\big)\)
+\\(\displaystyle  c_j = \frac{b_j+b_k}2+\delta = \frac{b_j+b_k}2+\frac{b_j-b_k}{2\Delta}\delta = \frac{b_j}2\big(1+\frac\delta\Delta\big) + \frac{b_k}2\big(1-\frac\delta\Delta\big)\\)
 
  ба 
 
-\(\displaystyle  c_k = \frac{b_j+b_k}2-\delta = \frac{b_j+b_k}2-\frac{b_j-b_k}{2\Delta}\delta = \frac{b_j}2\big(1-\frac\delta\Delta\big) + \frac{b_k}2\big(1+\frac\delta\Delta\big)\)
+\\(\displaystyle  c_k = \frac{b_j+b_k}2-\delta = \frac{b_j+b_k}2-\frac{b_j-b_k}{2\Delta}\delta = \frac{b_j}2\big(1-\frac\delta\Delta\big) + \frac{b_k}2\big(1+\frac\delta\Delta\big)\\)
 
  гэж бичиж болох тул 
 
-\(\displaystyle  \begin{pmatrix} c_j\\c_k \end{pmatrix} = \frac12 \begin{pmatrix} 1+\delta/\Delta&1-\delta/\Delta\\ 1-\delta/\Delta&1+\delta/\Delta\\ \end{pmatrix} \begin{pmatrix} b_j\\b_k \end{pmatrix}.\)
+\\(\displaystyle  \begin{pmatrix} c_j\\c_k \end{pmatrix} = \frac12 \begin{pmatrix} 1+\delta/\Delta&1-\delta/\Delta\\ 1-\delta/\Delta&1+\delta/\Delta\\ \end{pmatrix} \begin{pmatrix} b_j\\b_k \end{pmatrix}.\\)
 
- Өөрөөр хэлбэл \({j}\) ба \({k}\) дахь мөр багануудын огтлолцолд нь 
+ Өөрөөр хэлбэл \\({j}\\) ба \\({k}\\) дахь мөр багануудын огтлолцолд нь 
 
-\(\displaystyle  \frac12 \begin{pmatrix} 1+\delta/\Delta&1-\delta/\Delta\\ 1-\delta/\Delta&1+\delta/\Delta\\ \end{pmatrix}\)
+\\(\displaystyle  \frac12 \begin{pmatrix} 1+\delta/\Delta&1-\delta/\Delta\\ 1-\delta/\Delta&1+\delta/\Delta\\ \end{pmatrix}\\)
 
- матриц байх, үлдсэн хэсэг нь нэгж матрицаас тогтох \({T}\) гэсэн матриц тодорхойлбол 
+ матриц байх, үлдсэн хэсэг нь нэгж матрицаас тогтох \\({T}\\) гэсэн матриц тодорхойлбол 
 
-\(\displaystyle  c=Tb .\)
+\\(\displaystyle  c=Tb .\\)
 
- Энэ \({T}\) матрицыг давхар стохастик матриц болохыг шалгахад амархан. Түүнчлэн, бид \({c_j=a_j}\) эсвэл \({c_k=a_k}\) гэж мэднэ. Тэгэхээр дээрх аргументийг давтан хэрэгжүүлснээр \({T_1,\ldots,T_m}\) гэсэн давхар стохастик матрицуудын хувьд 
+ Энэ \\({T}\\) матрицыг давхар стохастик матриц болохыг шалгахад амархан. Түүнчлэн, бид \\({c_j=a_j}\\) эсвэл \\({c_k=a_k}\\) гэж мэднэ. Тэгэхээр дээрх аргументийг давтан хэрэгжүүлснээр \\({T_1,\ldots,T_m}\\) гэсэн давхар стохастик матрицуудын хувьд 
 
-\(\displaystyle  a=T_m\cdots T_1b\)
+\\(\displaystyle  a=T_m\cdots T_1b\\)
 
  болно гэсэн үг. Одоо давхар стохастик матрицуудын үржвэр мөн давхар стохастик гэдгийг шалгачихвал баталгаа дуусна. Үүнийг 
 
-\(\displaystyle  \sum_j\sum_kA_{jk}B_{k\ell} = \sum_k\sum_jA_{jk}B_{k\ell}=\sum_k1\cdot B_{k\ell}=1\)
+\\(\displaystyle  \sum_j\sum_kA_{jk}B_{k\ell} = \sum_k\sum_jA_{jk}B_{k\ell}=\sum_k1\cdot B_{k\ell}=1\\)
 
  гэх мэтээр шалгахад төвөггүй.
 
@@ -413,109 +413,109 @@ templateEngineOverride: "md"
 
 Өмнөх 2 хэсгийн үр дүнг нэгтгэж бичвэл 
 
-\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad a=Mb \qquad\Longleftrightarrow\qquad a\prec b\)
+\\(\displaystyle  a\in H(b) \qquad\Longrightarrow\qquad a=Mb \qquad\Longleftrightarrow\qquad a\prec b\\)
 
- болох ба эдгээр нөхцлүүд бүгд хоорондоо эквивалент гэж харуулахад \({a=Mb}\) нөхцлөөс \({a\in H(b)}\) гэж мөрдөхийг батлах үлдээд байгаа. Энэ мөрдлөгөө нь *давхар стохастик матрицуудын олонлог нь сэлгэмлийн матрицууд дээр оройтой гүдгэр олон талст юм* гэсэн [Гаррет Биркгофын](https://en.wikipedia.org/wiki/Garrett_Birkhoff) алдарт теоремоос шууд гардаг. Үүнтэй эквивалент үр дүнгүүдийг Биркгофоос өмнө 1894 онд Германы математикч [Эрнст Штайниц](https://en.wikipedia.org/wiki/Ernst_Steinitz), 1916 онд Унгарын математикч [Денеш Кёниг](https://en.wikipedia.org/wiki/Denes_Konig) нар баталж байсныг дурдах нь зүйтэй.
+ болох ба эдгээр нөхцлүүд бүгд хоорондоо эквивалент гэж харуулахад \\({a=Mb}\\) нөхцлөөс \\({a\in H(b)}\\) гэж мөрдөхийг батлах үлдээд байгаа. Энэ мөрдлөгөө нь *давхар стохастик матрицуудын олонлог нь сэлгэмлийн матрицууд дээр оройтой гүдгэр олон талст юм* гэсэн [Гаррет Биркгофын](https://en.wikipedia.org/wiki/Garrett_Birkhoff) алдарт теоремоос шууд гардаг. Үүнтэй эквивалент үр дүнгүүдийг Биркгофоос өмнө 1894 онд Германы математикч [Эрнст Штайниц](https://en.wikipedia.org/wiki/Ernst_Steinitz), 1916 онд Унгарын математикч [Денеш Кёниг](https://en.wikipedia.org/wiki/Denes_Konig) нар баталж байсныг дурдах нь зүйтэй.
 
-Өгөгдсөн \({\sigma\in S_n}\) сэлгэмэлд харгалзах *сэлгэмлийн матриц* \({P_\sigma}\) гэдгээр бид \({\sigma(j)=k}\) үед \({[P_\sigma]_{jk}=1}\) байх, бусад индексийнхээ хувьд \({[P_\sigma]_{jk}=0}\) байх \({n\times n}\) матрицыг ойлгоно. Дурын \({x\in{\mathbb R}^n}\) вектор аваад, \({P_\sigma x}\) үржвэрийн \({j}\) дэх байгуулагчийг сонирхвол 
+Өгөгдсөн \\({\sigma\in S_n}\\) сэлгэмэлд харгалзах *сэлгэмлийн матриц* \\({P_\sigma}\\) гэдгээр бид \\({\sigma(j)=k}\\) үед \\({[P_\sigma]_{jk}=1}\\) байх, бусад индексийнхээ хувьд \\({[P_\sigma]_{jk}=0}\\) байх \\({n\times n}\\) матрицыг ойлгоно. Дурын \\({x\in{\mathbb R}^n}\\) вектор аваад, \\({P_\sigma x}\\) үржвэрийн \\({j}\\) дэх байгуулагчийг сонирхвол 
 
-\(\displaystyle  [P_\sigma x]_j = \sum_k[P_\sigma]_{jk}x_k =x_{\sigma(j)} .\)
+\\(\displaystyle  [P_\sigma x]_j = \sum_k[P_\sigma]_{jk}x_k =x_{\sigma(j)} .\\)
 
- Тэгэхээр \({P_\sigma}\) нь векторын байгуулагчдыг \({\sigma}\) сэлгэмлийн дагуу сэлгэх үйлдлийг хэрэгжүүлдэг матриц юм.
+ Тэгэхээр \\({P_\sigma}\\) нь векторын байгуулагчдыг \\({\sigma}\\) сэлгэмлийн дагуу сэлгэх үйлдлийг хэрэгжүүлдэг матриц юм.
 
-**Теорем 5.**  Хэрэв \({M}\) нь давхар стохастик матриц бол 
+**Теорем 5.**  Хэрэв \\({M}\\) нь давхар стохастик матриц бол 
 
-\(\displaystyle  M=\sum_{\sigma\in S_n} \lambda_\sigma P_\sigma\)
+\\(\displaystyle  M=\sum_{\sigma\in S_n} \lambda_\sigma P_\sigma\\)
 
  ба 
 
-\(\displaystyle  \sum_{\sigma\in S_n}\lambda_\sigma=1\)
+\\(\displaystyle  \sum_{\sigma\in S_n}\lambda_\sigma=1\\)
 
- байх сөрөг биш \({\{\lambda_\sigma:\sigma\in S_n\}}\) тоонууд олдоно. 
+ байх сөрөг биш \\({\{\lambda_\sigma:\sigma\in S_n\}}\\) тоонууд олдоно. 
 
-Эндээс хэрэв \({a=Mb}\) бол 
+Эндээс хэрэв \\({a=Mb}\\) бол 
 
-\(\displaystyle  a = Mb = \sum_{\sigma\in S_n} \lambda_\sigma P_\sigma b\)
+\\(\displaystyle  a = Mb = \sum_{\sigma\in S_n} \lambda_\sigma P_\sigma b\\)
 
  буюу 
 
-\(\displaystyle  a_j = \sum_{\sigma\in S_n} \lambda_\sigma [P_\sigma b]_j = \sum_{\sigma\in S_n} \lambda_\sigma b_{\sigma(j)}\)
+\\(\displaystyle  a_j = \sum_{\sigma\in S_n} \lambda_\sigma [P_\sigma b]_j = \sum_{\sigma\in S_n} \lambda_\sigma b_{\sigma(j)}\\)
 
- гэдэг нь илэрхий. Өөрөөр хэлбэл, \({a=Mb}\) нөхцлөөс \({a\in H(b)}\) гэж мөрдөнө.
+ гэдэг нь илэрхий. Өөрөөр хэлбэл, \\({a=Mb}\\) нөхцлөөс \\({a\in H(b)}\\) гэж мөрдөнө.
 
-Биркгофын теоремыг батлахдаа бид \({M}\) матриц дахь тэг биш элементийн тоо \({N}\)-ээр индукц хийнэ. Уг \({n\times n}\) матрицын ээементүүд сөрөг биш, мөр багана бүрийн нийлбэр 1-тэй тэнцүү гэдгийг санавал, \({N\geq n}\) байх нь ойлгомжтой. Түүнчлэн, хэрэв \({N=n}\) бол \({M}\) нь сэлгэмлийн матриц байх ёстой. Өөрөөр хэлбэл ямар нэг \({\sigma}\) сэлгэмлийн хувьд \({M=P_\sigma}\).
+Биркгофын теоремыг батлахдаа бид \\({M}\\) матриц дахь тэг биш элементийн тоо \\({N}\\)-ээр индукц хийнэ. Уг \\({n\times n}\\) матрицын ээементүүд сөрөг биш, мөр багана бүрийн нийлбэр 1-тэй тэнцүү гэдгийг санавал, \\({N\geq n}\\) байх нь ойлгомжтой. Түүнчлэн, хэрэв \\({N=n}\\) бол \\({M}\\) нь сэлгэмлийн матриц байх ёстой. Өөрөөр хэлбэл ямар нэг \\({\sigma}\\) сэлгэмлийн хувьд \\({M=P_\sigma}\\).
 
-Индукцийн зорилго бол тэг биш элементийн тоо нь \({N}\)-ээс бага давхар стохастик матриц бүр сэлгэмлийн матрицуудын гүдгэр эвлүүлэг мөн гэж үзээд, энэ өгүүлбэрийг тэг биш элементийн тоо нь \({N}\) үед батлах явдал. Үүний тулд, [
+Индукцийн зорилго бол тэг биш элементийн тоо нь \\({N}\\)-ээс бага давхар стохастик матриц бүр сэлгэмлийн матрицуудын гүдгэр эвлүүлэг мөн гэж үзээд, энэ өгүүлбэрийг тэг биш элементийн тоо нь \\({N}\\) үед батлах явдал. Үүний тулд, [
 
-\(\displaystyle  M = \lambda P_\sigma + (1-\lambda)M' \ \ \ \ \ (6)\)
+\\(\displaystyle  M = \lambda P_\sigma + (1-\lambda)M' \ \ \ \ \ (6)\\)
 
-] маягаар, тэг биш элементийн тоо нь \({N}\)-ээс бага \({M'}\) гэсэн давхар стохастик матриц цаана нь үлдэж байхаар ямар нэг сэлгэмлийн матрицыг \({M}\)-ээс ялгаж авахад хангалттай. Ийм сэлгэмлийн матриц ялгаж авах зорилгоор \({M}\) матрицын \({j}\) дэх мөрийн тэг биш элементүүдийн байрлалыг \({W_j\subset\{1,\ldots,n\}}\) гэсэн олонлогт хадгалъя: 
+] маягаар, тэг биш элементийн тоо нь \\({N}\\)-ээс бага \\({M'}\\) гэсэн давхар стохастик матриц цаана нь үлдэж байхаар ямар нэг сэлгэмлийн матрицыг \\({M}\\)-ээс ялгаж авахад хангалттай. Ийм сэлгэмлийн матриц ялгаж авах зорилгоор \\({M}\\) матрицын \\({j}\\) дэх мөрийн тэг биш элементүүдийн байрлалыг \\({W_j\subset\{1,\ldots,n\}}\\) гэсэн олонлогт хадгалъя: 
 
-\(\displaystyle  W_j = \{k:M_{jk}\neq0\}.\)
+\\(\displaystyle  W_j = \{k:M_{jk}\neq0\}.\\)
 
- Одоо \({j=1,\ldots,n}\) бүрийн хувьд \({\sigma(j)\in W_j}\) байх \({\sigma}\) гэсэн сэлгэмэл *олддог бол*, 
+ Одоо \\({j=1,\ldots,n}\\) бүрийн хувьд \\({\sigma(j)\in W_j}\\) байх \\({\sigma}\\) гэсэн сэлгэмэл *олддог бол*, 
 
-\(\displaystyle  \lambda = \min \{M_{j\sigma(j)}:j=1,\ldots,n\}\)
+\\(\displaystyle  \lambda = \min \{M_{j\sigma(j)}:j=1,\ldots,n\}\\)
 
  ба 
 
-\(\displaystyle  M'=\frac1{1-\lambda} (M-\lambda P_\sigma)\)
+\\(\displaystyle  M'=\frac1{1-\lambda} (M-\lambda P_\sigma)\\)
 
- гэж тодорхойлсноор [(6)](#em-m-prime) томъёо хүчинтэй. Түүнчлэн, \({M-\lambda P_\sigma}\) матрицыг байгуулах үед \({M_{j\sigma(j)}=\lambda}\) байх \({M}\)-ийн элементүүд \({0}\) болох тул, \({M'}\) матрицын тэг биш элементийн тоо \({N}\)-ээс бага. Мөн \({M}\) матрицын мөр, багана бүрийн нийлбэрээс \({\lambda}\) тоо хасагдах тул, \({M'}\) матрицын мөр, багана бүрийн нийлбэр \({1}\). Эцэст нь \({M'}\) матрицын элементүүд сөрөг биш гэдгийг тооцвол \({M'}\) нь давхар стохастик матриц болж, теорем батлагдана.
+ гэж тодорхойлсноор [(6)](#em-m-prime) томъёо хүчинтэй. Түүнчлэн, \\({M-\lambda P_\sigma}\\) матрицыг байгуулах үед \\({M_{j\sigma(j)}=\lambda}\\) байх \\({M}\\)-ийн элементүүд \\({0}\\) болох тул, \\({M'}\\) матрицын тэг биш элементийн тоо \\({N}\\)-ээс бага. Мөн \\({M}\\) матрицын мөр, багана бүрийн нийлбэрээс \\({\lambda}\\) тоо хасагдах тул, \\({M'}\\) матрицын мөр, багана бүрийн нийлбэр \\({1}\\). Эцэст нь \\({M'}\\) матрицын элементүүд сөрөг биш гэдгийг тооцвол \\({M'}\\) нь давхар стохастик матриц болж, теорем батлагдана.
 
-Тэгэхээр \({j=1,\ldots,n}\) бүрийн хувьд \({\sigma(j)\in W_j}\) байх \({\sigma}\) гэсэн сэлгэмэл олдоно гэдгийг харуулах л үлдлээ. Үүнийг «гэрлэлтийн тухай» Холлын теоремыг ашиглан батлах болно. Холлын теоремын нөхцөл нь \({j_1,\ldots,j_m\in\{1,\ldots,n\}}\) гэсэн харилцан ялгаатай дурын \({m}\) ширхэг индекс бүрийн хувьд \({W_{j_1}\cup\ldots\cup W_{j_m}}\) олонлогийн элементийн тоо \({m}\)-ээс багагүй байх явдал болно. Манай \({M}\) матриц давхар стохастик матриц тул, 
+Тэгэхээр \\({j=1,\ldots,n}\\) бүрийн хувьд \\({\sigma(j)\in W_j}\\) байх \\({\sigma}\\) гэсэн сэлгэмэл олдоно гэдгийг харуулах л үлдлээ. Үүнийг «гэрлэлтийн тухай» Холлын теоремыг ашиглан батлах болно. Холлын теоремын нөхцөл нь \\({j_1,\ldots,j_m\in\{1,\ldots,n\}}\\) гэсэн харилцан ялгаатай дурын \\({m}\\) ширхэг индекс бүрийн хувьд \\({W_{j_1}\cup\ldots\cup W_{j_m}}\\) олонлогийн элементийн тоо \\({m}\\)-ээс багагүй байх явдал болно. Манай \\({M}\\) матриц давхар стохастик матриц тул, 
 
-\(\displaystyle  m = \sum_{k=1}^n M_{j_1,k} +\ldots+ \sum_{k=1}^n M_{j_m,k}\)
+\\(\displaystyle  m = \sum_{k=1}^n M_{j_1,k} +\ldots+ \sum_{k=1}^n M_{j_m,k}\\)
 
- гэж бичиж болно. Өөрөөр хэлбэл, \({m}\) нь \({M}\) матрицын \({j_1,\ldots,j_m}\) мөрнүүд дэх тэг биш элементүүдийн нийлбэртэй тэнцүү. Нөгөө талаас, \({M}\) матрицын \({j_1,\ldots,j_m}\) мөрнүүд дэх тэг биш элементүүдийн байрлалыг \({k_1,\ldots,k_\ell}\) гэе: 
+ гэж бичиж болно. Өөрөөр хэлбэл, \\({m}\\) нь \\({M}\\) матрицын \\({j_1,\ldots,j_m}\\) мөрнүүд дэх тэг биш элементүүдийн нийлбэртэй тэнцүү. Нөгөө талаас, \\({M}\\) матрицын \\({j_1,\ldots,j_m}\\) мөрнүүд дэх тэг биш элементүүдийн байрлалыг \\({k_1,\ldots,k_\ell}\\) гэе: 
 
-\(\displaystyle  \{k_1,\ldots,k_\ell\} = \{k:M_{j_i,k}\neq0,\,i=1,\ldots,m\}.\)
+\\(\displaystyle  \{k_1,\ldots,k_\ell\} = \{k:M_{j_i,k}\neq0,\,i=1,\ldots,m\}.\\)
 
- Тэгвэл \({W_{j_1}\cup\ldots\cup W_{j_m}}\) олонлогийн элементийн тоо 
+ Тэгвэл \\({W_{j_1}\cup\ldots\cup W_{j_m}}\\) олонлогийн элементийн тоо 
 
-\(\displaystyle  \big|W_{j_1}\cup\ldots\cup W_{j_m}\big| = \sum_{j=1}^n M_{j,k_1} +\ldots+ \sum_{j=1}^n M_{j,k_\ell}\)
+\\(\displaystyle  \big|W_{j_1}\cup\ldots\cup W_{j_m}\big| = \sum_{j=1}^n M_{j,k_1} +\ldots+ \sum_{j=1}^n M_{j,k_\ell}\\)
 
  байх нь ойлгомжтой. Иймд 
 
-\(\displaystyle  m = \sum_{j\in\{j_1,\ldots,j_m\}} M_{j,k_1} +\ldots+ \sum_{j\in\{j_1,\ldots,j_m\}} M_{j,k_\ell} \leq \big|W_{j_1}\cup\ldots\cup W_{j_m}\big|\)
+\\(\displaystyle  m = \sum_{j\in\{j_1,\ldots,j_m\}} M_{j,k_1} +\ldots+ \sum_{j\in\{j_1,\ldots,j_m\}} M_{j,k_\ell} \leq \big|W_{j_1}\cup\ldots\cup W_{j_m}\big|\\)
 
- болж, Холлын теоремын нөхцөл биелэх тул, \({j=1,\ldots,n}\) бүрийн хувьд \({\sigma(j)\in W_j}\) байх \({\sigma}\) гэсэн сэлгэмэл олдоно.
+ болж, Холлын теоремын нөхцөл биелэх тул, \\({j=1,\ldots,n}\\) бүрийн хувьд \\({\sigma(j)\in W_j}\\) байх \\({\sigma}\\) гэсэн сэлгэмэл олдоно.
 
 ##  Холлын теорем 
 
 Биркгофын теоремын баталгааг тэмдэглэлдээ бүрэн багтаах үүднээс энэ хэсэгт Холлын теоремыг баталцгаая. «Гэрлэлтийн тухай теорем» гэж алдаршсан энэ теоремыг [1935 онд](https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/jlms/s1-10.37.26) Английн математикч [Филипп Холл](https://en.wikipedia.org/wiki/Philip_Hall) анх нийтлүүлжээ.
 
-**Теорем 6.**  Бидэнд \({W_1,\ldots,W_n\subset{\mathbb N}}\) гэсэн натурал тоон олонлогууд өгөгдсөн ба, 
+**Теорем 6.**  Бидэнд \\({W_1,\ldots,W_n\subset{\mathbb N}}\\) гэсэн натурал тоон олонлогууд өгөгдсөн ба, 
 
-\(\displaystyle  j_1,\ldots,j_m\in\{1,\ldots,n\}\)
+\\(\displaystyle  j_1,\ldots,j_m\in\{1,\ldots,n\}\\)
 
- гэсэн харилцан ялгаатай дурын \({m}\) ширхэг индекс бүрийн хувьд \({W_{j_1}\cup\ldots\cup W_{j_m}}\) олонлогийн элементийн тоо \({m}\)-ээс багагүй байдаг болог: 
+ гэсэн харилцан ялгаатай дурын \\({m}\\) ширхэг индекс бүрийн хувьд \\({W_{j_1}\cup\ldots\cup W_{j_m}}\\) олонлогийн элементийн тоо \\({m}\\)-ээс багагүй байдаг болог: 
 
-\(\displaystyle  \big|W_{j_1}\cup\ldots\cup W_{j_m}\big|\geq m.\)
+\\(\displaystyle  \big|W_{j_1}\cup\ldots\cup W_{j_m}\big|\geq m.\\)
 
- Тэгвэл \({j=1,\ldots,n}\) бүрийн хувьд \({\sigma(j)\in W_j}\) байх \({\sigma:\{1,\ldots,n\}\rightarrow{\mathbb N}}\) гэсэн инъектив буулгалт олдоно. 
+ Тэгвэл \\({j=1,\ldots,n}\\) бүрийн хувьд \\({\sigma(j)\in W_j}\\) байх \\({\sigma:\{1,\ldots,n\}\rightarrow{\mathbb N}}\\) гэсэн инъектив буулгалт олдоно. 
 
-Энэ теоремоос гарах \({\sigma(1),\ldots,\sigma(n)}\) элементүүдийг \({W_1,\ldots,W_n}\) олонлогуудын *ялгаатай төлөөллүүдийн систем*, эсвэл *хөндлөн огтлол* гэж ярьдаг.
+Энэ теоремоос гарах \\({\sigma(1),\ldots,\sigma(n)}\\) элементүүдийг \\({W_1,\ldots,W_n}\\) олонлогуудын *ялгаатай төлөөллүүдийн систем*, эсвэл *хөндлөн огтлол* гэж ярьдаг.
 
-Хэрэв дурын \({mm}\) байдаг бол, \({W_n}\) олонлогоос дурын нэг \({a\in W_n}\) гэсэн элемент сонгон авч \({\sigma(n)=a}\) гэж өгөөд, энэ \({a}\) элементийг \({W_1,\ldots,W_{n-1}}\) олонлогуудаас хасвал \({W_1,\ldots,W_{n-1}}\) олонлогууд нь Холлын теоремын нөхцлийг хангана. Иймд теорем индукцээр батлагдана.
+Хэрэв дурын \\({mm}\\) байдаг бол, \\({W_n}\\) олонлогоос дурын нэг \\({a\in W_n}\\) гэсэн элемент сонгон авч \\({\sigma(n)=a}\\) гэж өгөөд, энэ \\({a}\\) элементийг \\({W_1,\ldots,W_{n-1}}\\) олонлогуудаас хасвал \\({W_1,\ldots,W_{n-1}}\\) олонлогууд нь Холлын теоремын нөхцлийг хангана. Иймд теорем индукцээр батлагдана.
 
-Харин \({|W_{j_1}\cup\ldots\cup W_{j_m}|=m\(\displaystyle  W_{j_1}\cup\ldots\cup W_{j_m}=\{a_1,\ldots,a_m\}\)
+Харин \\({|W_{j_1}\cup\ldots\cup W_{j_m}|=m\\(\displaystyle  W_{j_1}\cup\ldots\cup W_{j_m}=\{a_1,\ldots,a_m\}\\)
 
  байх нь гарцаагүй. Одоо 
 
-\(\displaystyle  \{1,\ldots,n\}\setminus\{j_1,\ldots,j_m\}\)
+\\(\displaystyle  \{1,\ldots,n\}\setminus\{j_1,\ldots,j_m\}\\)
 
- индексүүдэд харгалзах \({W_j}\) олонлогуудыг \({U_1,\ldots,U_{n-m}}\) гэвэл, дурын \({\ell}\) ширхэг харилцан ялгаатай 
+ индексүүдэд харгалзах \\({W_j}\\) олонлогуудыг \\({U_1,\ldots,U_{n-m}}\\) гэвэл, дурын \\({\ell}\\) ширхэг харилцан ялгаатай 
 
-\(\displaystyle  i_1,\ldots,i_\ell\in\{1,\ldots,n-m\}\)
+\\(\displaystyle  i_1,\ldots,i_\ell\in\{1,\ldots,n-m\}\\)
 
  индексүүдийн хувьд 
 
-\(\displaystyle  \big|U_{i_1}\cup\ldots\cup U_{i_\ell}\cup W_{j_1}\cup\ldots\cup W_{j_m}\big| \geq \ell+m .\)
+\\(\displaystyle  \big|U_{i_1}\cup\ldots\cup U_{i_\ell}\cup W_{j_1}\cup\ldots\cup W_{j_m}\big| \geq \ell+m .\\)
 
- Эцэст нь, \({a_1,\ldots,a_m}\) элементүүдийг \({U_1,\ldots,U_{n-m}}\) олонлогуудаасаа хасаад, гарч ирсэн олонлогуудыг нь \({V_1,\ldots,V_{n-m}}\) гэвэл, 
+ Эцэст нь, \\({a_1,\ldots,a_m}\\) элементүүдийг \\({U_1,\ldots,U_{n-m}}\\) олонлогуудаасаа хасаад, гарч ирсэн олонлогуудыг нь \\({V_1,\ldots,V_{n-m}}\\) гэвэл, 
 
-\(\displaystyle  \big|V_{i_1}\cup\ldots\cup V_{i_\ell}\big| = \big|U_{i_1}\cup\ldots\cup U_{i_\ell}\cup W_{j_1}\cup\ldots\cup W_{j_m}\big|-m \geq \ell\)
+\\(\displaystyle  \big|V_{i_1}\cup\ldots\cup V_{i_\ell}\big| = \big|U_{i_1}\cup\ldots\cup U_{i_\ell}\cup W_{j_1}\cup\ldots\cup W_{j_m}\big|-m \geq \ell\\)
 
  болж, Холлын теорем индукцээр батлагдана.
 
@@ -523,93 +523,93 @@ templateEngineOverride: "md"
 
 **Жишээ 7.**  Кошийн тэнцэл бишийг батал. 
 
-*Бодолт.*  Мюрхедийн тэнцэл бишийг \({a=(\frac1n,\cdots,\frac1n)}\) ба \({b=(1,0,\ldots,0)}\) илтгэгчидтэйгээр хэрэглэвэл 
+*Бодолт.*  Мюрхедийн тэнцэл бишийг \\({a=(\frac1n,\cdots,\frac1n)}\\) ба \\({b=(1,0,\ldots,0)}\\) илтгэгчидтэйгээр хэрэглэвэл 
 
-\(\displaystyle  n! x_1^{1/n}\cdots x_1^{1/n} \leq (n-1)! \big( x_1+\ldots+x_n\big)\)
+\\(\displaystyle  n! x_1^{1/n}\cdots x_1^{1/n} \leq (n-1)! \big( x_1+\ldots+x_n\big)\\)
 
  буюу 
 
-\(\displaystyle  \sqrt[n]{x_1\cdots x_n} \leq \frac{x_1+\ldots+x_n}{n}\)
+\\(\displaystyle  \sqrt[n]{x_1\cdots x_n} \leq \frac{x_1+\ldots+x_n}{n}\\)
 
- гарна. \(\Box\)
+ гарна. \\(\Box\\)
 
 **Жишээ 8.**  Маклорены тэнцэл бишийн 
 
-\(\displaystyle  \sqrt[n]{x_1\cdots x_n} \leq \frac1{n(n-1)}\sum_{1\leq j
+\\(\displaystyle  \sqrt[n]{x_1\cdots x_n} \leq \frac1{n(n-1)}\sum_{1\leq j
  тохиолдлыг батал. 
 
-*Бодолт.*  Мюрхедийн тэнцэл бишийг \({a=(\frac1n,\cdots,\frac1n)}\) ба \({b=(\frac12,\frac12,0,\ldots,0)}\) илтгэгчидтэйгээр хэрэглэвэл 
+*Бодолт.*  Мюрхедийн тэнцэл бишийг \\({a=(\frac1n,\cdots,\frac1n)}\\) ба \\({b=(\frac12,\frac12,0,\ldots,0)}\\) илтгэгчидтэйгээр хэрэглэвэл 
 
-\(\displaystyle  n! x_1^{1/n}\cdots x_1^{1/n} \leq (n-2)! \big( x_1x_2+x_1x_3+\ldots+x_{n-1}x_n\big)\)
+\\(\displaystyle  n! x_1^{1/n}\cdots x_1^{1/n} \leq (n-2)! \big( x_1x_2+x_1x_3+\ldots+x_{n-1}x_n\big)\\)
 
- гарна. \(\Box\)
+ гарна. \\(\Box\\)
 
-**Жишээ 9.**  Дурын эерэг \({x,y}\) ба \({\frac12\leq\lambda<\mu\leq1}\) тоонуудын хувьд 
+**Жишээ 9.**  Дурын эерэг \\({x,y}\\) ба \\({\frac12\leq\lambda<\mu\leq1}\\) тоонуудын хувьд 
 
-\(\displaystyle  x^{\lambda}y^{1-\lambda}+y^{\lambda}x^{1-\lambda} \leq x^{\mu}y^{1-\mu}+y^{\mu}x^{1-\mu}\)
+\\(\displaystyle  x^{\lambda}y^{1-\lambda}+y^{\lambda}x^{1-\lambda} \leq x^{\mu}y^{1-\mu}+y^{\mu}x^{1-\mu}\\)
 
  тэнцэл биш биелнэ гэж харуул. 
 
-*Бодолт.*  Энэ тэнцэл биш нь Мюрхедийн тэнцэл бишийн \({a=(\lambda,1-\lambda)}\) ба \({b=(\mu,1-\mu)}\) илтгэгчидтэй тохиолдол юм. \(\Box\)
+*Бодолт.*  Энэ тэнцэл биш нь Мюрхедийн тэнцэл бишийн \\({a=(\lambda,1-\lambda)}\\) ба \\({b=(\mu,1-\mu)}\\) илтгэгчидтэй тохиолдол юм. \\(\Box\\)
 
-**Жишээ 10.**  Дурын эерэг \({x,y,z}\) тоонуудын хувьд 
+**Жишээ 10.**  Дурын эерэг \\({x,y,z}\\) тоонуудын хувьд 
 
-\(\displaystyle  \frac{x^8}{yz} + \frac{y^8}{zx} + \frac{z^8}{xy} \geq x^6+y^6+z^6\)
+\\(\displaystyle  \frac{x^8}{yz} + \frac{y^8}{zx} + \frac{z^8}{xy} \geq x^6+y^6+z^6\\)
 
  гэж харуул. 
 
-*Бодолт.*  Мюрхедийн тэнцэл бишийн \({a=(6,0,0)}\) ба \({b=(8,-1,-1)}\) илтгэгчидтэй тохиолдол нь 
+*Бодолт.*  Мюрхедийн тэнцэл бишийн \\({a=(6,0,0)}\\) ба \\({b=(8,-1,-1)}\\) илтгэгчидтэй тохиолдол нь 
 
-\(\displaystyle  \sum_{\mathrm{sym}} x^6 \leq \sum_{\mathrm{sym}} x^8y^{-1}z^{-1}\)
+\\(\displaystyle  \sum_{\mathrm{sym}} x^6 \leq \sum_{\mathrm{sym}} x^8y^{-1}z^{-1}\\)
 
  буюу 
 
-\(\displaystyle  2( x^6 + y^6 + z^6) \leq 2( x^8y^{-1}z^{-1} + y^8z^{-1}x^{-1} + z^8x^{-1}y^{-1} )\)
+\\(\displaystyle  2( x^6 + y^6 + z^6) \leq 2( x^8y^{-1}z^{-1} + y^8z^{-1}x^{-1} + z^8x^{-1}y^{-1} )\\)
 
- тул бодлого шууд бодогдоно. \(\Box\)
+ тул бодлого шууд бодогдоно. \\(\Box\\)
 
-**Жишээ 11.**  Дурын эерэг \({x,y,z}\) тоонуудын хувьд 
+**Жишээ 11.**  Дурын эерэг \\({x,y,z}\\) тоонуудын хувьд 
 
-\(\displaystyle  \frac1x + \frac1y+\frac1z \leq \frac{x^8+y^8+z^8}{x^3y^3z^3}\)
+\\(\displaystyle  \frac1x + \frac1y+\frac1z \leq \frac{x^8+y^8+z^8}{x^3y^3z^3}\\)
 
  гэж харуул. 
 
 *Бодолт 1.*  Энэ тэнцэл бишийг 
 
-\(\displaystyle  \frac12\sum_{\mathrm{sym}} x^0y^0z^{-1} \leq \frac12\sum_{\mathrm{sym}} x^5y^{-3}z^{-3}\)
+\\(\displaystyle  \frac12\sum_{\mathrm{sym}} x^0y^0z^{-1} \leq \frac12\sum_{\mathrm{sym}} x^5y^{-3}z^{-3}\\)
 
- гэж бичээд харвал Мюрхедийн тэнцэл бишийн \({a=(0,0,-1)}\) ба \({b=(5,-3,-3)}\) илтгэгчидтэй тохиолдол болох нь илэрнэ. \(\Box\)
+ гэж бичээд харвал Мюрхедийн тэнцэл бишийн \\({a=(0,0,-1)}\\) ба \\({b=(5,-3,-3)}\\) илтгэгчидтэй тохиолдол болох нь илэрнэ. \\(\Box\\)
 
-*Бодолт 2.*  Дээрх тэнцэл бишийг \({x^3y^3z^3}\) илэрхийллээр үржүүлж хуваариас чөлөөлбөл 
+*Бодолт 2.*  Дээрх тэнцэл бишийг \\({x^3y^3z^3}\\) илэрхийллээр үржүүлж хуваариас чөлөөлбөл 
 
-\(\displaystyle  \frac12\sum_{\mathrm{sym}} x^3y^3z^2 \leq \frac12\sum_{\mathrm{sym}} x^8y^{0}z^{0}\)
+\\(\displaystyle  \frac12\sum_{\mathrm{sym}} x^3y^3z^2 \leq \frac12\sum_{\mathrm{sym}} x^8y^{0}z^{0}\\)
 
- хэлбэрт орох ба энэ нь Мюрхедийн тэнцэл бишийн \({a=(3,3,2)}\) ба \({b=(8,0,0)}\) илтгэгчидтэй тохиолдол болно. \(\Box\)
+ хэлбэрт орох ба энэ нь Мюрхедийн тэнцэл бишийн \\({a=(3,3,2)}\\) ба \\({b=(8,0,0)}\\) илтгэгчидтэй тохиолдол болно. \\(\Box\\)
 
-**Жишээ 12.**  Эерэг \({x,y,z}\) тоонууд \({xyz=1}\) нөхцлийг хангадаг бол 
+**Жишээ 12.**  Эерэг \\({x,y,z}\\) тоонууд \\({xyz=1}\\) нөхцлийг хангадаг бол 
 
-\(\displaystyle  x^2+y^2+z^2\leq x^3+y^3+z^3\)
+\\(\displaystyle  x^2+y^2+z^2\leq x^3+y^3+z^3\\)
 
  гэж харуул. 
 
-*Бодолт 1.*  Энэ тэнцэл бишийн зүүн гар талыг \({\sqrt[3]{xyz}=1}\) илэрхийллээр үржүүлэн нэгэн төрлийн хэлбэрт оруулбал 
+*Бодолт 1.*  Энэ тэнцэл бишийн зүүн гар талыг \\({\sqrt[3]{xyz}=1}\\) илэрхийллээр үржүүлэн нэгэн төрлийн хэлбэрт оруулбал 
 
-\(\displaystyle  x^{7/3}y^{1/3}z^{1/3}+y^{7/3}z^{1/3}x^{1/3}+z^{7/3}x^{1/3}y^{1/3}\leq x^3+y^3+z^3\)
+\\(\displaystyle  x^{7/3}y^{1/3}z^{1/3}+y^{7/3}z^{1/3}x^{1/3}+z^{7/3}x^{1/3}y^{1/3}\leq x^3+y^3+z^3\\)
 
- болно. Нөгөө талаас, Мюрхедийн тэнцэл бишийн \({a=(\frac73,\frac13,\frac13)}\) ба \({b=(3,0,0)}\) илтгэгчидтэй тохиолдол нь 
+ болно. Нөгөө талаас, Мюрхедийн тэнцэл бишийн \\({a=(\frac73,\frac13,\frac13)}\\) ба \\({b=(3,0,0)}\\) илтгэгчидтэй тохиолдол нь 
 
-\(\displaystyle  2\big( x^{7/3}y^{1/3}z^{1/3} +y^{7/3}z^{1/3}x^{1/3} +z^{7/3}x^{1/3}y^{1/3} \big) \leq 2\big( x^3+y^3+z^3 \big)\)
+\\(\displaystyle  2\big( x^{7/3}y^{1/3}z^{1/3} +y^{7/3}z^{1/3}x^{1/3} +z^{7/3}x^{1/3}y^{1/3} \big) \leq 2\big( x^3+y^3+z^3 \big)\\)
 
- тул, бодлого бодогдоно. \(\Box\)
+ тул, бодлого бодогдоно. \\(\Box\\)
 
 *Бодолт 2.*  Дээр дурдсан ёсоор, Мюрхедийн тэнцэл бишийг ашигласан тухайн тохиолдол бүрийг жинтэй Кошийн тэнцэл бишээр солих зарчмын боломж бий. Жишээлбэл, 
 
-\(\displaystyle  x^{7/3}y^{1/3}z^{1/3}+y^{7/3}z^{1/3}x^{1/3}+z^{7/3}x^{1/3}y^{1/3}\leq x^3+y^3+z^3\)
+\\(\displaystyle  x^{7/3}y^{1/3}z^{1/3}+y^{7/3}z^{1/3}x^{1/3}+z^{7/3}x^{1/3}y^{1/3}\leq x^3+y^3+z^3\\)
 
  тэнцэл бишийг батлахын тулд 
 
-\(\displaystyle  x^{7/3}y^{1/3}z^{1/3} = (x^3)^{7/9}(y^3)^{1/9}(z^3)^{1/9} \leq \frac79x^3+\frac19y^3+\frac19z^3\)
+\\(\displaystyle  x^{7/3}y^{1/3}z^{1/3} = (x^3)^{7/9}(y^3)^{1/9}(z^3)^{1/9} \leq \frac79x^3+\frac19y^3+\frac19z^3\\)
 
- гэдгийг ажиглахад хангалттай. Ерөнхий тохиолдолд бол үүнийг гүйцэлдүүлэх үед тулгарах ганц бэрхшээл нь жингүүдээ яаж сонгох вэ гэсэн асуудал л байгаа. \(\Box\)
+ гэдгийг ажиглахад хангалттай. Ерөнхий тохиолдолд бол үүнийг гүйцэлдүүлэх үед тулгарах ганц бэрхшээл нь жингүүдээ яаж сонгох вэ гэсэн асуудал л байгаа. \\(\Box\\)
 
  [![](/blog/assets/wp-media/2020/12/muirhead.jpeg)](/blog/assets/wp-media/2020/12/muirhead.jpeg) Роберт Мюрхед (1860–1941)

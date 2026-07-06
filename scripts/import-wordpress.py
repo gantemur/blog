@@ -332,9 +332,9 @@ def convert_latex(content):
         body = re.sub(r"^display=true\s+", "", body)
         body = re.split(r"&(?:bg|fg|s|size|source)=", body, maxsplit=1)[0].strip()
         count += 1
-        return f"\\({body}\\)"
+        return f"\\\\({body}\\\\)"
 
-    return re.sub(r"\$latex\s+(.+?)\$", repl, content or "", flags=re.I | re.S), count
+    return re.sub(r"\$\\?latex\s+(.+?)\$", repl, content or "", flags=re.I | re.S), count
 
 
 def convert_sourcecode(content):

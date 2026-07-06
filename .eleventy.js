@@ -41,6 +41,10 @@ module.exports = function (eleventyConfig) {
     return encodeURIComponent(normalized).replace(/%2F/gi, "-");
   });
 
+  eleventyConfig.addFilter("limit", (values, count) => {
+    return Array.isArray(values) ? values.slice(0, count) : [];
+  });
+
   eleventyConfig.addCollection("posts", (collectionApi) => {
     return collectionApi
       .getFilteredByGlob("src/posts/**/*.md")
@@ -68,6 +72,32 @@ module.exports = function (eleventyConfig) {
       for (const tag of post.data.tags || []) tags.add(tag);
     }
     return Array.from(tags).sort((a, b) => a.localeCompare(b));
+  });
+
+  eleventyConfig.addCollection("topicPages", (collectionApi) => {
+    const order = new Map([
+      ["contents", 0],
+      ["algebr", 1],
+      ["geometry", 2],
+      ["numbers", 3],
+      ["analysis", 4],
+      ["topology", 5],
+      ["physics", 6],
+      ["astronomy", 7],
+      ["calendar", 8],
+      ["history", 9],
+      ["algorithms", 10],
+      ["cpp", 11],
+      ["logical-fallacies", 12]
+    ]);
+    return collectionApi
+      .getFilteredByGlob("src/pages/**/*.md")
+      .filter((item) => item.data.status !== "draft" && item.data.draft !== true)
+      .sort((a, b) => {
+        const aOrder = order.has(a.data.slug) ? order.get(a.data.slug) : 999;
+        const bOrder = order.has(b.data.slug) ? order.get(b.data.slug) : 999;
+        return aOrder - bOrder || String(a.data.title).localeCompare(String(b.data.title));
+      });
   });
 
   eleventyConfig.addFilter("postsWithTag", (posts, tag) => {

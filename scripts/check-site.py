@@ -19,6 +19,9 @@ for required in ["source/", "_import/", "_tmp/", "_site/", "node_modules/", "_pr
 
 require('pathPrefix: "/blog/"' in ROOT.joinpath(".eleventy.js").read_text(encoding="utf-8"), "Eleventy pathPrefix is not /blog/.")
 
+workflow = ROOT.joinpath(".github/workflows/pages.yml").read_text(encoding="utf-8")
+require("import:wordpress" not in workflow, "GitHub Pages workflow must not run the WordPress importer.")
+
 site_data = json.loads(ROOT.joinpath("src/_data/site.json").read_text(encoding="utf-8"))
 comments = site_data.get("comments", {})
 require(comments.get("provider") == "giscus", "Site comments provider is not giscus.")
@@ -78,6 +81,13 @@ for path in ROOT.joinpath("src/posts").glob("*.md"):
     text = path.read_text(encoding="utf-8", errors="ignore")
     if re.search(r"(?m)^draft:\s*true\s*$", text):
         draft_count += 1
+
+duplicate_sources = sorted(ROOT.joinpath("src").rglob("* 2.md"))
+if duplicate_sources:
+    errors.append(
+        "Found duplicate cloud-conflict Markdown files:\n"
+        + "\n".join(str(path.relative_to(ROOT)) for path in duplicate_sources[:20])
+    )
 
 print(f"Draft posts in public source: {draft_count}")
 

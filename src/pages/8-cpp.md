@@ -21,11 +21,11 @@ templateEngineOverride: "md"
 
 #### **0. Удиртгал**
 
-0.0. [Програмчлалын хэл гэж юу вэ](http://t8m8r.wordpress.com/2008/01/02/proglang/)
-0.1. [Cи++ хэлний товч түүх](http://t8m8r.wordpress.com/2008/01/02/cpphist/)
-0.2. [Cи++ хэл дээр программ боловсруулах](http://t8m8r.wordpress.com/2008/01/02/cppcomp/)
-0.3. [Cи++ хэлний хөрвүүлэгчид](http://t8m8r.wordpress.com/2008/01/13/cpp-compilers/)
-0.4. [Энгийн Cи++ программ](http://t8m8r.wordpress.com/2008/02/14/cpp-simple-example/)
+0.0. [Програмчлалын хэл гэж юу вэ](/blog/2008/01/02/proglang/)
+0.1. [Cи++ хэлний товч түүх](/blog/2008/01/02/cpphist/)
+0.2. [Cи++ хэл дээр программ боловсруулах](/blog/2008/01/02/cppcomp/)
+0.3. [Cи++ хэлний хөрвүүлэгчид](/blog/2008/01/13/cpp-compilers/)
+0.4. [Энгийн Cи++ программ](/blog/2008/02/14/cpp-simple-example/)
 
 #### **1. Илэрхийлэл**
 

@@ -15,11 +15,11 @@ generated_by: "wordpress-importer"
 templateEngineOverride: "md"
 ---
 
-Алдарт Бернуллийн тэнцэл биш нь \(\alpha\geq1\) ба \(x\geq-1\) үед биелдэг
+Алдарт Бернуллийн тэнцэл биш нь \\(\alpha\geq1\\) ба \\(x\geq-1\\) үед биелдэг
 
-\((1+x)^\alpha\geq 1+\alpha x\)
+\\((1+x)^\alpha\geq 1+\alpha x\\)
 
-хэлбэрийн тэнцэл биш байгаа. Үүнд \(\alpha=1\) эсвэл \(x=0\) биш л бол Бернуллийн тэнцэл биш нь *эрс* тэнцэл биш болно.
+хэлбэрийн тэнцэл биш байгаа. Үүнд \\(\alpha=1\\) эсвэл \\(x=0\\) биш л бол Бернуллийн тэнцэл биш нь *эрс* тэнцэл биш болно.
 
 [![](/blog/assets/wp-media/2018/12/bernoulli.png)](/blog/assets/wp-media/2018/12/bernoulli.png)
 
@@ -35,31 +35,31 @@ templateEngineOverride: "md"
 
 [![](/blog/assets/wp-media/2018/12/Screenshot-2018-12-24-22.19.53.png)](/blog/assets/wp-media/2018/12/Screenshot-2018-12-24-22.19.53.png) J. Bernoulli. Positiones Arithmeticae de Seriebus Infinitis (Basel, 1689). 380-р тал.
 
-Бернуллийн тэнцэл бишийг \(\alpha\in\mathbb{N}\) үед [индукцээр батлахад](https://en.wikipedia.org/wiki/Bernoulli%27s_inequality) амархан. Ерөнхий тохиолдолд бол уламжлал оролцуулсан шинжүүр хэрэглэж болно. Энд логарифм функцийн чанарыг ашигласан нэгэн хялбар баталгааг толилуулъя. Юуны түрүүнд, логарифмын хотгор чанараас
+Бернуллийн тэнцэл бишийг \\(\alpha\in\mathbb{N}\\) үед [индукцээр батлахад](https://en.wikipedia.org/wiki/Bernoulli%27s_inequality) амархан. Ерөнхий тохиолдолд бол уламжлал оролцуулсан шинжүүр хэрэглэж болно. Энд логарифм функцийн чанарыг ашигласан нэгэн хялбар баталгааг толилуулъя. Юуны түрүүнд, логарифмын хотгор чанараас
 
-\(\displaystyle
+\\(\displaystyle
 \frac1\alpha\log(1+x)
 =\frac{\alpha-1}\alpha\log1+\frac1\alpha\log(1+x)
 \leq\log\big(\frac{\alpha-1}\alpha+\frac{1+x}\alpha\big)
-=\log\big(1+\frac{x}\alpha\big)\)
+=\log\big(1+\frac{x}\alpha\big)\\)
 
-гэж гарна. Үүнд \(\alpha\neq1\) ба \(x\neq0\) бол тэнцэтгэл биш эрс байна гэдгийг анхаар. Мөн илэрхийлэлд орсон логарифмын утгууд тодорхойлогдож байхын тулд \(x>-1\), хотгор чанарын тэнцэл биш биелдэг байхын тулд \(\alpha\geq1\) байх хэрэгтэй. Одоо логарифмын өсөх чанараас \((1+x)^{\frac1\alpha}
-\leq1+\frac{x}\alpha\) буюу
+гэж гарна. Үүнд \\(\alpha\neq1\\) ба \\(x\neq0\\) бол тэнцэтгэл биш эрс байна гэдгийг анхаар. Мөн илэрхийлэлд орсон логарифмын утгууд тодорхойлогдож байхын тулд \\(x>-1\\), хотгор чанарын тэнцэл биш биелдэг байхын тулд \\(\alpha\geq1\\) байх хэрэгтэй. Одоо логарифмын өсөх чанараас \\((1+x)^{\frac1\alpha}
+\leq1+\frac{x}\alpha\\) буюу
 
-\(\displaystyle
+\\(\displaystyle
 1+x
-\leq\big(1+\frac{x}\alpha\big)^{\alpha}\)
+\leq\big(1+\frac{x}\alpha\big)^{\alpha}\\)
 
-гэж гарах ба, эндээс \(\frac{x}\alpha\mapsto x\) гэсэн орлуулгаар
+гэж гарах ба, эндээс \\(\frac{x}\alpha\mapsto x\\) гэсэн орлуулгаар
 
-\(\displaystyle
+\\(\displaystyle
 1+\alpha x
-\leq(1+x)^{\alpha}\)
+\leq(1+x)^{\alpha}\\)
 
-болно. Энэ гаргалгаанд шаардагдсан нөхцлүүдийг дахин дүгнэвэл: \(\alpha\geq1\) ба \(x>-\frac1\alpha\).
+болно. Энэ гаргалгаанд шаардагдсан нөхцлүүдийг дахин дүгнэвэл: \\(\alpha\geq1\\) ба \\(x>-\frac1\alpha\\).
 
-**Дасгал.** Дээрх аргыг ашиглан \(0\leq\alpha\leq1\) ба \(x\geq-1\) үед
+**Дасгал.** Дээрх аргыг ашиглан \\(0\leq\alpha\leq1\\) ба \\(x\geq-1\\) үед
 
-\((1+x)^\alpha\leq 1+\alpha x\)
+\\((1+x)^\alpha\leq 1+\alpha x\\)
 
 байна гэж батал. Эрс тэнцэл биш нь ямар үед биелэх вэ?

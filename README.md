@@ -8,7 +8,6 @@ https://gantemur.github.io/blog/
 
 ```sh
 npm install
-npm run import:wordpress
 npm run check
 npm run build
 npm run dev
@@ -19,6 +18,12 @@ npm run new:draft -- "Post Title"
 `source/` contains private WordPress export material and is ignored by git. Do not commit it. `_import/` contains private migration review files and reports, including sanitized comment review output; it is also ignored.
 
 `npm run import:wordpress` is only for local migration or re-migration from private WordPress export files. Normal writing uses `npm run new -- "Post Title"`. Deployment builds from committed `src/` content only; GitHub Actions does not run the WordPress importer because `source/`, `_import/`, and `_private/` are intentionally ignored.
+
+Run the WordPress importer only when you intentionally want to refresh the migrated Markdown from the private export files:
+
+```sh
+npm run import:wordpress
+```
 
 The importer reads the WXR XML directly from the zip archive and copies media from the tar archive into `src/assets/wp-media/`. Generated posts and pages live under `src/posts/` and `src/pages/` so the final static site can be built without publishing the raw WordPress export.
 

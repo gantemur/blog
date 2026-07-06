@@ -1,0 +1,17 @@
+---
+permalink: "/contents/cpp/"
+eleventyExcludeFromCollections: true
+target: "/cpp/"
+---
+<!doctype html>
+<html lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting to {{ title or site.title }}</title>
+    <link rel="canonical" href="{{ site.url }}{{ target | url }}">
+    <meta http-equiv="refresh" content="0; url={{ target | url }}">
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ target | url }}">{{ target | url }}</a>.</p>
+  </body>
+</html>

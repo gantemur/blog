@@ -20,10 +20,10 @@ templateEngineOverride: "md"
 Ихэнх постууд ямар нэг цувралын хэсэг байгаа. Цуврал бүр өөрийн гарчиг хуудастай байх ба эдгээр хуудаснуудыг энд жагсааж бичиж байх болно. Үүнд:
 
 	
-- [Тооны онол](http://t8m8r.wordpress.com/numbers/)
+- [Тооны онол](/blog/numbers/)
 
 	
-- [Алгебр](http://t8m8r.wordpress.com/contents/algebr/)
+- [Алгебр](/blog/algebr/)
 
 	
 - [Геометр](/blog/geometry/)
@@ -50,7 +50,7 @@ templateEngineOverride: "md"
 - [Түүх](/blog/history/)
 
 	
-- [Логик төөрөгдлүүд](http://t8m8r.wordpress.com/contents/logical-fallacies/)
+- [Логик төөрөгдлүүд](/blog/logical-fallacies/)
 
 	
-- [Стандарт C++](http://t8m8r.wordpress.com/contents/cpp/) (дөнгөж эхэлж байгаад хаясан)
+- [Стандарт C++](/blog/cpp/) (дөнгөж эхэлж байгаад хаясан)
