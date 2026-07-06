@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+    {% if math %}
+    <script>
+      window.MathJax = { tex: { inlineMath: [["\\(", "\\)"], ["$", "$"]], displayMath: [["\\[", "\\]"]] } };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {% endif %}
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | url }}">{{ site.title }}</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ '/archive/' | url }}">Archive</a>
+        <a href="{{ '/tags/' | url }}">Tags</a>
+        <a href="{{ '/feed.xml' | url }}">RSS</a>
+      </nav>
+    </header>
+    <main class="site-main">
+      {{ content | safe }}
+    </main>
+    <footer class="site-footer">
+      <p>Static archive of t8m8r.wordpress.com. Built with Eleventy.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag | tagSlug }}/"
+eleventyComputed:
+  title: "Tag: {{ tag }}"
+---
+<h1>Tag: {{ tag }}</h1>
+{% set taggedPosts = collections.posts | postsWithTag(tag) %}
+<ol class="post-list compact">
+  {% for post in taggedPosts %}
+    <li>
+      <time datetime="{{ post.date | dateIso }}">{{ post.date | readableDate }}</time>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <header class="post-header">
+    <p class="eyebrow">{{ date | readableDate }}</p>
+    <h1>{{ title }}</h1>
+    {% if categories and categories.length %}
+    <p class="terms">Categories:
+      {% for category in categories %}
+        <span>{{ category }}</span>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  {% if tags and tags.length %}
+  <footer class="post-meta">
+    <p>Tags:
+      {% for tag in tags %}
+        <a href="{{ ('/tags/' + (tag | tagSlug) + '/') | url }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  </footer>
+  {% endif %}
+
+  <nav class="post-nav" aria-label="Post navigation">
+    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {% if previousPost %}<a href="{{ previousPost.url | url }}">Previous: {{ previousPost.data.title }}</a>{% endif %}
+    {% if nextPost %}<a href="{{ nextPost.url | url }}">Next: {{ nextPost.data.title }}</a>{% endif %}
+  </nav>
+
+  {% include "comments.njk" %}
+</article>

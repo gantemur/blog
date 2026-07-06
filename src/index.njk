@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+title: Home
+permalink: /
+---
+<section class="intro">
+  <h1>{{ site.title }}</h1>
+  <p>A static archive of posts migrated from t8m8r.wordpress.com.</p>
+</section>
+
+<section class="post-list" aria-labelledby="recent-posts">
+  <h2 id="recent-posts">Recent Posts</h2>
+  {% for post in collections.posts | slice(0, 12) %}
+    <article class="list-item">
+      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+      <p class="meta">{{ post.date | readableDate }}</p>
+      {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+    </article>
+  {% endfor %}
+</section>

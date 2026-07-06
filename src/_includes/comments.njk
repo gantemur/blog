@@ -1,0 +1,27 @@
+{% set config = site.comments %}
+{% set pageAllowsComments = comments is not defined or comments != false %}
+
+<section class="comments-placeholder" aria-label="Comments">
+  <h2>Comments</h2>
+  {% if config.enabled and config.provider == "giscus" and pageAllowsComments %}
+    <script src="https://giscus.app/client.js"
+      data-repo="{{ config.repo }}"
+      data-repo-id="{{ config.repoId }}"
+      data-category="{{ config.category }}"
+      data-category-id="{{ config.categoryId }}"
+      data-mapping="{{ config.mapping }}"
+      data-strict="{{ config.strict }}"
+      data-reactions-enabled="{{ config.reactionsEnabled }}"
+      data-emit-metadata="{{ config.emitMetadata }}"
+      data-input-position="{{ config.inputPosition }}"
+      data-theme="{{ config.theme }}"
+      data-lang="{{ config.lang }}"
+      crossorigin="anonymous"
+      async>
+    </script>
+  {% elif not pageAllowsComments %}
+    <p>Comments are disabled for this post.</p>
+  {% else %}
+    <p>New comments are prepared for giscus but disabled until GitHub Discussions are configured. Archived WordPress comments are not published here.</p>
+  {% endif %}
+</section>

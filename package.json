@@ -1,0 +1,19 @@
+{
+  "name": "t8m8r-blog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static Eleventy migration of t8m8r.wordpress.com for GitHub Pages.",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "node scripts/clean.js",
+    "import:wordpress": "python3 scripts/import-wordpress.py",
+    "check": "python3 scripts/check-site.py",
+    "new": "node scripts/new-post.js",
+    "new:draft": "node scripts/new-post.js --private-draft"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {}
+}

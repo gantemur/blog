@@ -1,0 +1,23 @@
+{
+  "title": "T8M8R Blog",
+  "description": "Mathematics, physics, computing, and notes from the old t8m8r WordPress blog.",
+  "url": "https://gantemur.github.io",
+  "baseUrl": "/blog/",
+  "author": "Tsogtgerel Gantumur",
+  "language": "en",
+  "comments": {
+    "provider": "giscus",
+    "enabled": false,
+    "repo": "gantemur/blog",
+    "repoId": "",
+    "category": "Blog comments",
+    "categoryId": "",
+    "mapping": "pathname",
+    "strict": "0",
+    "reactionsEnabled": "1",
+    "emitMetadata": "0",
+    "inputPosition": "bottom",
+    "theme": "preferred_color_scheme",
+    "lang": "en"
+  }
+}

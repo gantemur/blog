@@ -1,0 +1,157 @@
+:root {
+  color-scheme: light;
+  --bg: #f9f8f4;
+  --paper: #fffdf8;
+  --ink: #1f2933;
+  --muted: #64707d;
+  --line: #ded8cc;
+  --accent: #315f72;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  width: min(100% - 2rem, 860px);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-title {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-main {
+  padding: 2rem 0 3rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 1rem 0 2rem;
+}
+
+.intro {
+  padding: 1rem 0 2rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.post-header {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.eyebrow,
+.meta,
+.terms,
+.post-meta,
+.comments-placeholder,
+time {
+  color: var(--muted);
+}
+
+.list-item {
+  border-top: 1px solid var(--line);
+  padding: 1rem 0;
+}
+
+.list-item h3 {
+  margin-bottom: 0.2rem;
+}
+
+.post-content {
+  background: var(--paper);
+}
+
+.post-content pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: #f0ede6;
+}
+
+.post-content code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.post-nav {
+  display: grid;
+  gap: 0.75rem;
+  margin: 2rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.archive-year ol,
+.post-list.compact,
+.tag-list {
+  padding-left: 1.25rem;
+}
+
+.comments-placeholder {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header {
+    display: block;
+  }
+
+  .site-nav {
+    margin-top: 0.5rem;
+  }
+}
