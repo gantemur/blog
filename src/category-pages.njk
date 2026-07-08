@@ -1,17 +1,17 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: collections.tagList
+  data: collections.categoryList
   size: 1
-  alias: tag
-permalink: "/tags/{{ tag | tagSlug }}/"
+  alias: category
+permalink: "/categories/{{ category.slug }}/"
 eleventyComputed:
-  title: "{{ tag }}"
+  title: "{{ category.name }}"
 ---
-<h1>{{ tag }}</h1>
-{% set taggedPosts = collections.posts | postsWithTag(tag) %}
+<h1>{{ category.name }}</h1>
+{% set categoryPosts = collections.posts | postsWithCategory(category) %}
 <ol class="post-list compact">
-  {% for post in taggedPosts %}
+  {% for post in categoryPosts %}
     <li>
       <time datetime="{{ post.date | dateIso }}">{{ post.date | dateYmd }}</time>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>

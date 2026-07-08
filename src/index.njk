@@ -1,22 +1,86 @@
 ---
 layout: layouts/base.njk
-title: Home
+title: Нүүр
 permalink: /
 ---
-<section class="intro">
+<section class="home-intro">
   <h1>{{ site.title }}</h1>
-  <p>Notes, essays, and occasional writings on mathematics, physics, computing, history, and whatever else keeps asking for a page.</p>
+  <p class="tagline">{{ site.description }}</p>
+  <p>Энэ блогийг оюутны ноорог тэмдэглэлийн дэвтэр гэж бодож болно. Ихэнх бичлэг нь өөртөө зориулж тэмдэглэсэн зүйл боловч лекцийн дэвтэр шиг сүүлд өөр хүнд хэрэг болж магадгүй.</p>
 </section>
 
-<section class="post-list" aria-labelledby="recent-posts">
-  <h2 id="recent-posts">Recent Posts</h2>
-  {% for post in collections.posts | limit(12) %}
-    <article class="list-item">
-      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-      <p class="meta">{{ post.date | readableDate }}</p>
-      {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
-    </article>
-  {% else %}
-    <p>No posts found yet.</p>
-  {% endfor %}
-</section>
+<div class="home-layout">
+  <div class="home-main">
+    <section aria-labelledby="contents-title">
+      <h2 id="contents-title">Гарчиг</h2>
+      <p class="section-note">Цуврал болон сэдэвчилсэн хуудсууд.</p>
+      <ul class="topic-grid compact">
+        <li><a href="{{ '/numbers/' | url }}">Тооны онол</a></li>
+        <li><a href="{{ '/algebr/' | url }}">Алгебр</a></li>
+        <li><a href="{{ '/geometry/' | url }}">Геометр</a></li>
+        <li><a href="{{ '/topology/' | url }}">Топологи</a></li>
+        <li><a href="{{ '/analysis/' | url }}">Анализ</a></li>
+        <li><a href="{{ '/algorithms/' | url }}">Алгоритм</a></li>
+        <li><a href="{{ '/physics/' | url }}">Физик</a></li>
+        <li><a href="{{ '/astronomy/' | url }}">Одон орон</a></li>
+        <li><a href="{{ '/calendar/' | url }}">Цаг тоолол</a></li>
+        <li><a href="{{ '/history/' | url }}">Түүх</a></li>
+        <li><a href="{{ '/logical-fallacies/' | url }}">Логик төөрөгдлүүд</a></li>
+        <li><a href="{{ '/cpp/' | url }}">Стандарт C++</a></li>
+        <li><a href="{{ '/cpp/' | url }}">Програмчлал</a></li>
+        <li><a href="{{ ('/categories/' + ('Магадлал' | tagSlug) + '/') | url }}">Магадлал</a></li>
+        <li><a href="{{ ('/categories/' + ('Харьцангуйн онол' | tagSlug) + '/') | url }}">Харьцангуйн онол</a></li>
+        <li><a href="{{ ('/tags/' + ('эгэл бөөм' | tagSlug) + '/') | url }}">Эгэл бөөм</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="recent-posts">
+      <h2 id="recent-posts">Шинэ бичлэгүүд</h2>
+      <ol class="recent-list">
+        {% for post in collections.posts | limit(16) %}
+          <li>
+            <time datetime="{{ post.date | dateIso }}">{{ post.date | dateYmd }}</time>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </li>
+        {% else %}
+          <li>Бичлэг хараахан алга.</li>
+        {% endfor %}
+      </ol>
+    </section>
+  </div>
+
+  <aside class="home-sidebar" aria-label="Хажуугийн цэс">
+    <section>
+      <h2>Ангилал</h2>
+      <ul class="inline-list">
+        {% for category in collections.categoryList | limit(18) %}
+          <li><a href="{{ ('/categories/' + category.slug + '/') | url }}">{{ category.name }}</a> <span>({{ category.count }})</span></li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Түлхүүр үг</h2>
+      <ul class="tag-cloud compact">
+        {% for tag in collections.popularKeywords | limit(36) %}
+          <li><a href="{{ ('/tags/' + (tag.name | tagSlug) + '/') | url }}">{{ tag.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Архив</h2>
+      <ul class="archive-mini">
+        {% for group in collections.postsByMonth | limit(12) %}
+          <li><a href="{{ '/archive/' | url }}">{{ group.month }}</a> <span>({{ group.posts.length }})</span></li>
+        {% endfor %}
+      </ul>
+      <p><a href="{{ '/archive/' | url }}">Бүх архив</a></p>
+    </section>
+
+    <section>
+      <h2>RSS</h2>
+      <p><a href="{{ '/feed.xml' | url }}">Шинэ бичлэгийн RSS</a></p>
+    </section>
+  </aside>
+</div>

@@ -1,15 +1,8 @@
 ---
 layout: layouts/base.njk
-title: Topics
+title: Гарчиг
 permalink: /topics/
+eleventyExcludeFromCollections: true
 ---
-<h1>Topics</h1>
-<p>Older table-of-contents pages are gathered here as topic guides.</p>
-
-<section class="topic-grid" aria-label="Topic pages">
-  {% for topic in collections.topicPages %}
-    <article class="topic-item">
-      <h2><a href="{{ topic.url | url }}">{{ topic.data.title }}</a></h2>
-    </article>
-  {% endfor %}
-</section>
+<p><a href="{{ '/contents/' | url }}">Гарчиг</a> хуудас руу шилжүүлж байна.</p>
+<meta http-equiv="refresh" content="0; url={{ '/contents/' | url }}">

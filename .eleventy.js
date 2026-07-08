@@ -7,6 +7,15 @@ module.exports = function (eleventyConfig) {
     return item.data.draft !== true && !["draft", "private"].includes(item.data.status || "");
   };
 
+  const tagSlug = (value) => {
+    const normalized = String(value || "")
+      .normalize("NFKC")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+    return encodeURIComponent(normalized).replace(/%2F/gi, "-");
+  };
+
   eleventyConfig.addFilter("readableDate", (value) => {
     return new Intl.DateTimeFormat("en", {
       year: "numeric",
@@ -23,6 +32,15 @@ module.exports = function (eleventyConfig) {
     return new Date(value).getFullYear();
   });
 
+  eleventyConfig.addFilter("dateYmd", (value) => {
+    const date = new Date(value);
+    return [
+      date.getFullYear(),
+      String(date.getMonth() + 1).padStart(2, "0"),
+      String(date.getDate()).padStart(2, "0")
+    ].join("-");
+  });
+
   eleventyConfig.addFilter("slugify", (value) => {
     return String(value || "")
       .normalize("NFKD")
@@ -33,12 +51,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("tagSlug", (value) => {
-    const normalized = String(value || "")
-      .normalize("NFKC")
-      .trim()
-      .toLowerCase()
-      .replace(/\s+/g, "-");
-    return encodeURIComponent(normalized).replace(/%2F/gi, "-");
+    return tagSlug(value);
   });
 
   eleventyConfig.addFilter("limit", (values, count) => {
@@ -65,6 +78,35 @@ module.exports = function (eleventyConfig) {
       .map(([year, posts]) => ({ year, posts }));
   });
 
+  eleventyConfig.addCollection("postsByMonth", (collectionApi) => {
+    const grouped = new Map();
+    for (const post of collectionApi.getFilteredByGlob("src/posts/**/*.md")) {
+      if (!isPublicPost(post)) continue;
+      const month = `${post.date.getFullYear()}-${String(post.date.getMonth() + 1).padStart(2, "0")}`;
+      if (!grouped.has(month)) grouped.set(month, []);
+      grouped.get(month).push(post);
+    }
+    return Array.from(grouped.entries())
+      .sort((a, b) => b[0].localeCompare(a[0]))
+      .map(([month, posts]) => ({ month, posts }));
+  });
+
+  eleventyConfig.addCollection("categoryList", (collectionApi) => {
+    const counts = new Map();
+    for (const post of collectionApi.getFilteredByGlob("src/posts/**/*.md")) {
+      if (!isPublicPost(post)) continue;
+      for (const category of post.data.categories || []) {
+        const slug = tagSlug(category);
+        const existing = counts.get(slug) || { name: category, slug, names: [], count: 0 };
+        if (!existing.names.includes(category)) existing.names.push(category);
+        existing.count += 1;
+        counts.set(slug, existing);
+      }
+    }
+    return Array.from(counts.values())
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "mn"));
+  });
+
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tags = new Set();
     for (const post of collectionApi.getFilteredByGlob("src/posts/**/*.md")) {
@@ -72,6 +114,21 @@ module.exports = function (eleventyConfig) {
       for (const tag of post.data.tags || []) tags.add(tag);
     }
     return Array.from(tags).sort((a, b) => a.localeCompare(b));
+  });
+
+  eleventyConfig.addCollection("popularKeywords", (collectionApi) => {
+    const counts = new Map();
+    for (const post of collectionApi.getFilteredByGlob("src/posts/**/*.md")) {
+      if (!isPublicPost(post)) continue;
+      for (const tag of post.data.tags || []) {
+        counts.set(tag, (counts.get(tag) || 0) + 1);
+      }
+    }
+    return Array.from(counts.entries())
+      .map(([name, count]) => ({ name, count }))
+      .filter((tag) => tag.count > 1)
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "mn"))
+      .slice(0, 48);
   });
 
   eleventyConfig.addCollection("topicPages", (collectionApi) => {
@@ -102,6 +159,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("postsWithTag", (posts, tag) => {
     return posts.filter((post) => (post.data.tags || []).includes(tag));
+  });
+
+  eleventyConfig.addFilter("postsWithCategory", (posts, category) => {
+    const names = Array.isArray(category?.names) ? category.names : [category];
+    return posts.filter((post) => (post.data.categories || []).some((name) => names.includes(name)));
   });
 
   eleventyConfig.addShortcode("assetUrl", function (assetPath) {

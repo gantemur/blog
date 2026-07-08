@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
-title: Tags
+title: Түлхүүр үг
 permalink: /tags/
 ---
-<h1>Tags</h1>
+<h1>Түлхүүр үг</h1>
 <ul class="tag-list">
   {% for tag in collections.tagList %}
     {% set taggedPosts = collections.posts | postsWithTag(tag) %}

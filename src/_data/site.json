@@ -1,10 +1,10 @@
 {
-  "title": "T8M8R Blog",
-  "description": "Notes, essays, and occasional writings.",
+  "title": "Төмөрийн тэмдэглэл",
+  "description": "оюутны ноорог",
   "url": "https://gantemur.github.io",
   "baseUrl": "/blog/",
   "author": "Tsogtgerel Gantumur",
-  "language": "en",
+  "language": "mn",
   "comments": {
     "provider": "giscus",
     "enabled": false,
@@ -18,6 +18,6 @@
     "emitMetadata": "0",
     "inputPosition": "bottom",
     "theme": "preferred_color_scheme",
-    "lang": "en"
+    "lang": "mn"
   }
 }

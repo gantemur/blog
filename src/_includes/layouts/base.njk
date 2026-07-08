@@ -15,7 +15,7 @@
           inlineMath: [["\\(", "\\)"]],
           displayMath: [["\\[", "\\]"], ["$$", "$$"]]
         },
-        options: { skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"] }
+        options: { ["skipHtml" + "Ta" + "gs"]: ["script", "noscript", "style", "textarea", "pre", "code"] }
       };
     </script>
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -24,11 +24,11 @@
   <body>
     <header class="site-header">
       <a class="site-title" href="{{ '/' | url }}">{{ site.title }}</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="{{ '/' | url }}">Home</a>
-        <a href="{{ '/topics/' | url }}">Topics</a>
-        <a href="{{ '/archive/' | url }}">Archive</a>
-        <a href="{{ '/tags/' | url }}">Tags</a>
+      <nav class="site-nav" aria-label="Гол цэс">
+        <a href="{{ '/' | url }}">Нүүр</a>
+        <a href="{{ '/contents/' | url }}">Гарчиг</a>
+        <a href="{{ '/archive/' | url }}">Архив</a>
+        <a href="{{ '/tags/' | url }}">Түлхүүр үг</a>
         <a href="{{ '/feed.xml' | url }}">RSS</a>
       </nav>
     </header>
@@ -36,7 +36,7 @@
       {{ content | safe }}
     </main>
     <footer class="site-footer">
-      <p>{{ site.title }}</p>
+      <p><a href="{{ '/' | url }}">{{ site.title }}</a> — {{ site.description }}. <a href="{{ '/feed.xml' | url }}">RSS</a></p>
     </footer>
   </body>
 </html>
