@@ -3,35 +3,27 @@ layout: layouts/base.njk
 title: Нүүр
 permalink: /
 ---
-<section class="home-intro">
+<section class="home-heading">
   <h1>{{ site.title }}</h1>
   <p class="tagline">{{ site.description }}</p>
-  <p>Энэ блогийг оюутны ноорог тэмдэглэлийн дэвтэр гэж бодож болно. Ихэнх бичлэг нь өөртөө зориулж тэмдэглэсэн зүйл боловч лекцийн дэвтэр шиг сүүлд өөр хүнд хэрэг болж магадгүй.</p>
 </section>
 
 <div class="home-layout">
   <div class="home-main">
-    <section aria-labelledby="contents-title">
-      <h2 id="contents-title">Гарчиг</h2>
-      <p class="section-note">Цуврал болон сэдэвчилсэн хуудсууд.</p>
-      <ul class="topic-grid compact">
-        <li><a href="{{ '/numbers/' | url }}">Тооны онол</a></li>
-        <li><a href="{{ '/algebr/' | url }}">Алгебр</a></li>
-        <li><a href="{{ '/geometry/' | url }}">Геометр</a></li>
-        <li><a href="{{ '/topology/' | url }}">Топологи</a></li>
-        <li><a href="{{ '/analysis/' | url }}">Анализ</a></li>
-        <li><a href="{{ '/algorithms/' | url }}">Алгоритм</a></li>
-        <li><a href="{{ '/physics/' | url }}">Физик</a></li>
-        <li><a href="{{ '/astronomy/' | url }}">Одон орон</a></li>
-        <li><a href="{{ '/calendar/' | url }}">Цаг тоолол</a></li>
-        <li><a href="{{ '/history/' | url }}">Түүх</a></li>
-        <li><a href="{{ '/logical-fallacies/' | url }}">Логик төөрөгдлүүд</a></li>
-        <li><a href="{{ '/cpp/' | url }}">Стандарт C++</a></li>
-        <li><a href="{{ '/cpp/' | url }}">Програмчлал</a></li>
-        <li><a href="{{ ('/categories/' + ('Магадлал' | tagSlug) + '/') | url }}">Магадлал</a></li>
-        <li><a href="{{ ('/categories/' + ('Харьцангуйн онол' | tagSlug) + '/') | url }}">Харьцангуйн онол</a></li>
-        <li><a href="{{ ('/tags/' + ('эгэл бөөм' | tagSlug) + '/') | url }}">Эгэл бөөм</a></li>
-      </ul>
+    <section class="featured-posts" aria-labelledby="featured-posts">
+      <h2 id="featured-posts">Сүүлийн бичлэгүүдээс</h2>
+      {% for post in collections.posts | limit(3) %}
+        <article class="featured-post">
+          <header>
+            <time datetime="{{ post.date | dateIso }}">{{ post.date | dateYmd }}</time>
+            <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+          </header>
+          <div class="excerpt">
+            {{ post.templateContent | homeExcerpt | safe }}
+          </div>
+          <p class="read-more"><a href="{{ post.url | url }}">Цааш унших</a></p>
+        </article>
+      {% endfor %}
     </section>
 
     <section aria-labelledby="recent-posts">
@@ -76,11 +68,6 @@ permalink: /
         {% endfor %}
       </ul>
       <p><a href="{{ '/archive/' | url }}">Бүх архив</a></p>
-    </section>
-
-    <section>
-      <h2>RSS</h2>
-      <p><a href="{{ '/feed.xml' | url }}">Шинэ бичлэгийн RSS</a></p>
     </section>
   </aside>
 </div>

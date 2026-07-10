@@ -5,18 +5,18 @@ This report compares migrated WordPress URLs with generated Eleventy permalinks.
 ## Summary
 
 - Posts/pages with WordPress URLs: 220
-- Old path/new permalink mismatches: 12
-- Alias pages generated: 12
+- Old path/new permalink mismatches: 13
+- Alias pages generated: 13
 - Source files with WordPress links rewritten: 0
 - Unresolved WordPress links left in Markdown: 20
 
 ## Texas Name Post
 
 - Title: Техас нэрний учир
-- Source: `src/posts/2024-03-17-5738-техас-нэрний-учир.md`
-- Generated URL: `/blog/2024/03/17/%d1%82%d0%b5%d1%85%d0%b0%d1%81-%d0%bd%d1%8d%d1%80%d0%bd%d0%b8%d0%b9-%d1%83%d1%87%d0%b8%d1%80/`
+- Source: `src/posts/2024-03-17-5738-texas.md`
+- Generated URL: `/blog/2024/03/17/texas/`
 - Original WordPress URL: https://t8m8r.wordpress.com/2024/03/17/%d1%82%d0%b5%d1%85%d0%b0%d1%81-%d0%bd%d1%8d%d1%80%d0%bd%d0%b8%d0%b9-%d1%83%d1%87%d0%b8%d1%80/
-- Old path and generated path match: yes
+- Old path and generated path match: no
 
 ## Alias Pages
 
@@ -34,6 +34,7 @@ This report compares migrated WordPress URLs with generated Eleventy permalinks.
 | `/contents/cpp/` | `/cpp/` | `src/pages/8-cpp.md` |
 | `/contents/physics/` | `/physics/` | `src/pages/808-physics.md` |
 | `/contents/astronomy/` | `/astronomy/` | `src/pages/894-astronomy.md` |
+| `/2024/03/17/%d1%82%d0%b5%d1%85%d0%b0%d1%81-%d0%bd%d1%8d%d1%80%d0%bd%d0%b8%d0%b9-%d1%83%d1%87%d0%b8%d1%80/` | `/2024/03/17/texas/` | `src/posts/2024-03-17-5738-texas.md` |
 
 ## Unresolved WordPress Links
 

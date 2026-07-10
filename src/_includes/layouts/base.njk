@@ -6,7 +6,6 @@
     <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ description or site.description }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | url }}">
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
     {% if math %}
     <script>
@@ -29,14 +28,13 @@
         <a href="{{ '/contents/' | url }}">Гарчиг</a>
         <a href="{{ '/archive/' | url }}">Архив</a>
         <a href="{{ '/tags/' | url }}">Түлхүүр үг</a>
-        <a href="{{ '/feed.xml' | url }}">RSS</a>
       </nav>
     </header>
     <main class="site-main">
       {{ content | safe }}
     </main>
     <footer class="site-footer">
-      <p><a href="{{ '/' | url }}">{{ site.title }}</a> — {{ site.description }}. <a href="{{ '/feed.xml' | url }}">RSS</a></p>
+      <p><a href="{{ '/' | url }}">{{ site.title }}</a> — {{ site.description }}.</p>
     </footer>
   </body>
 </html>

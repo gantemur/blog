@@ -16,6 +16,14 @@ module.exports = function (eleventyConfig) {
     return encodeURIComponent(normalized).replace(/%2F/gi, "-");
   };
 
+  const escapeHtml = (value) => {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  };
+
   eleventyConfig.addFilter("readableDate", (value) => {
     return new Intl.DateTimeFormat("en", {
       year: "numeric",
@@ -56,6 +64,30 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (values, count) => {
     return Array.isArray(values) ? values.slice(0, count) : [];
+  });
+
+  eleventyConfig.addFilter("homeExcerpt", (content, fallbackLength = 420) => {
+    const html = String(content || "");
+    const marker = html.match(/<!--\s*more\s*-->/i);
+    if (marker && marker.index > 0) {
+      return html.slice(0, marker.index).trim();
+    }
+
+    const paragraph = html.match(/<p\b[^>]*>[\s\S]*?<\/p>/i);
+    if (paragraph) return paragraph[0];
+
+    const text = html
+      .replace(/<script\b[\s\S]*?<\/script>/gi, "")
+      .replace(/<style\b[\s\S]*?<\/style>/gi, "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!text) return "";
+
+    const excerpt = text.length > fallbackLength
+      ? `${text.slice(0, fallbackLength).trim()}...`
+      : text;
+    return `<p>${escapeHtml(excerpt)}</p>`;
   });
 
   eleventyConfig.addCollection("posts", (collectionApi) => {

@@ -73,16 +73,16 @@ iframe {
   padding: 1rem 0 2rem;
 }
 
-.home-intro {
+.home-heading {
   margin-bottom: 1rem;
   max-width: 760px;
 }
 
-.home-intro h1 {
+.home-heading h1 {
   margin: 0 0 0.15rem;
 }
 
-.home-intro p {
+.home-heading p {
   margin: 0.35rem 0;
 }
 
@@ -211,6 +211,34 @@ time {
   margin: 0;
 }
 
+.featured-post {
+  border-top: 1px solid var(--line);
+  padding: 0.85rem 0;
+}
+
+.featured-post header {
+  display: grid;
+  gap: 0.35rem;
+  grid-template-columns: 6.1rem minmax(0, 1fr);
+  align-items: baseline;
+}
+
+.featured-post h3 {
+  margin: 0;
+}
+
+.featured-post .excerpt {
+  margin-top: 0.35rem;
+}
+
+.featured-post .excerpt p {
+  margin: 0.35rem 0;
+}
+
+.read-more {
+  margin: 0.25rem 0 0;
+}
+
 .recent-list {
   list-style: none;
   margin: 0;
@@ -298,5 +326,9 @@ time {
 
   .recent-list li {
     grid-template-columns: 5.9rem minmax(0, 1fr);
+  }
+
+  .featured-post header {
+    display: block;
   }
 }
