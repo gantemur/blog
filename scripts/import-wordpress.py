@@ -69,7 +69,10 @@ class MarkdownConverter(HTMLParser):
             alt = attrs.get("alt", "")
             src = attrs.get("src", "")
             if src:
-                self.emit(f"![{escape_md(alt)}]({src})")
+                if any(attrs.get(name) for name in ("class", "width", "height", "style")):
+                    self.emit(html_img(attrs))
+                else:
+                    self.emit(f"![{escape_md(alt)}]({src})")
         elif tag in {"strong", "b"}:
             self.emit("**")
         elif tag in {"em", "i"}:
@@ -136,6 +139,19 @@ class MarkdownConverter(HTMLParser):
 
 def escape_md(value):
     return str(value).replace("[", "\\[").replace("]", "\\]")
+
+
+def html_attr(value):
+    return html.escape(str(value), quote=True)
+
+
+def html_img(attrs):
+    parts = []
+    for name in ("src", "alt", "class", "width", "height", "style"):
+        value = attrs.get(name)
+        if value:
+            parts.append(f'{name}="{html_attr(value)}"')
+    return "<img " + " ".join(parts) + ">"
 
 
 def text(parent, tag):

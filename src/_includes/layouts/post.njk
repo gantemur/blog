@@ -29,10 +29,10 @@ layout: layouts/base.njk
   {% endif %}
 
   <nav class="post-nav" aria-label="Бичлэгийн залуур">
-    {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-    {% set nextPost = collections.posts | getNextCollectionItem(page) %}
-    {% if previousPost %}<a href="{{ previousPost.url | url }}">Өмнөх: {{ previousPost.data.title }}</a>{% endif %}
-    {% if nextPost %}<a href="{{ nextPost.url | url }}">Дараах: {{ nextPost.data.title }}</a>{% endif %}
+    {% set newerPost = collections.posts | getPreviousCollectionItem(page) %}
+    {% set olderPost = collections.posts | getNextCollectionItem(page) %}
+    {% if olderPost %}<a href="{{ olderPost.url | url }}">Өмнөх: {{ olderPost.data.title }}</a>{% endif %}
+    {% if newerPost %}<a href="{{ newerPost.url | url }}">Дараах: {{ newerPost.data.title }}</a>{% endif %}
   </nav>
 
   {% include "comments.njk" %}
