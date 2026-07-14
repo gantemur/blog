@@ -103,6 +103,76 @@ def yaml_quote(value):
     return json.dumps(str(value), ensure_ascii=False)
 
 
+def latex_escape_text(value):
+    replacements = {
+        "\\": r"\textbackslash{}",
+        "&": r"\&",
+        "%": r"\%",
+        "$": r"\$",
+        "#": r"\#",
+        "_": r"\_",
+        "{": r"\{",
+        "}": r"\}",
+        "~": r"\textasciitilde{}",
+        "^": r"\textasciicircum{}",
+    }
+    return "".join(replacements.get(char, char) for char in str(value))
+
+
+def resolve_caption_names(manifest, args):
+    language = str(manifest.get("language") or manifest.get("lang") or "").casefold()
+    figure_name = args.figure_name if args.figure_name is not None else manifest.get("figureName")
+    table_name = args.table_name if args.table_name is not None else manifest.get("tableName")
+    if language in {"mn", "mongolian"}:
+        figure_name = figure_name or "Зураг"
+        table_name = table_name or "Хүснэгт"
+    return figure_name, table_name
+
+
+def caption_header_include(figure_name, table_name):
+    if not figure_name and not table_name:
+        return []
+
+    commands = []
+    if figure_name:
+        commands.append(rf"\renewcommand{{\figurename}}{{{latex_escape_text(figure_name)}}}%")
+    if table_name:
+        commands.append(rf"\renewcommand{{\tablename}}{{{latex_escape_text(table_name)}}}%")
+
+    lines = [
+        "header-includes:",
+        "  - |",
+        "    \\makeatletter",
+        "    \\@ifundefined{captionsmongolian}{}{%",
+        "      \\addto\\captionsmongolian{%",
+    ]
+    lines.extend(f"        {command}" for command in commands)
+    lines.extend(
+        [
+            "      }%",
+            "    }",
+            "    \\@ifundefined{captionsmn}{}{%",
+            "      \\addto\\captionsmn{%",
+        ]
+    )
+    lines.extend(f"        {command}" for command in commands)
+    lines.extend(
+        [
+            "      }%",
+            "    }",
+            "    \\AtBeginDocument{%",
+        ]
+    )
+    lines.extend(f"      {command}" for command in commands)
+    lines.extend(
+        [
+            "    }",
+            "    \\makeatother",
+        ]
+    )
+    return lines
+
+
 def normalize_path(value):
     if not value:
         return None
@@ -446,18 +516,50 @@ def post_heading_level(division):
     return 1
 
 
-def export_book(manifest, resolved, unresolved_refs, out_dir):
+def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind):
+    command = [
+        pandoc_path,
+        str(book_md),
+        "--resource-path",
+        str(out_dir),
+    ]
+    if args.mainfont:
+        command.extend(["-V", f"mainfont={args.mainfont}"])
+    if output_kind == "tex":
+        command.extend(["-s", "-f", "markdown+raw_tex", "-t", "latex"])
+    elif output_kind == "pdf":
+        command.extend(["--pdf-engine", args.pdf_engine])
+    else:
+        raise ValueError(f"Unknown Pandoc output kind: {output_kind}")
+    command.extend(["-o", str(output_path)])
+    return command
+
+
+def run_pandoc(command):
+    result = {"command": command, "ok": False, "error": None}
+    try:
+        subprocess.run(command, check=True, capture_output=True, text=True)
+        result["ok"] = True
+    except subprocess.CalledProcessError as error:
+        detail = (error.stderr or error.stdout or str(error)).strip()
+        result["error"] = detail
+    return result
+
+
+def export_book(manifest, resolved, unresolved_refs, out_dir, args):
     out_dir.mkdir(parents=True, exist_ok=True)
     copied = set()
     unresolved_images = []
     diagnostics = new_diagnostics()
     division = manifest.get("division", "chapter")
+    figure_name, table_name = resolve_caption_names(manifest, args)
     heading_level = post_heading_level(division)
     lines = [
         "---",
         f"title: {yaml_quote(manifest.get('title', 'Blog export'))}",
         f"author: {yaml_quote(manifest.get('author', ''))}",
         f"lang: {yaml_quote(manifest.get('language', 'mn'))}",
+        *caption_header_include(figure_name, table_name),
         "---",
         "",
     ]
@@ -493,23 +595,27 @@ def export_book(manifest, resolved, unresolved_refs, out_dir):
     book_md.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     pandoc_path = shutil.which("pandoc")
     book_tex = out_dir / "book.tex"
-    pandoc_ran = False
+    book_pdf = out_dir / "book.pdf"
+    pandoc_report = {
+        "found": bool(pandoc_path),
+        "path": pandoc_path,
+        "wrote_tex": False,
+        "wrote_pdf": False,
+        "tex_command": None,
+        "pdf_command": None,
+        "tex_error": None,
+        "pdf_error": None,
+    }
     if pandoc_path:
-        subprocess.run(
-            [
-                pandoc_path,
-                str(book_md),
-                "-s",
-                "-f",
-                "markdown+raw_tex",
-                "-t",
-                "latex",
-                "-o",
-                str(book_tex),
-            ],
-            check=True,
-        )
-        pandoc_ran = True
+        tex_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_tex, args, "tex"))
+        pandoc_report["tex_command"] = tex_result["command"]
+        pandoc_report["wrote_tex"] = tex_result["ok"]
+        pandoc_report["tex_error"] = tex_result["error"]
+        if args.pdf:
+            pdf_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_pdf, args, "pdf"))
+            pandoc_report["pdf_command"] = pdf_result["command"]
+            pandoc_report["wrote_pdf"] = pdf_result["ok"]
+            pandoc_report["pdf_error"] = pdf_result["error"]
     manifest_resolved = {
         "title": manifest.get("title"),
         "author": manifest.get("author"),
@@ -519,13 +625,14 @@ def export_book(manifest, resolved, unresolved_refs, out_dir):
         "unresolved_refs": unresolved_refs,
         "unresolved_images": sorted(set(unresolved_images)),
         "diagnostics": diagnostics,
-        "pandoc": {"found": bool(pandoc_path), "path": pandoc_path, "wrote_tex": pandoc_ran},
+        "caption_names": {"figure": figure_name, "table": table_name},
+        "pandoc": pandoc_report,
     }
     (out_dir / "manifest-resolved.json").write_text(
         json.dumps(manifest_resolved, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    return book_md, book_tex if pandoc_ran else None, manifest_resolved
+    return book_md, book_tex if pandoc_report["wrote_tex"] else None, book_pdf if pandoc_report["wrote_pdf"] else None, manifest_resolved
 
 
 def manifest_from_contents(args, mapping):
@@ -553,6 +660,11 @@ def main():
     mode.add_argument("--contents", help="Contents/topic Markdown page to scan for post links")
     parser.add_argument("--section", help="Section title to export from a contents/topic page")
     parser.add_argument("--out", required=True, type=Path, help="Output directory, e.g. exports/example")
+    parser.add_argument("--pdf", action="store_true", help="Also generate book.pdf with Pandoc")
+    parser.add_argument("--pdf-engine", default="xelatex", help="Pandoc PDF engine to use with --pdf")
+    parser.add_argument("--mainfont", help="Main font passed to Pandoc, e.g. Times New Roman")
+    parser.add_argument("--figure-name", help="LaTeX figure caption name, e.g. Зураг")
+    parser.add_argument("--table-name", help="LaTeX table caption name, e.g. Хүснэгт")
     args = parser.parse_args()
 
     mapping, _posts = build_post_index()
@@ -566,14 +678,27 @@ def main():
         raise SystemExit("No posts resolved for export.")
 
     out_dir = ROOT / args.out
-    book_md, book_tex, report = export_book(manifest, resolved, unresolved, out_dir)
+    book_md, book_tex, book_pdf, report = export_book(manifest, resolved, unresolved, out_dir, args)
     print(f"Wrote {book_md.relative_to(ROOT)}")
     print(f"Wrote {(out_dir / 'manifest-resolved.json').relative_to(ROOT)}")
     if book_tex:
         print(f"Wrote {book_tex.relative_to(ROOT)}")
+    elif report["pandoc"]["tex_error"]:
+        print("Pandoc could not generate book.tex.", file=sys.stderr)
+        print(f"Command: {' '.join(report['pandoc']['tex_command'])}", file=sys.stderr)
+        print(report["pandoc"]["tex_error"], file=sys.stderr)
     else:
         print("Pandoc was not found; book.tex was not generated.")
-        print(f"To generate LaTeX later: pandoc {book_md.relative_to(ROOT)} -s -f markdown+raw_tex -t latex -o {(out_dir / 'book.tex').relative_to(ROOT)}")
+        print(f"To generate LaTeX later: pandoc {book_md.relative_to(ROOT)} --resource-path={out_dir.relative_to(ROOT)} -s -f markdown+raw_tex -t latex -o {(out_dir / 'book.tex').relative_to(ROOT)}")
+    if args.pdf:
+        if book_pdf:
+            print(f"Wrote {book_pdf.relative_to(ROOT)}")
+        elif report["pandoc"]["pdf_error"]:
+            print("Pandoc could not generate book.pdf.", file=sys.stderr)
+            print(f"Command: {' '.join(report['pandoc']['pdf_command'])}", file=sys.stderr)
+            print(report["pandoc"]["pdf_error"], file=sys.stderr)
+        elif not report["pandoc"]["found"]:
+            print(f"To generate PDF later: pandoc {book_md.relative_to(ROOT)} --resource-path={out_dir.relative_to(ROOT)} --pdf-engine={args.pdf_engine} -o {(out_dir / 'book.pdf').relative_to(ROOT)}")
     if report["unresolved_refs"]:
         print(f"Unresolved post links: {len(report['unresolved_refs'])}", file=sys.stderr)
     if report["unresolved_images"]:

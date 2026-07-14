@@ -55,6 +55,14 @@ python3 scripts/export-latex.py --contents src/pages/808-physics.md --section "�
 
 The exporter writes `book.md` and `manifest-resolved.json`. If Pandoc is installed, it also writes `book.tex`; otherwise it prints the Pandoc command to run later. `book.tex` references image files; it does not embed them, so keep the generated `assets/` directory beside the book source or make it reachable through Pandoc’s `--resource-path`.
 
+To ask the exporter to create a PDF as well:
+
+```sh
+npm run export:latex -- --manifest export/books/example.yml --out exports/example --pdf --pdf-engine xelatex --mainfont "Times New Roman"
+```
+
+For Mongolian exports, figure and table captions default to `Зураг` and `Хүснэгт`. Override them when needed with `--figure-name "Зураг"` and `--table-name "Хүснэгт"` or the manifest fields `figureName` and `tableName`.
+
 For a PDF with Mongolian Cyrillic, use XeLaTeX or LuaLaTeX. From inside the export directory:
 
 ```sh
