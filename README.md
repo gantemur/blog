@@ -27,6 +27,53 @@ npm run import:wordpress
 
 The importer reads the WXR XML directly from the zip archive and copies media from the tar archive into `src/assets/wp-media/`. Generated posts and pages live under `src/posts/` and `src/pages/` so the final static site can be built without publishing the raw WordPress export.
 
+## LaTeX/PDF Export
+
+Selected post sequences can be exported from committed source Markdown into a combined Pandoc-ready Markdown file:
+
+```sh
+npm run export:latex -- --manifest export/books/example.yml --out exports/example
+```
+
+Manifests live in `export/books/` and are intended to be tracked. A minimal manifest looks like:
+
+```yml
+title: "Эгэл бөөмсийн тэмдэглэл"
+author: "Төмөр"
+language: "mn"
+division: "chapter"
+posts:
+  - /2023/05/03/chicago-pile/
+  - /2023/05/04/jj/
+```
+
+You can also export links discovered from a topic/contents page, optionally limited to one section:
+
+```sh
+python3 scripts/export-latex.py --contents src/pages/808-physics.md --section "Атом, цөм, эгэл бөөмс" --out exports/physics-particles
+```
+
+The exporter writes `book.md` and `manifest-resolved.json`. If Pandoc is installed, it also writes `book.tex`; otherwise it prints the Pandoc command to run later. `book.tex` references image files; it does not embed them, so keep the generated `assets/` directory beside the book source or make it reachable through Pandoc’s `--resource-path`.
+
+For a PDF with Mongolian Cyrillic, use XeLaTeX or LuaLaTeX. From inside the export directory:
+
+```sh
+cd exports/example
+pandoc book.md --pdf-engine=xelatex -V mainfont="Times New Roman" -o book.pdf
+```
+
+Or from the repository root:
+
+```sh
+pandoc exports/example/book.md \
+  --resource-path=exports/example \
+  --pdf-engine=xelatex \
+  -V mainfont="Times New Roman" \
+  -o exports/example/book.pdf
+```
+
+Generated `exports/` output is ignored by git by default. Commit selected export sources only if a particular book project should become part of the repository.
+
 ## Old WordPress Comments
 
 Old WordPress comments were exported from the WXR file, but they are not rendered on the public site. The importer writes a sanitized local review file to `_import/comments-sanitized.jsonl` with only public-looking fields: post id/slug, display name, date, content, and optional author URL.

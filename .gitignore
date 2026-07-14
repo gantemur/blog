@@ -4,4 +4,11 @@ _tmp/
 _site/
 node_modules/
 _private/
+exports/
+exports/*/build/
+exports/*/*.aux
+exports/*/*.log
+exports/*/*.out
+exports/*/*.toc
+exports/*/*.pdf
 .DS_Store
