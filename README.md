@@ -120,7 +120,13 @@ Generated `exports/` output is ignored by git by default. Commit selected export
 
 ## Per-Post PDF Downloads
 
-Selected posts can expose a static PDF download link. Missing `pdf` front matter means PDF downloads are off.
+Selected posts can expose a PDF download link. Missing `pdf` front matter means PDF downloads are off.
+
+No PDF:
+
+```yml
+# no pdf field needed
+```
 
 Enable a house-generated PDF for one post:
 
@@ -128,7 +134,14 @@ Enable a house-generated PDF for one post:
 pdf: true
 ```
 
-Then generate enabled post PDFs locally:
+Ordinary local checks and builds generate and validate enabled PDFs automatically:
+
+```sh
+npm run check
+npm run build
+```
+
+The manual generator is still available:
 
 ```sh
 npm run export:post-pdfs
@@ -168,9 +181,22 @@ pdf:
   label: "PDF татах"
 ```
 
+The checker verifies local `/blog/assets/...` and `/assets/...` PDF files exist. Remote PDFs are allowed but not fetched during local checks:
+
+```yml
+pdf:
+  url: "https://example.com/my-paper.pdf"
+```
+
 Layout settings apply only to generated PDFs. External/static `pdf.url` files are served as-is.
 
-Do not generate PDFs for all posts automatically in GitHub Actions. Keep PDF generation local and commit only selected finished PDFs.
+Use this when you need to build without regenerating PDFs locally:
+
+```sh
+BLOG_SKIP_PDF=1 npm run build
+```
+
+Do not generate PDFs for all posts automatically in GitHub Actions. In CI, the wrapper skips Pandoc/MacTeX generation and validates that committed PDF files and `src/_data/post_pdfs.json` are present instead.
 
 ## Old WordPress Comments
 
