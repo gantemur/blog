@@ -1,0 +1,16 @@
+title: "Кинематик ба харьцангуйн ерөнхий онол"
+author: "Төмөр"
+language: "mn"
+division: "chapter"
+figureName: "Зураг"
+tableName: "Хүснэгт"
+posts:
+  - /blog/2017/03/16/time/
+  - /blog/2017/03/16/length/
+  - /blog/2017/10/13/geometry-of-space/
+  - /blog/2017/10/27/euclidean-motions/
+  - /blog/2018/01/03/simultaneity/
+  - /blog/2017/03/16/redshift/
+  - /blog/2017/03/16/schildarg/
+  - /blog/2017/03/16/equivalenceprinciple/
+  - /blog/2017/03/16/equivalenceredshift/

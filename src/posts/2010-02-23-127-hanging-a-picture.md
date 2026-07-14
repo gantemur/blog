@@ -2,8 +2,8 @@
 layout: "layouts/post.njk"
 title: "Зураг өлгөх"
 date: "2010-02-23T19:16:32"
-slug: "%d0%b7%d1%83%d1%80%d0%b0%d0%b3-%d3%a9%d0%bb%d0%b3%d3%a9%d1%85"
-permalink: "/2010/02/23/%d0%b7%d1%83%d1%80%d0%b0%d0%b3-%d3%a9%d0%bb%d0%b3%d3%a9%d1%85/"
+slug: "hanging-a-picture"
+permalink: "/2010/02/23/hanging-a-picture/"
 wordpress_id: 127
 wordpress_url: "https://t8m8r.wordpress.com/2010/02/23/%d0%b7%d1%83%d1%80%d0%b0%d0%b3-%d3%a9%d0%bb%d0%b3%d3%a9%d1%85/"
 categories: []

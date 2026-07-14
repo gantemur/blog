@@ -1,0 +1,12 @@
+title: "Машин сургалт"
+author: "Төмөр"
+language: "mn"
+division: "chapter"
+figureName: "Зураг"
+tableName: "Хүснэгт"
+posts:
+  - /blog/2018/08/11/ann/
+  - /blog/2018/08/16/uat/
+  - /blog/2018/08/21/depth-separation/
+  - /blog/2018/08/27/backpropagation/
+  - /blog/2020/11/27/gradient-descent/

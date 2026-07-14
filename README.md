@@ -67,7 +67,7 @@ For a PDF with Mongolian Cyrillic, use XeLaTeX or LuaLaTeX. From inside the expo
 
 ```sh
 cd exports/example
-pandoc book.md --pdf-engine=xelatex -V mainfont="Times New Roman" -o book.pdf
+pandoc book.md -f markdown+raw_tex+tex_math_single_backslash --pdf-engine=xelatex -V mainfont="Times New Roman" -o book.pdf
 ```
 
 Or from the repository root:
@@ -75,6 +75,7 @@ Or from the repository root:
 ```sh
 pandoc exports/example/book.md \
   --resource-path=exports/example \
+  -f markdown+raw_tex+tex_math_single_backslash \
   --pdf-engine=xelatex \
   -V mainfont="Times New Roman" \
   -o exports/example/book.pdf

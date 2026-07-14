@@ -109,7 +109,7 @@ templateEngineOverride: "md"
 - [Эсрэг протон](/blog/2023/05/06/segre-chamberlain/)
 
  	
-- [Эсрэг нейтрон](https://t8m8r.wordpress.com/2023/05/06/%d0%bd%d0%b5%d0%b9%d1%82%d1%80%d0%be%d0%bd%d1%8b-%d1%8d%d1%81%d1%80%d1%8d%d0%b3/)
+- [Эсрэг нейтрон](/blog/2023/05/06/clpw/)
 
  	
 - [Сигма барион](/blog/2023/06/01/superproton/)

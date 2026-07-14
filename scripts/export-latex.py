@@ -497,6 +497,15 @@ def post_process_images(markdown, diagnostics):
     return normalize_figure_spacing(markdown)
 
 
+def normalize_math_delimiters(markdown):
+    return (
+        markdown.replace(r"\\(", r"\(")
+        .replace(r"\\)", r"\)")
+        .replace(r"\\[", r"\[")
+        .replace(r"\\]", r"\]")
+    )
+
+
 def adjust_headings(markdown, inserted_level):
     minimum = inserted_level + 1
 
@@ -522,11 +531,13 @@ def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind
         str(book_md),
         "--resource-path",
         str(out_dir),
+        "-f",
+        "markdown+raw_tex+tex_math_single_backslash",
     ]
     if args.mainfont:
         command.extend(["-V", f"mainfont={args.mainfont}"])
     if output_kind == "tex":
-        command.extend(["-s", "-f", "markdown+raw_tex", "-t", "latex"])
+        command.extend(["-s", "-t", "latex"])
     elif output_kind == "pdf":
         command.extend(["--pdf-engine", args.pdf_engine])
     else:
@@ -570,7 +581,8 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
         title = front.get("title") or front.get("slug") or post["path"].stem
         date = front.get("date", "")
         permalink = front.get("permalink", "")
-        body = rewrite_assets(post["body"], out_dir, copied, unresolved_images, diagnostics).strip()
+        body = normalize_math_delimiters(post["body"])
+        body = rewrite_assets(body, out_dir, copied, unresolved_images, diagnostics).strip()
         body = post_process_images(body, diagnostics).strip()
         body = adjust_headings(body, heading_level)
         lines.append("#" * heading_level + f" {title}")
