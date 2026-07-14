@@ -21,6 +21,10 @@
 
 Normal commits reduce current and future checkout size, but they do not shrink already-pushed Git history.
 
+## Future Git History Rewrite
+
+This optimization pass reduced the current tree/site media size, but old large media blobs remain in Git history. If repository size becomes a problem later, a deliberate history rewrite with `git-filter-repo` or BFG may be considered. Do this only after backups and with care, because it requires force-pushing and other clones should re-clone afterward.
+
 ## Optimized Files
 
 - `src/assets/wp-media/2015/09/star_trails_over_the_eso_3-6-metre_telescope.jpg`: 5.7M -> 1.3M (3456x2304 -> 2200x1467, saved 4.4M)

@@ -198,6 +198,12 @@ BLOG_SKIP_PDF=1 npm run build
 
 Do not generate PDFs for all posts automatically in GitHub Actions. In CI, the wrapper skips Pandoc/MacTeX generation and validates that committed PDF files and `src/_data/post_pdfs.json` are present instead.
 
+## Media Size Maintenance
+
+Imported WordPress media live under `src/assets/wp-media/`. Large still images have been optimized for the current tree and public site, with full-resolution originals from that optimization pass kept locally under ignored `_private/media-originals/`.
+
+Normal image optimization commits reduce the current checkout and site size, but they do not remove old large blobs from Git history. If repository size becomes a problem later, consider a deliberate history rewrite with `git-filter-repo` or BFG only after backups and with care. That kind of rewrite requires force-pushing, and other clones should re-clone afterward.
+
 ## Old WordPress Comments
 
 Old WordPress comments were exported from the WXR file, but they are not rendered on the public site. The importer writes a sanitized local review file to `_import/comments-sanitized.jsonl` with only public-looking fields: post id/slug, display name, date, content, and optional author URL.
