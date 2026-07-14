@@ -210,6 +210,12 @@ def resolve_pandoc_options(manifest, args):
     }
 
 
+def resolve_pdf_layout_options(manifest, args):
+    papersize = args.papersize if args.papersize is not None else manifest.get("papersize")
+    margin = args.margin if args.margin is not None else manifest.get("margin")
+    return papersize or "a4", margin or "25mm"
+
+
 def normalize_path(value):
     if not value:
         return None
@@ -562,7 +568,7 @@ def post_heading_level(division):
     return 1
 
 
-def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind, toc, toc_depth, pandoc_options):
+def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind, toc, toc_depth, pandoc_options, papersize, margin):
     command = [
         pandoc_path,
         str(book_md),
@@ -581,6 +587,7 @@ def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind
         command.append(f"--include-in-header={pandoc_options['include_header']}")
     if args.mainfont:
         command.extend(["-V", f"mainfont={args.mainfont}"])
+    command.extend(["-V", f"papersize={papersize}", "-V", f"geometry:margin={margin}"])
     if output_kind == "tex":
         command.extend(["-s", "-t", "latex"])
     elif output_kind == "pdf":
@@ -611,6 +618,7 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
     figure_name, table_name, toc_title = resolve_latex_names(manifest, args)
     toc, toc_depth = resolve_toc_options(manifest, args)
     pandoc_options = resolve_pandoc_options(manifest, args)
+    papersize, margin = resolve_pdf_layout_options(manifest, args)
     heading_level = post_heading_level(division)
     lines = [
         "---",
@@ -666,12 +674,12 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
         "pdf_error": None,
     }
     if pandoc_path:
-        tex_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_tex, args, "tex", toc, toc_depth, pandoc_options))
+        tex_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_tex, args, "tex", toc, toc_depth, pandoc_options, papersize, margin))
         pandoc_report["tex_command"] = tex_result["command"]
         pandoc_report["wrote_tex"] = tex_result["ok"]
         pandoc_report["tex_error"] = tex_result["error"]
         if args.pdf:
-            pdf_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_pdf, args, "pdf", toc, toc_depth, pandoc_options))
+            pdf_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_pdf, args, "pdf", toc, toc_depth, pandoc_options, papersize, margin))
             pandoc_report["pdf_command"] = pdf_result["command"]
             pandoc_report["wrote_pdf"] = pdf_result["ok"]
             pandoc_report["pdf_error"] = pdf_result["error"]
@@ -686,6 +694,7 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
         "diagnostics": diagnostics,
         "latex_names": {"contents": toc_title, "figure": figure_name, "table": table_name},
         "toc": {"enabled": toc, "depth": toc_depth, "title": toc_title},
+        "pdf_layout": {"papersize": papersize, "margin": margin},
         "pandoc_options": {
             "template": str(pandoc_options["template"].relative_to(ROOT)) if pandoc_options["template"] else None,
             "include_header": str(pandoc_options["include_header"].relative_to(ROOT)) if pandoc_options["include_header"] else None,
@@ -735,6 +744,8 @@ def main():
     parser.add_argument("--toc-title", help="LaTeX table-of-contents title, e.g. Гарчиг")
     parser.add_argument("--template", help="Pandoc LaTeX template path")
     parser.add_argument("--include-header", help="Extra LaTeX header file passed to Pandoc")
+    parser.add_argument("--papersize", help="Pandoc/LaTeX paper size, default: a4")
+    parser.add_argument("--margin", help="Pandoc/LaTeX page margin, default: 25mm")
     args = parser.parse_args()
 
     mapping, _posts = build_post_index()

@@ -61,6 +61,14 @@ To ask the exporter to create a PDF as well:
 npm run export:latex -- --manifest export/books/example.yml --out exports/example --pdf --pdf-engine xelatex --mainfont "Times New Roman"
 ```
 
+Generated book PDFs default to A4 paper with 25mm margins. Override the layout when needed:
+
+```sh
+npm run export:latex -- --manifest export/books/example.yml --out exports/example --pdf --papersize a4 --margin 25mm
+```
+
+Book manifests may also set `papersize: "a4"` and `margin: "25mm"`.
+
 For Mongolian exports, table-of-contents, figure, and table labels default to `Гарчиг`, `Зураг`, and `Хүснэгт`. Override them when needed with `--toc-title "Гарчиг"`, `--figure-name "Зураг"`, and `--table-name "Хүснэгт"` or the manifest fields `tocTitle`, `figureName`, and `tableName`.
 
 To include a table of contents in generated TeX/PDF output, use CLI flags or manifest fields:
@@ -109,6 +117,60 @@ pandoc exports/example/book.md \
 ```
 
 Generated `exports/` output is ignored by git by default. Commit selected export sources only if a particular book project should become part of the repository.
+
+## Per-Post PDF Downloads
+
+Selected posts can expose a static PDF download link. Missing `pdf` front matter means PDF downloads are off.
+
+Enable a house-generated PDF for one post:
+
+```yml
+pdf: true
+```
+
+Then generate enabled post PDFs locally:
+
+```sh
+npm run export:post-pdfs
+```
+
+Generated PDFs are committed static assets under `src/assets/pdf/posts/`, and `src/_data/post_pdfs.json` maps post permalinks to the generated PDF URLs. The generator uses Pandoc/XeLaTeX, defaults to A4 paper with 25mm margins, and enables active PDF hyperlinks with colored link variables.
+
+Override generated post PDF layout from the command line:
+
+```sh
+npm run export:post-pdfs -- --papersize a4 --margin 16mm
+```
+
+Or override it per generated post:
+
+```yml
+pdf: true
+pdfPapersize: "a4"
+pdfMargin: "25mm"
+```
+
+The object form can carry the same generated-PDF options:
+
+```yml
+pdf:
+  enabled: true
+  source: "generated"
+  papersize: "a4"
+  margin: "25mm"
+```
+
+For a PDF created elsewhere, for example from original TeX source, point the post at an external/static file instead:
+
+```yml
+pdf:
+  url: "/blog/assets/pdf/custom/my-paper.pdf"
+  label: "PDF татах"
+```
+
+Layout settings apply only to generated PDFs. External/static `pdf.url` files are served as-is.
+
+Do not generate PDFs for all posts automatically in GitHub Actions. Keep PDF generation local and commit only selected finished PDFs.
 
 ## Old WordPress Comments
 

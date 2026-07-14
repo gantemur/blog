@@ -13,7 +13,8 @@
     "check": "python3 scripts/check-site.py",
     "new": "node scripts/new-post.js",
     "new:draft": "node scripts/new-post.js --private-draft",
-    "export:latex": "python3 scripts/export-latex.py"
+    "export:latex": "python3 scripts/export-latex.py",
+    "export:post-pdfs": "python3 scripts/export-post-pdfs.py"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"

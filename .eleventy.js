@@ -62,6 +62,37 @@ module.exports = function (eleventyConfig) {
     return tagSlug(value);
   });
 
+  const postPdfConfig = (value) => {
+    if (value === true) return { enabled: true, source: "generated" };
+    if (!value || value === false || typeof value !== "object") return { enabled: false };
+    return {
+      enabled: value.enabled !== false,
+      source: value.source || (value.url ? "external" : "generated"),
+      url: value.url,
+      label: value.label
+    };
+  };
+
+  const prefixedUrl = (value) => {
+    const url = String(value || "");
+    if (!url || /^[a-z][a-z0-9+.-]*:/i.test(url) || url.startsWith("//")) return url;
+    if (url.startsWith("/blog/")) return url;
+    if (url.startsWith("/")) return path.posix.join("/blog", url).replace(/\\/g, "/");
+    return url;
+  };
+
+  eleventyConfig.addFilter("postPdfUrl", (pdf, pageUrl, postPdfs = {}) => {
+    const config = postPdfConfig(pdf);
+    if (!config.enabled) return "";
+    if (config.url) return prefixedUrl(config.url);
+    if (config.source === "external") return "";
+    return postPdfs[pageUrl] || "";
+  });
+
+  eleventyConfig.addFilter("postPdfLabel", (pdf) => {
+    return postPdfConfig(pdf).label || "PDF татах";
+  });
+
   eleventyConfig.addFilter("limit", (values, count) => {
     return Array.isArray(values) ? values.slice(0, count) : [];
   });

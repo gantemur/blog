@@ -117,6 +117,19 @@ h3 {
   padding-bottom: 1rem;
 }
 
+.post-actions {
+  margin: 0.5rem 0;
+}
+
+.pdf-download {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+}
+
 .post,
 .page {
   max-width: 860px;

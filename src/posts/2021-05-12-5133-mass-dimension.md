@@ -11,6 +11,9 @@ tags: ["Янг-Миллс", "вектор орон", "масс хэмжээс", 
 status: "publish"
 comments_count: 0
 math: true
+pdf: true
+pdfToc: true
+pdfTocDepth: 2
 generated_by: "wordpress-importer"
 templateEngineOverride: "md"
 ---
