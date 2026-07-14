@@ -1,0 +1,8 @@
+% Light Pandoc/XeLaTeX header customizations for Mongolian blog books.
+% Prefer this file for small tweaks; generate a full template only when needed:
+% pandoc -D latex > export/templates/blog-book.latex
+\AtBeginDocument{%
+  \renewcommand{\contentsname}{Гарчиг}%
+  \renewcommand{\figurename}{Зураг}%
+  \renewcommand{\tablename}{Хүснэгт}%
+}

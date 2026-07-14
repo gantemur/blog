@@ -4,6 +4,9 @@ language: "mn"
 division: "chapter"
 figureName: "Зураг"
 tableName: "Хүснэгт"
+toc: true
+tocDepth: 2
+tocTitle: "Гарчиг"
 posts:
   - /blog/2007/12/22/false_dilemma/
   - /blog/2007/12/22/argumentum-ad-ignorantiam/

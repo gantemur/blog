@@ -61,7 +61,34 @@ To ask the exporter to create a PDF as well:
 npm run export:latex -- --manifest export/books/example.yml --out exports/example --pdf --pdf-engine xelatex --mainfont "Times New Roman"
 ```
 
-For Mongolian exports, figure and table captions default to `Зураг` and `Хүснэгт`. Override them when needed with `--figure-name "Зураг"` and `--table-name "Хүснэгт"` or the manifest fields `figureName` and `tableName`.
+For Mongolian exports, table-of-contents, figure, and table labels default to `Гарчиг`, `Зураг`, and `Хүснэгт`. Override them when needed with `--toc-title "Гарчиг"`, `--figure-name "Зураг"`, and `--table-name "Хүснэгт"` or the manifest fields `tocTitle`, `figureName`, and `tableName`.
+
+To include a table of contents in generated TeX/PDF output, use CLI flags or manifest fields:
+
+```sh
+npm run export:latex -- --manifest export/books/example.yml --out exports/example --toc --toc-depth 2
+```
+
+```yml
+toc: true
+tocDepth: 2
+tocTitle: "Гарчиг"
+```
+
+For lighter LaTeX customization, prefer an include file:
+
+```sh
+npm run export:latex -- --manifest export/books/example.yml --out exports/example --include-header export/templates/book-header.tex
+```
+
+For a full custom Pandoc template, create one manually and then pass it to the exporter:
+
+```sh
+pandoc -D latex > export/templates/blog-book.latex
+npm run export:latex -- --manifest export/books/example.yml --out exports/example --template export/templates/blog-book.latex
+```
+
+Generated `book.tex` is output, not the reusable template. Keep small project-specific LaTeX changes in `export/templates/book-header.tex` unless a full template is truly needed.
 
 For a PDF with Mongolian Cyrillic, use XeLaTeX or LuaLaTeX. From inside the export directory:
 

@@ -4,6 +4,9 @@ language: "mn"
 division: "chapter"
 figureName: "Зураг"
 tableName: "Хүснэгт"
+toc: true
+tocDepth: 2
+tocTitle: "Гарчиг"
 posts:
   - /blog/2023/05/03/chicago-pile/
   - /blog/2023/05/04/jj/

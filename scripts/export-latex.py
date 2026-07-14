@@ -119,21 +119,25 @@ def latex_escape_text(value):
     return "".join(replacements.get(char, char) for char in str(value))
 
 
-def resolve_caption_names(manifest, args):
+def resolve_latex_names(manifest, args):
     language = str(manifest.get("language") or manifest.get("lang") or "").casefold()
     figure_name = args.figure_name if args.figure_name is not None else manifest.get("figureName")
     table_name = args.table_name if args.table_name is not None else manifest.get("tableName")
+    toc_title = args.toc_title if args.toc_title is not None else manifest.get("tocTitle")
     if language in {"mn", "mongolian"}:
         figure_name = figure_name or "Зураг"
         table_name = table_name or "Хүснэгт"
-    return figure_name, table_name
+        toc_title = toc_title or "Гарчиг"
+    return figure_name, table_name, toc_title
 
 
-def caption_header_include(figure_name, table_name):
-    if not figure_name and not table_name:
+def latex_name_header_include(figure_name, table_name, toc_title):
+    if not figure_name and not table_name and not toc_title:
         return []
 
     commands = []
+    if toc_title:
+        commands.append(rf"\renewcommand{{\contentsname}}{{{latex_escape_text(toc_title)}}}%")
     if figure_name:
         commands.append(rf"\renewcommand{{\figurename}}{{{latex_escape_text(figure_name)}}}%")
     if table_name:
@@ -171,6 +175,39 @@ def caption_header_include(figure_name, table_name):
         ]
     )
     return lines
+
+
+def resolve_toc_options(manifest, args):
+    toc = args.toc if args.toc is not None else bool(manifest.get("toc", False))
+    toc_depth = args.toc_depth if args.toc_depth is not None else manifest.get("tocDepth")
+    if toc_depth is not None:
+        try:
+            toc_depth = int(toc_depth)
+        except (TypeError, ValueError) as error:
+            raise SystemExit("tocDepth / --toc-depth must be an integer") from error
+        if toc_depth < 1:
+            raise SystemExit("tocDepth / --toc-depth must be at least 1")
+    return toc, toc_depth
+
+
+def resolve_existing_option_path(value, option_name):
+    if not value:
+        return None
+    path = Path(value)
+    if not path.is_absolute():
+        path = ROOT / path
+    if not path.exists():
+        raise SystemExit(f"{option_name} file not found: {path}")
+    return path
+
+
+def resolve_pandoc_options(manifest, args):
+    template = args.template if args.template is not None else manifest.get("template")
+    include_header = args.include_header if args.include_header is not None else manifest.get("includeHeader")
+    return {
+        "template": resolve_existing_option_path(template, "--template"),
+        "include_header": resolve_existing_option_path(include_header, "--include-header"),
+    }
 
 
 def normalize_path(value):
@@ -525,7 +562,7 @@ def post_heading_level(division):
     return 1
 
 
-def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind):
+def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind, toc, toc_depth, pandoc_options):
     command = [
         pandoc_path,
         str(book_md),
@@ -534,6 +571,14 @@ def pandoc_command(pandoc_path, book_md, out_dir, output_path, args, output_kind
         "-f",
         "markdown+raw_tex+tex_math_single_backslash",
     ]
+    if toc:
+        command.append("--toc")
+    if toc_depth is not None:
+        command.append(f"--toc-depth={toc_depth}")
+    if pandoc_options["template"]:
+        command.append(f"--template={pandoc_options['template']}")
+    if pandoc_options["include_header"]:
+        command.append(f"--include-in-header={pandoc_options['include_header']}")
     if args.mainfont:
         command.extend(["-V", f"mainfont={args.mainfont}"])
     if output_kind == "tex":
@@ -563,14 +608,16 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
     unresolved_images = []
     diagnostics = new_diagnostics()
     division = manifest.get("division", "chapter")
-    figure_name, table_name = resolve_caption_names(manifest, args)
+    figure_name, table_name, toc_title = resolve_latex_names(manifest, args)
+    toc, toc_depth = resolve_toc_options(manifest, args)
+    pandoc_options = resolve_pandoc_options(manifest, args)
     heading_level = post_heading_level(division)
     lines = [
         "---",
         f"title: {yaml_quote(manifest.get('title', 'Blog export'))}",
         f"author: {yaml_quote(manifest.get('author', ''))}",
         f"lang: {yaml_quote(manifest.get('language', 'mn'))}",
-        *caption_header_include(figure_name, table_name),
+        *latex_name_header_include(figure_name, table_name, toc_title),
         "---",
         "",
     ]
@@ -619,12 +666,12 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
         "pdf_error": None,
     }
     if pandoc_path:
-        tex_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_tex, args, "tex"))
+        tex_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_tex, args, "tex", toc, toc_depth, pandoc_options))
         pandoc_report["tex_command"] = tex_result["command"]
         pandoc_report["wrote_tex"] = tex_result["ok"]
         pandoc_report["tex_error"] = tex_result["error"]
         if args.pdf:
-            pdf_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_pdf, args, "pdf"))
+            pdf_result = run_pandoc(pandoc_command(pandoc_path, book_md, out_dir, book_pdf, args, "pdf", toc, toc_depth, pandoc_options))
             pandoc_report["pdf_command"] = pdf_result["command"]
             pandoc_report["wrote_pdf"] = pdf_result["ok"]
             pandoc_report["pdf_error"] = pdf_result["error"]
@@ -637,6 +684,12 @@ def export_book(manifest, resolved, unresolved_refs, out_dir, args):
         "unresolved_refs": unresolved_refs,
         "unresolved_images": sorted(set(unresolved_images)),
         "diagnostics": diagnostics,
+        "latex_names": {"contents": toc_title, "figure": figure_name, "table": table_name},
+        "toc": {"enabled": toc, "depth": toc_depth, "title": toc_title},
+        "pandoc_options": {
+            "template": str(pandoc_options["template"].relative_to(ROOT)) if pandoc_options["template"] else None,
+            "include_header": str(pandoc_options["include_header"].relative_to(ROOT)) if pandoc_options["include_header"] else None,
+        },
         "caption_names": {"figure": figure_name, "table": table_name},
         "pandoc": pandoc_report,
     }
@@ -677,6 +730,11 @@ def main():
     parser.add_argument("--mainfont", help="Main font passed to Pandoc, e.g. Times New Roman")
     parser.add_argument("--figure-name", help="LaTeX figure caption name, e.g. Зураг")
     parser.add_argument("--table-name", help="LaTeX table caption name, e.g. Хүснэгт")
+    parser.add_argument("--toc", action="store_true", default=None, help="Include a table of contents in Pandoc TeX/PDF output")
+    parser.add_argument("--toc-depth", type=int, help="Pandoc table-of-contents depth")
+    parser.add_argument("--toc-title", help="LaTeX table-of-contents title, e.g. Гарчиг")
+    parser.add_argument("--template", help="Pandoc LaTeX template path")
+    parser.add_argument("--include-header", help="Extra LaTeX header file passed to Pandoc")
     args = parser.parse_args()
 
     mapping, _posts = build_post_index()

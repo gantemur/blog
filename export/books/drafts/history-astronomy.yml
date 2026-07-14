@@ -4,6 +4,9 @@ language: "mn"
 division: "chapter"
 figureName: "Зураг"
 tableName: "Хүснэгт"
+toc: true
+tocDepth: 2
+tocTitle: "Гарчиг"
 posts:
   - /blog/2020/03/07/egyptian-astronomy/
   - /blog/2020/03/29/spherical-earth/
