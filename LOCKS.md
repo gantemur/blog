@@ -7,4 +7,3 @@ A lock coordinates writes but does not authorize publication or merging.
 
 | Scope | Holder | Claimed (UTC) | Expires (UTC) | Purpose |
 | --- | --- | --- | --- | --- |
-| src/posts/2026-10-16-pre-newtonian-mechanics-test.md | chatgpt-blog-e004b | 2026-10-17 02:10 | 2026-10-17 06:10 | Create approved E004b two-paragraph public PR |
