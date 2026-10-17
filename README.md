@@ -134,17 +134,17 @@ Enable a house-generated PDF for one post:
 pdf: true
 ```
 
-Ordinary local checks and builds generate and validate enabled PDFs automatically:
+Ordinary local checks and builds validate committed PDFs and their SHA-256 provenance; they do not run TeX:
 
 ```sh
 npm run check
 npm run build
 ```
 
-The manual generator is still available:
+Render only an explicitly selected post (requires Pandoc and a PDF engine):
 
 ```sh
-npm run export:post-pdfs
+npm run export:post-pdfs -- --post src/posts/SELECTED-POST.md
 ```
 
 Generated PDFs are committed static assets under `src/assets/pdf/posts/`, and `src/_data/post_pdfs.json` maps post permalinks to the generated PDF URLs. The generator uses Pandoc/XeLaTeX, defaults to A4 paper with 25mm margins, and enables active PDF hyperlinks with colored link variables.
@@ -152,7 +152,7 @@ Generated PDFs are committed static assets under `src/assets/pdf/posts/`, and `s
 Override generated post PDF layout from the command line:
 
 ```sh
-npm run export:post-pdfs -- --papersize a4 --margin 16mm
+npm run export:post-pdfs -- --post src/posts/SELECTED-POST.md --papersize a4 --margin 16mm
 ```
 
 Or override it per generated post:
@@ -255,3 +255,71 @@ npm run new:draft -- "Post Title"
 ```
 
 Production builds exclude posts with `draft: true`. `npm run check` reports the number of draft posts currently in public source.
+
+
+## Everyday publication from the cloud
+
+1. Keep unpublished writing in the private companion. Editing a public-repository
+   source makes its contents public even before merge. Select, sanitize and review
+   the exact post before opening an owner-authorized public branch/PR.
+2. For a post without PDF, omit `pdf` front matter. Run `npm ci`,
+   `CI=true npm run check`, `CI=true npm run build` and
+   `python3 scripts/check-built-site.py`. No TeX is needed.
+3. For an owner-selected generated PDF, set `pdf: true` and use the explicit
+   Linux recipe below. Commit the selected PDF, its post, `src/_data/post_pdfs.json`
+   and `src/_data/post_pdf_provenance.json` together. Targeted generation preserves
+   unrelated PDF files and map/provenance entries. `pdf.url` static/external
+   overrides are validated and are never regenerated.
+4. Open the public PR. **Validate pull request** runs read-only checks and uploads
+   `site-preview-<PR number>` for seven days. Download it from the workflow run's
+   Artifacts section. To inspect locally, extract it as a `blog/` subdirectory,
+   run `python3 -m http.server 8000` in its parent and visit
+   `http://localhost:8000/blog/` (the site uses the `/blog/` prefix). Artifacts are
+   review downloads; this workflow does not deploy PRs.
+5. Review source, rendered pages and optional PDF. Only explicit owner merge
+   approval permits merging; the existing main Pages workflow then deploys.
+   Passing validation or generating a PDF does not grant publication authority.
+
+### Explicit Linux PDF command
+
+On an Ubuntu/Debian cloud agent, install the toolchain only for PDF production:
+
+```sh
+sudo apt-get update
+sudo apt-get install --no-install-recommends pandoc texlive-xetex \
+  texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core poppler-utils
+fc-match "DejaVu Serif"
+npm run export:post-pdfs -- --post src/posts/SELECTED-POST.md --mainfont "DejaVu Serif"
+CI=true npm run check
+CI=true npm run build
+python3 scripts/check-built-site.py
+```
+
+DejaVu Serif is freely licensed and supports Mongolian Cyrillic. Font files are
+installed from the distribution; none are copied into this repository. The
+existing exporter's default remains Times New Roman for existing users: Linux
+commands explicitly select DejaVu Serif instead. Font/toolchain changes affect
+layout and PDF bytes, so review text, math, hyperlinks and images before committing.
+This path is a cloud-agent command, not an automated write-enabled Actions job.
+Routine PR/Pages builds install no TeX or fonts. Render only reviewed source;
+Pandoc/LaTeX are not a sandbox for arbitrary untrusted documents.
+
+No selection is an error; bulk rendering requires explicit `--all-enabled` and
+should be used only with separate approval. All selected PDFs are staged before
+replacement, so a render failure leaves the existing assets and maps intact.
+A source or local image SHA-256 change fails ordinary PDF checks until that post
+is regenerated. Generated PDFs use local reviewed images; remote images must be
+saved as reviewed assets first. Unsupported custom TeX/image dependencies require
+manual review rather than an assumption that provenance covers them.
+
+The two historical PDFs have explicit, hash-bound legacy exceptions in provenance:
+their original renderer is unverified and their bytes are intentionally retained.
+Those exceptions apply only to the recorded source/image/PDF hashes. A future
+exception requires a reviewer-written reason and exact new hashes in the PR;
+never bypass a failed check by silently refreshing the hashes.
+
+Run fast safety tests with `python3 -m unittest discover -s tests -v`.
+Run the optional synthetic render with
+`BLOG_TEST_RENDER=1 python3 -m unittest discover -s tests -v` in a toolchain-equipped
+cloud environment. Fixtures live only in temporary directories and never become
+public posts. PDF text extraction and link/image inspection complement visual review.

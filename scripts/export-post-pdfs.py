@@ -2,6 +2,7 @@
 """Generate selected per-post PDFs from source Markdown."""
 
 import argparse
+import os
 import json
 import re
 import shutil
@@ -10,10 +11,13 @@ import sys
 import tempfile
 from pathlib import Path, PurePosixPath
 
+from post_pdf_provenance import asset_hashes, digest, source_record
+
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "src" / "posts"
 POST_PDF_DIR = ROOT / "src" / "assets" / "pdf" / "posts"
 POST_PDF_DATA = ROOT / "src" / "_data" / "post_pdfs.json"
+PROVENANCE = ROOT / "src" / "_data" / "post_pdf_provenance.json"
 
 
 def parse_scalar(value):
@@ -190,7 +194,7 @@ def post_markdown(front, body):
     return "\n".join(header) + body + "\n"
 
 
-def pandoc_command(pandoc, source_md, output_pdf, args, toc, toc_depth, papersize, margin):
+def pandoc_command(pandoc, source_md, staged_pdf, args, toc, toc_depth, papersize, margin):
     command = [
         pandoc,
         str(source_md),
@@ -215,7 +219,7 @@ def pandoc_command(pandoc, source_md, output_pdf, args, toc, toc_depth, papersiz
         "-V",
         "toccolor=blue",
         "-o",
-        str(output_pdf),
+        str(staged_pdf),
     ]
     if toc:
         command.insert(1, "--toc")
@@ -224,7 +228,9 @@ def pandoc_command(pandoc, source_md, output_pdf, args, toc, toc_depth, papersiz
     return command
 
 
-def export_post(path, pandoc, args):
+def export_post(path, pandoc, args, staging):
+    source_hash = digest(path)
+    images = asset_hashes(ROOT, path)
     front, body = split_post(path)
     config = pdf_config(front)
     if not should_generate(front):
@@ -232,16 +238,18 @@ def export_post(path, pandoc, args):
     year, month, day = post_date_parts(front)
     slug = post_slug(front)
     output_dir = POST_PDF_DIR / year / month / day
-    output_dir.mkdir(parents=True, exist_ok=True)
     output_pdf = output_dir / f"{slug}.pdf"
+    staged_pdf = staging / f"{year}-{month}-{day}-{slug}.pdf"
     toc, toc_depth = toc_options(front, config)
     papersize, margin = layout_options(front, config, args)
     with tempfile.TemporaryDirectory(prefix="blog-post-pdf-") as tmp:
         source_md = Path(tmp) / f"{slug}.md"
         source_md.write_text(post_markdown(front, body), encoding="utf-8")
-        command = pandoc_command(pandoc, source_md, output_pdf, args, toc, toc_depth, papersize, margin)
+        command = pandoc_command(pandoc, source_md, staged_pdf, args, toc, toc_depth, papersize, margin)
         try:
-            subprocess.run(command, check=True, capture_output=True, text=True)
+            rendered = subprocess.run(command, check=True, capture_output=True, text=True)
+            if "Missing character:" in (rendered.stderr + rendered.stdout):
+                raise SystemExit("PDF font is missing required glyphs; staged output was not installed")
         except subprocess.CalledProcessError as error:
             print(f"Pandoc failed for {path}", file=sys.stderr)
             print("Command: " + " ".join(command), file=sys.stderr)
@@ -251,7 +259,16 @@ def export_post(path, pandoc, args):
     if not permalink:
         raise SystemExit(f"Post has no permalink: {path}")
     url = f"/blog/assets/pdf/posts/{year}/{month}/{day}/{slug}.pdf"
+    provenance = source_record(ROOT, path, staged_pdf, {
+        "engine": args.pdf_engine, "mainfont": args.mainfont,
+        "papersize": papersize, "margin": margin,
+        "pandoc": subprocess.check_output([pandoc, "--version"], text=True).splitlines()[0],
+    })
+    if provenance["source_sha256"] != source_hash or provenance["assets"] != images:
+        raise SystemExit("Source or image changed during rendering; staged output was not installed")
     return {
+        "staged": staged_pdf,
+        "provenance": provenance,
         "source": str(path.relative_to(ROOT)),
         "title": front.get("title"),
         "permalink": permalink,
@@ -280,8 +297,8 @@ def main():
     parser.add_argument("--margin", default="25mm", help="Pandoc/LaTeX page margin, default: 25mm")
     args = parser.parse_args()
 
-    if not args.all_enabled and not args.post:
-        args.all_enabled = True
+    if bool(args.all_enabled) == bool(args.post):
+        parser.error("Select --post PATH (repeatable) or explicitly --all-enabled")
 
     pandoc = shutil.which("pandoc")
     if not pandoc:
@@ -289,17 +306,60 @@ def main():
     if not shutil.which(args.pdf_engine):
         raise SystemExit(f"PDF engine was not found on PATH: {args.pdf_engine}")
 
+    paths = selected_posts(args)
+    # Resolve and validate the complete selection before any PDF output is touched.
+    posts = []
+    targets = set()
+    mapping = json.loads(POST_PDF_DATA.read_text()) if POST_PDF_DATA.exists() else {}
+    provenance = json.loads(PROVENANCE.read_text()) if PROVENANCE.exists() else {}
+    known = {}
+    for candidate in POSTS_DIR.glob("*.md"):
+        front, _ = split_post(candidate)
+        if should_generate(front):
+            permalink = front.get("permalink")
+            if permalink in known:
+                raise SystemExit("Generated posts must have unique permalinks")
+            known[permalink] = candidate.resolve()
+    for path in paths:
+        path = path.resolve()
+        if path.parent != POSTS_DIR.resolve() or path.suffix != ".md" or not path.is_file():
+            raise SystemExit("--post must name a Markdown file directly in src/posts/")
+        front, _ = split_post(path)
+        if not should_generate(front):
+            if args.post:
+                raise SystemExit(f"Selected post does not enable generated PDFs: {path.name}")
+            continue
+        year, month, day = post_date_parts(front)
+        slug = post_slug(front)
+        if slug in {".", ".."} or re.search(r"[/\\]", slug):
+            raise SystemExit("PDF slug must be a single safe filename component")
+        permalink = front.get("permalink")
+        if not isinstance(permalink, str) or not permalink.startswith('/'):
+            raise SystemExit("Generated PDF needs an absolute post permalink")
+        url = f"/blog/assets/pdf/posts/{year}/{month}/{day}/{slug}.pdf"
+        if url in targets or any(k != permalink and v == url for k, v in mapping.items()):
+            raise SystemExit("Two selected posts or mappings would share one PDF output")
+        targets.add(url)
+        # Validate image availability before invoking Pandoc.
+        asset_hashes(ROOT, path)
+        posts.append(path)
     generated = []
-    for path in selected_posts(args):
-        front, _body = split_post(path)
-        if args.post or should_generate(front):
-            result = export_post(path, pandoc, args)
-            if result:
-                generated.append(result)
-
-    mapping = {item["permalink"]: item["url"] for item in generated}
-    POST_PDF_DATA.parent.mkdir(parents=True, exist_ok=True)
-    POST_PDF_DATA.write_text(json.dumps(mapping, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    # Stage the entire selection first: a renderer failure leaves existing PDFs/maps intact.
+    with tempfile.TemporaryDirectory(prefix="blog-pdf-stage-", dir=ROOT) as tmp:
+        for path in posts:
+            generated.append(export_post(path, pandoc, args, Path(tmp)))
+        for item in generated:
+            mapping[item['permalink']] = item['url']
+            provenance[item['permalink']] = item['provenance']
+        for item in generated:
+            output = ROOT / item['output']
+            output.parent.mkdir(parents=True, exist_ok=True)
+            os.replace(item['staged'], output)
+        for path, data in [(POST_PDF_DATA, mapping), (PROVENANCE, provenance)]:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            staged = Path(tmp) / path.name
+            staged.write_text(json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+            os.replace(staged, path)
 
     for item in generated:
         toc = " with ToC" if item["toc"] else ""
