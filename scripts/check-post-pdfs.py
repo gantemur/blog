@@ -5,6 +5,8 @@ import json
 import re
 from pathlib import Path, PurePosixPath
 
+from post_pdf_provenance import validate_record
+
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "src" / "posts"
 POST_PDF_DIR = ROOT / "src" / "assets" / "pdf" / "posts"
@@ -152,6 +154,13 @@ def main():
     else:
         post_pdf_map = {}
 
+    provenance_path = ROOT / "src/_data/post_pdf_provenance.json"
+    try:
+        provenance = json.loads(provenance_path.read_text()) if provenance_path.exists() else {}
+    except (ValueError, OSError) as error:
+        errors.append(f"Invalid PDF provenance: {error}")
+        provenance = {}
+
     generated_permalinks = set()
 
     for path in sorted(POSTS_DIR.glob("*.md")):
@@ -171,8 +180,9 @@ def main():
             generated_permalinks.add(permalink)
             if pdf_path.exists():
                 generated_found += 1
-                if pdf_path.stat().st_mtime < path.stat().st_mtime:
-                    warnings.append(f"{rel}: generated PDF may be stale: {pdf_path.relative_to(ROOT)}")
+                issue = validate_record(ROOT, path, pdf_path, provenance.get(permalink))
+                if issue:
+                    errors.append(f"{rel}: {issue}")
             else:
                 errors.append(f"{rel}: missing generated PDF {pdf_path.relative_to(ROOT)}")
 

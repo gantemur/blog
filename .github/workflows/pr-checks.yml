@@ -1,0 +1,43 @@
+name: Validate pull request
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-checks-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  site:
+    runs-on: ubuntu-24.04
+    env:
+      CI: "true"
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Test targeted PDF updates
+        run: python3 -m unittest discover -s tests -v
+      - name: Check committed sources and PDFs
+        run: npm run check
+      - name: Build site
+        run: npm run build
+      - name: Check generated pages, navigation and PDFs
+        run: python3 scripts/check-built-site.py
+      - name: Upload site preview (no deployment)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview-${{ github.event.pull_request.number }}
+          path: _site/
+          if-no-files-found: error
+          retention-days: 7

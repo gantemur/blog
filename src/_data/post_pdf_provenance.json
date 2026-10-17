@@ -1,0 +1,25 @@
+{
+  "/2021/05/12/mass-dimension/": {
+    "assets": {
+      "src/assets/wp-media/2021/05/mass1.jpeg": "e23f13aade45360742e534a57065e589b470913ce2118a2881a59aa5e8303a21",
+      "src/assets/wp-media/2021/05/mass2.jpeg": "adff3599bbceaee28cc4703d9c6d2ed7308befd616d6674b70878960e7c9545d",
+      "src/assets/wp-media/2021/05/mass3.jpeg": "bfaa73afb6aa36a1f1ffb587ea74add53ec81007d39959633198f6d4b57362ad",
+      "src/assets/wp-media/2021/05/mass4.jpeg": "019dba4fd2e1d6bffa1b26787174a03eb06be8d99f8ed1e91ef2e93d91a2da35",
+      "src/assets/wp-media/2021/05/mass5.jpeg": "374fff9f85bb7326450fa7c1a36c1fa71042f27ff8c87be9026ca6a71e90bac3",
+      "src/assets/wp-media/2021/05/mass6.jpeg": "fe9548ccc1d857de22ceb3ee62d1c3e0af499d6741401602b1a1306516c6b4ef",
+      "src/assets/wp-media/2021/05/mass7.jpeg": "ae1e741ce9dfd30496ae6918212589c1d93ad6db832681772e5a5c076a926fd0",
+      "src/assets/wp-media/2021/05/mass8.jpeg": "869900ad59e5b3dab641dc632d1fafa123c2c1c628304e728a0b113fde3d4d2a"
+    },
+    "exception": "Legacy committed PDF retained byte-for-byte from 55b53625322e775ca34a4ea837b3b1a79dbdf1e1; original renderer/source-to-PDF reproduction unverified. Applies only to these exact source, local image and PDF hashes.",
+    "pdf_sha256": "e07da94e581b7ff571537ecc0672ff49194aab14cbe6eee6b29b0295beba6177",
+    "source": "src/posts/2021-05-12-5133-mass-dimension.md",
+    "source_sha256": "003e3615e5b93de6a8896d206fd34b29640fd12b6f14865433c3932d1898bb95"
+  },
+  "/2022/05/24/ergodic/": {
+    "assets": {},
+    "exception": "Legacy committed PDF retained byte-for-byte from 55b53625322e775ca34a4ea837b3b1a79dbdf1e1; original renderer/source-to-PDF reproduction unverified. Applies only to these exact source, local image and PDF hashes.",
+    "pdf_sha256": "77e27f13199875e0e0a84e968c695cb0561e4cab63ca8ab0b49b25f4d74f347a",
+    "source": "src/posts/2022-05-24-5222-ergodic.md",
+    "source_sha256": "9d4f38ff225d64c415159f5accb7ecafbd7a5aced0875a2862f2cfca6c9bd2ab"
+  }
+}
